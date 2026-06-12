@@ -456,7 +456,7 @@ initProjectWorkspace();`;
   return (
     <div className={`min-h-screen transition-colors duration-300 font-sans antialiased text-[#1D1D1F] bg-[#FAFAFA] dark:bg-[#0A0A0B] dark:text-[#E4E4E7]`}>
       
-      {/* 1. GNB Header (Reference Image Style) */}
+      {/* 1. GNB Header (Reference Image Style - Rounded full buttons) */}
       <header className={`sticky top-0 z-40 w-full transition-all duration-300 border-b backdrop-blur-md bg-white/90 border-[#EBF0F5] dark:bg-[#0A0A0B]/90 dark:border-neutral-900`}>
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           
@@ -505,21 +505,21 @@ initProjectWorkspace();`;
           <div className="flex items-center gap-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-1 text-gray-400 hover:text-gray-950 dark:hover:text-white cursor-pointer"
+              className="p-1.5 rounded-full hover:bg-gray-150 dark:hover:bg-neutral-800 text-gray-400 hover:text-gray-955 dark:hover:text-white cursor-pointer transition-colors"
             >
               {darkMode ? (
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
                 </svg>
               ) : (
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                 </svg>
               )}
             </button>
             <button
               onClick={() => setQuizOpen(true)}
-              className="bg-[#A50034] text-white hover:bg-red-800 font-extrabold text-[11px] px-5 py-2.5 rounded-none transition-all shadow-sm cursor-pointer uppercase tracking-wider"
+              className="bg-[#A50034] text-white hover:bg-red-800 font-extrabold text-[11px] px-6 py-2.5 rounded-full transition-all shadow-sm hover:shadow-md cursor-pointer uppercase tracking-wider"
             >
               자가진단 받기
             </button>
@@ -527,7 +527,7 @@ initProjectWorkspace();`;
         </div>
       </header>
 
-      {/* 2. Hero Banner Section (Reference Image Style) */}
+      {/* 2. Hero Banner Section (Reference Image Style - rounded-full buttons) */}
       {currentPage === "home" && (
         <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#EBF0F5] to-white dark:from-[#111115] dark:to-[#0A0A0B] py-24 border-b border-[#EBF0F5] dark:border-neutral-900">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -541,19 +541,19 @@ initProjectWorkspace();`;
                 샛별자문단 5기: 프리미엄<br />
                 <span className="text-[#A50034]">AI 가이드</span>
               </h1>
-              <p className="text-sm sm:text-base text-gray-500 dark:text-neutral-400 leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base text-gray-505 dark:text-neutral-400 leading-relaxed max-w-xl font-normal">
                 최첨단 AI 인텔리전스로 데이터의 한계를 극복합니다. 직관적인 UI와 구조화된 맥락을 통해 비즈니스 의사결정의 수준을 한 단계 높이세요. 샛별자문단 5기의 프리미엄 AI 가이드를 만나보세요.
               </p>
               <div className="flex gap-4 pt-2">
                 <button
                   onClick={() => setQuizOpen(true)}
-                  className="bg-[#A50534] hover:bg-red-800 text-white font-extrabold text-xs px-6 py-3.5 shadow-md cursor-pointer transition-all flex items-center gap-1.5"
+                  className="bg-[#A50034] hover:bg-[#85002a] text-white font-extrabold text-xs px-7 py-4 rounded-full shadow-md hover:shadow-lg cursor-pointer transition-all flex items-center gap-1.5"
                 >
                   자가진단 등록 <span className="text-[10px]">➔</span>
                 </button>
                 <button
                   onClick={() => handlePageChange("part1")}
-                  className="bg-white/80 dark:bg-neutral-800 hover:bg-white dark:hover:bg-neutral-750 text-gray-700 dark:text-white font-extrabold text-xs px-6 py-3.5 border border-gray-200 dark:border-neutral-700 shadow-sm cursor-pointer transition-all"
+                  className="bg-white/80 dark:bg-neutral-800 hover:bg-white dark:hover:bg-neutral-750 text-gray-700 dark:text-white font-extrabold text-xs px-7 py-4 rounded-full border border-gray-200 dark:border-neutral-700 shadow-sm hover:shadow-md cursor-pointer transition-all"
                 >
                   가이드북 읽기
                 </button>
@@ -589,7 +589,7 @@ initProjectWorkspace();`;
         </section>
       )}
 
-      {/* Main Magazine Layout Body */}
+      {/* Main Layout Body */}
       <main className="max-w-6xl mx-auto w-full px-6 sm:px-8 py-20 sm:py-24 space-y-32">
         
         {/* ==================== 0. HOME VIEW (CHAPTER TEASERS) ==================== */}
@@ -601,7 +601,7 @@ initProjectWorkspace();`;
               
               {/* Left description */}
               <div className="lg:col-span-6 space-y-6">
-                <span className="px-3 py-1 border border-[#A50034] text-[#A50034] text-[10px] tracking-widest font-black uppercase inline-block">
+                <span className="px-4 py-1.5 rounded-full border border-[#A50034] text-[#A50034] text-[10px] tracking-widest font-black uppercase inline-block">
                   CHAPTER 01
                 </span>
                 <h2 className="text-3xl font-black text-gray-900 dark:text-white leading-tight">
@@ -613,7 +613,7 @@ initProjectWorkspace();`;
                 </p>
                 
                 {/* Embedded copy snippet preview */}
-                <div className="p-4 bg-gray-50 dark:bg-[#141416] border border-gray-150 dark:border-neutral-850 rounded-none flex items-center justify-between text-[11px] font-mono text-gray-500">
+                <div className="p-4 bg-gray-50 dark:bg-[#141416] border border-gray-150 dark:border-neutral-850 rounded-xl flex items-center justify-between text-[11px] font-mono text-gray-500">
                   <span className="truncate">XML Context-mode structured - templates free...</span>
                   <button
                     onClick={() => handleCopyText("XML Context-mode structured - templates free", "project")}
@@ -624,9 +624,9 @@ initProjectWorkspace();`;
                 </div>
               </div>
 
-              {/* Right Episode image card */}
+              {/* Right Episode image card (rounded-3xl, shadow-md) */}
               <div className="lg:col-span-6 flex justify-center">
-                <div className="relative w-full max-w-[420px] rounded-2xl bg-[#D8E2EC] dark:bg-[#1C1F26] p-6 border border-gray-200/50 dark:border-neutral-800 text-left overflow-hidden flex flex-col justify-between aspect-[1.5]">
+                <div className="relative w-full max-w-[420px] rounded-3xl bg-[#D8E2EC] dark:bg-[#1C1F26] p-6 border border-gray-200/50 dark:border-neutral-800 text-left overflow-hidden flex flex-col justify-between aspect-[1.5] shadow-md hover:shadow-lg transition-all duration-300">
                   <span className="text-[10px] tracking-widest font-bold text-gray-500 uppercase block">
                     Episode 1: Projects
                   </span>
@@ -638,12 +638,12 @@ initProjectWorkspace();`;
                       alt="Projects network graphic"
                       width={180}
                       height={180}
-                      className="object-contain hover:scale-105 transition-transform duration-500"
+                      className="object-contain hover:scale-105 transition-transform duration-550"
                     />
                   </div>
 
                   {/* Card bottom banner overlay */}
-                  <div className="bg-white/95 dark:bg-neutral-900/95 p-3 flex items-center justify-between border-t border-gray-100 dark:border-neutral-800">
+                  <div className="bg-white/95 dark:bg-neutral-900/95 p-4 flex items-center justify-between border-t border-gray-100 dark:border-neutral-800 rounded-b-2xl">
                     <div>
                       <span className="text-xs font-extrabold text-gray-900 dark:text-white block">Data Mode Efficiency</span>
                       <span className="text-[9px] text-gray-400 block font-semibold">Synchronized across 10 teams</span>
@@ -669,34 +669,34 @@ initProjectWorkspace();`;
               {/* Heading with arrow buttons */}
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div className="space-y-4 text-left">
-                  <span className="px-3 py-1 border border-[#A50034] text-[#A50034] text-[10px] tracking-widest font-black uppercase inline-block">
+                  <span className="px-4 py-1.5 rounded-full border border-[#A50034] text-[#A50034] text-[10px] tracking-widest font-black uppercase inline-block">
                     CHAPTER 02
                   </span>
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white leading-tight">
                     에피소드 2: GPTs - 업무 자동화
                   </h2>
-                  <p className="text-xs sm:text-sm text-gray-500 dark:text-neutral-400 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-gray-550 dark:text-neutral-400 leading-relaxed font-normal">
                     나만의 커스텀 AI 에이전트를 가동해 보세요. 최고 마케팅 카피라이터, 실시간 트렌드 리서처, 데이터 분석가, 품질 오토메이터 툴을 이용해 나만의 자동화 비서를 셋업할 수 있습니다.
                   </p>
                 </div>
                 
-                {/* Arrow sliders (Decorative) */}
+                {/* Arrow sliders (Rounded border) */}
                 <div className="flex gap-2 self-start sm:self-end">
-                  <button className="h-8 w-8 rounded-none border border-gray-200 dark:border-neutral-800 flex items-center justify-center text-gray-400 hover:text-gray-900 cursor-pointer">➔</button>
+                  <button className="h-8 w-8 rounded-full border border-gray-200 dark:border-neutral-800 flex items-center justify-center text-gray-400 hover:text-gray-900 cursor-pointer">➔</button>
                 </div>
               </div>
 
-              {/* Big Red Robots banner card */}
-              <div className="w-full relative overflow-hidden bg-white dark:bg-[#141416] p-8 border border-[#EBF0F5] dark:border-neutral-800 text-center space-y-6 flex flex-col items-center">
+              {/* Big Red Robots banner card (rounded-3xl, shadow-md) */}
+              <div className="w-full relative overflow-hidden bg-white dark:bg-[#141416] p-8 border border-[#EBF0F5] dark:border-neutral-800 text-center space-y-6 flex flex-col items-center rounded-3xl shadow-sm hover:shadow-md transition-all duration-300">
                 <span className="text-[10px] tracking-[0.25em] font-extrabold text-gray-400 uppercase">
                   EPISODE 2: GPTs
                 </span>
-                <p className="text-xs text-gray-500 max-w-lg leading-relaxed">
+                <p className="text-xs text-gray-500 max-w-lg leading-relaxed font-normal">
                   Decouple trivial model inputs with custom AI agents. Integrate automation and work automation. WRITER, RESEARCHER, ANALYST, AUTOMATOR, ASSISTANT.
                 </p>
                 
                 {/* Robot visual center */}
-                <div className="w-full max-w-[580px] py-4">
+                <div className="w-full max-w-[580px] py-4 rounded-2xl bg-gray-50/50 dark:bg-neutral-900/30 p-4 border border-gray-100 dark:border-neutral-850">
                   <Image
                     src="/chapter2_robots.png"
                     alt="GPTs robot squad visual"
@@ -708,7 +708,7 @@ initProjectWorkspace();`;
 
                 <button
                   onClick={() => handlePageChange("part2")}
-                  className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-800 dark:hover:bg-neutral-750 text-gray-700 dark:text-white font-extrabold text-[10px] px-8 py-3.5 tracking-wider uppercase transition-all cursor-pointer flex items-center gap-1.5"
+                  className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-850 dark:hover:bg-neutral-800 text-gray-700 dark:text-white font-extrabold text-[10px] px-8 py-3.5 tracking-wider uppercase transition-all cursor-pointer flex items-center gap-1.5 rounded-full"
                 >
                   <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
@@ -717,13 +717,13 @@ initProjectWorkspace();`;
                 </button>
               </div>
 
-              {/* Four Agent Horizontal Column Cards */}
+              {/* Four Agent Horizontal Column Cards (rounded-2xl with hover effect) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 {/* Card 1: Writer */}
-                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between">
+                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between rounded-2xl shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="h-10 w-10 bg-[#FFECEF] dark:bg-[#2C191D] flex items-center justify-center text-[#A50034]">
+                    <div className="h-10 w-10 bg-[#FFECEF] dark:bg-[#2C191D] flex items-center justify-center text-[#A50034] rounded-xl">
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                       </svg>
@@ -745,9 +745,9 @@ initProjectWorkspace();`;
                 </div>
 
                 {/* Card 2: Researcher */}
-                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between">
+                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between rounded-2xl shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="h-10 w-10 bg-[#E8F0FE] dark:bg-[#1B2538] flex items-center justify-center text-blue-600">
+                    <div className="h-10 w-10 bg-[#E8F0FE] dark:bg-[#1B2538] flex items-center justify-center text-blue-600 rounded-xl">
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                       </svg>
@@ -769,9 +769,9 @@ initProjectWorkspace();`;
                 </div>
 
                 {/* Card 3: Analyst */}
-                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between">
+                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between rounded-2xl shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="h-10 w-10 bg-[#FFF3CD] dark:bg-[#2C2417] flex items-center justify-center text-amber-600">
+                    <div className="h-10 w-10 bg-[#FFF3CD] dark:bg-[#2C2417] flex items-center justify-center text-amber-600 rounded-xl">
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
                       </svg>
@@ -793,9 +793,9 @@ initProjectWorkspace();`;
                 </div>
 
                 {/* Card 4: Automator */}
-                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between">
+                <div className="p-6 bg-white dark:bg-[#141416] border border-[#EBF0F5] dark:border-neutral-900 text-left space-y-4 flex flex-col justify-between rounded-2xl shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-300">
                   <div className="space-y-3">
-                    <div className="h-10 w-10 bg-[#E2E8F0] dark:bg-[#20252F] flex items-center justify-center text-gray-600 dark:text-neutral-400">
+                    <div className="h-10 w-10 bg-[#E2E8F0] dark:bg-[#20252F] flex items-center justify-center text-gray-600 dark:text-neutral-400 rounded-xl">
                       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                       </svg>
@@ -840,15 +840,15 @@ initProjectWorkspace();`;
             </div>
 
             {/* Layout like reference image */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white dark:bg-[#141416] p-8 sm:p-12 border border-[#EBF0F5] dark:border-neutral-900">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white dark:bg-[#141416] p-8 sm:p-12 border border-[#EBF0F5] dark:border-neutral-900 rounded-3xl shadow-sm">
               
               {/* Left explanation & play block */}
               <div className="lg:col-span-7 space-y-6">
                 <span className="text-[9px] tracking-wider font-extrabold text-[#A50034] uppercase block">XML 구조화 맥락 시스템</span>
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-gray-650 dark:text-neutral-400 leading-relaxed font-normal">
                   Knowledge 고정 기능은 최대 20개의 핵심 비즈니스 데이터를 프로젝트 폴더 내부에 영구 바인딩합니다. 개별 임직원들이 마케팅 보고서, 기술 사양표, 어조 톤앤매너 가이드북 파일을 대화창을 켤 때마다 드래그앤드롭하여 분석하던 수동 데이터 낭비가 근본적으로 소멸됩니다. 부서 팀원들을 해당 프로젝트에 초대하는 것만으로, 모든 구성원이 동일한 지식 컨텍스트 위에서 안전하고 다채로운 분석 채팅 세션을 개별 생성 및 병렬 구동할 수 있습니다.
                 </p>
-                <div className="p-4 bg-gray-50 dark:bg-[#0B0B0D] border border-gray-150 dark:border-neutral-850 rounded-none flex items-center justify-between text-[11px] font-mono text-gray-500">
+                <div className="p-4 bg-gray-55 dark:bg-[#0B0B0D] border border-gray-150 dark:border-neutral-850 rounded-xl flex items-center justify-between text-[11px] font-mono text-gray-500">
                   <span className="truncate">LGE-HE-Context-mode-structured - template active...</span>
                   <button
                     onClick={() => handleCopyText("LGE-HE-Context-mode-structured - template active", "project")}
@@ -859,9 +859,9 @@ initProjectWorkspace();`;
                 </div>
               </div>
 
-              {/* Right network card */}
+              {/* Right network card (rounded-3xl, shadow-md) */}
               <div className="lg:col-span-5 flex justify-center">
-                <div className="relative w-full max-w-[340px] rounded-2xl bg-[#D8E2EC] dark:bg-[#1C1F26] p-6 border border-gray-200/50 dark:border-neutral-800 text-left overflow-hidden flex flex-col justify-between aspect-[1.3]">
+                <div className="relative w-full max-w-[340px] rounded-3xl bg-[#D8E2EC] dark:bg-[#1C1F26] p-6 border border-gray-200/50 dark:border-neutral-800 text-left overflow-hidden flex flex-col justify-between aspect-[1.3] shadow-md">
                   <span className="text-[10px] tracking-widest font-bold text-gray-500 uppercase block">
                     Episode 1: Projects
                   </span>
@@ -874,7 +874,7 @@ initProjectWorkspace();`;
                       className="object-contain"
                     />
                   </div>
-                  <div className="bg-white/95 dark:bg-neutral-900/95 p-3 flex items-center justify-between border-t border-gray-100 dark:border-neutral-800 rounded-b-xl">
+                  <div className="bg-white/95 dark:bg-neutral-900/95 p-3.5 flex items-center justify-between border-t border-gray-100 dark:border-neutral-800 rounded-b-2xl">
                     <div>
                       <span className="text-xs font-extrabold text-gray-900 dark:text-white block">Data Mode Efficiency</span>
                       <span className="text-[9px] text-gray-400 block font-semibold">Synchronized across 10 teams</span>
@@ -885,17 +885,17 @@ initProjectWorkspace();`;
 
             </div>
 
-            {/* Before & After Panels */}
+            {/* Before & After Panels (rounded-2xl) */}
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">설정 적용 여부에 따른 비포 & 애프터 비교</h3>
                 
-                <div className="flex border border-gray-200 dark:border-neutral-800 p-0.5 rounded-none">
+                <div className="flex border border-gray-200 dark:border-neutral-850 p-0.5 rounded-full">
                   <button
                     onClick={() => setProjectBeforeAfterTab("sideBySide")}
-                    className={`px-4 py-1.5 text-[10px] tracking-wider font-semibold rounded-none cursor-pointer uppercase transition-all duration-300 ${
+                    className={`px-4 py-1.5 text-[10px] tracking-wider font-semibold rounded-full cursor-pointer uppercase transition-all duration-300 ${
                       projectBeforeAfterTab === "sideBySide"
-                        ? "bg-gray-900 dark:bg-white text-white dark:text-black"
+                        ? "bg-gray-950 dark:bg-white text-white dark:text-black"
                         : "text-gray-400"
                     }`}
                   >
@@ -903,9 +903,9 @@ initProjectWorkspace();`;
                   </button>
                   <button
                     onClick={() => setProjectBeforeAfterTab("focus")}
-                    className={`px-4 py-1.5 text-[10px] tracking-wider font-semibold rounded-none cursor-pointer uppercase transition-all duration-300 ${
+                    className={`px-4 py-1.5 text-[10px] tracking-wider font-semibold rounded-full cursor-pointer uppercase transition-all duration-300 ${
                       projectBeforeAfterTab === "focus"
-                        ? "bg-gray-900 dark:bg-white text-white dark:text-black"
+                        ? "bg-gray-950 dark:bg-white text-white dark:text-black"
                         : "text-gray-400"
                     }`}
                   >
@@ -917,11 +917,11 @@ initProjectWorkspace();`;
               {projectBeforeAfterTab === "sideBySide" ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Before */}
-                  <div className="p-8 rounded-none border border-gray-200 dark:border-neutral-800 bg-white dark:bg-[#141416] space-y-4">
+                  <div className="p-8 rounded-2xl border border-gray-150 dark:border-neutral-800 bg-white dark:bg-[#141416] space-y-4 shadow-sm">
                     <span className="text-[10px] tracking-widest font-bold text-red-700 block uppercase">
                       Before / 미설정 기존 환경
                     </span>
-                    <ul className="space-y-4 text-xs text-gray-600 dark:text-neutral-450 leading-relaxed font-normal list-disc pl-4">
+                    <ul className="space-y-4 text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-normal list-disc pl-4">
                       <li>매 대화방을 새로 열 때마다 대용량 <strong>LG HE 스마트 TV 글로벌 마케팅 가이드라인 PDF</strong>와 <strong>경쟁사 판매율 엑셀 파일</strong>을 수동 드래그앤드롭으로 재업로드.</li>
                       <li>동일한 지시 규칙(LG F.U.N 가이드 및 사내 보안 준수 서약)을 매번 메모장에서 복사해 대화 시작 시점에 반복 수동 입력하는 비효율 발생.</li>
                       <li>팀원 간에 분석한 대화방 흐름이나 축적된 맥락이 공유되지 않아 부서원 10명이 각자 10번 중복 작업을 반복하여 리소스 낭비.</li>
@@ -930,11 +930,11 @@ initProjectWorkspace();`;
                   </div>
 
                   {/* After */}
-                  <div className="p-8 rounded-none border border-gray-200 dark:border-neutral-800 bg-gray-50/50 dark:bg-[#141416] space-y-4">
+                  <div className="p-8 rounded-2xl border border-gray-150 dark:border-neutral-800 bg-gray-50/50 dark:bg-[#141416] space-y-4 shadow-sm">
                     <span className="text-[10px] tracking-widest font-bold text-[#A50034] block uppercase">
                       After / Projects 도입 환경
                     </span>
-                    <ul className="space-y-4 text-xs text-gray-600 dark:text-neutral-450 leading-relaxed font-normal list-disc pl-4">
+                    <ul className="space-y-4 text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-normal list-disc pl-4">
                       <li>최초 프로젝트 생성 시 유럽 출시 사양 가이드 및 경쟁사 실적 데이터 엑셀을 <strong>Knowledge 데이터로 영구 등록</strong>하여 이후 생성되는 모든 하위 채팅 스레드가 이를 자동 참조.</li>
                       <li><strong>System Instructions를 상시 고정</strong>하므로, 어시스턴트가 언제나 사내 보안 유출 가이드라인과 LG 특화 톤앤매너 규칙을 내재한 상태로 안전한 답변 제공.</li>
                       <li><strong>Share Project 기능</strong>을 활용하여 부서원들을 일괄 초대, 동일한 고정 지식 브레인 하에서 개별 세션방(Threads)을 쪼개 협업하며 최종 산출물 완성.</li>
@@ -943,11 +943,11 @@ initProjectWorkspace();`;
                   </div>
                 </div>
               ) : (
-                <div className="p-8 rounded-none bg-gray-50 dark:bg-[#141416] border border-gray-200 dark:border-neutral-800 space-y-4">
+                <div className="p-8 rounded-2xl bg-gray-50 dark:bg-[#141416] border border-gray-150 dark:border-neutral-800 space-y-4 shadow-sm">
                   <span className="text-[10px] tracking-widest font-bold text-[#A50034] block uppercase">
                     After / Projects 도입 효과 요약
                   </span>
-                  <p className="text-xs text-gray-655 dark:text-neutral-400 leading-relaxed">
+                  <p className="text-xs text-gray-650 dark:text-neutral-400 leading-relaxed">
                     프로젝트 폴더 내부에 타겟 고객 분석 보고서, 해외 바이어 협상 가이드, LG 시그니처 톤앤매너 룰을 결합하여 가상 분석 오피스를 셋업합니다. 이후 '독일 마켓 메일 작성방', '경쟁사 스펙 분석방' 등으로 채팅 스레드를 쪼개 사용하면서, 하나의 고정 지식 지휘소 하에서 각 방이 상시 협동하도록 관리할 수 있습니다.
                   </p>
                 </div>
@@ -955,12 +955,12 @@ initProjectWorkspace();`;
             </div>
 
             {/* Case Study */}
-            <div className="p-8 sm:p-12 rounded-none border border-gray-200 dark:border-neutral-800 bg-white dark:bg-[#141416] space-y-8">
+            <div className="p-8 sm:p-12 rounded-3xl border border-gray-150 dark:border-neutral-800 bg-white dark:bg-[#141416] space-y-8 shadow-sm">
               <h3 className="font-extrabold text-xl text-gray-900 dark:text-white border-b border-gray-100 dark:border-neutral-850 pb-4">
                 LG HE사업본부 스마트 TV 유럽 런칭 프로젝트 실무 사례
               </h3>
               
-              <div className="space-y-6 text-xs text-gray-600 dark:text-neutral-450 leading-relaxed font-normal">
+              <div className="space-y-6 text-xs text-gray-600 dark:text-neutral-455 leading-relaxed font-normal">
                 <div>
                   <strong className="block text-sm text-gray-800 dark:text-neutral-200 mb-1.5">1. 상황 배경 (Background Context)</strong>
                   <p>
@@ -974,13 +974,13 @@ initProjectWorkspace();`;
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
-                  <div className="p-5 bg-gray-50 dark:bg-[#0A0A0B] border border-gray-100 dark:border-neutral-850">
+                  <div className="p-5 bg-gray-50 dark:bg-[#0A0A0B] border border-gray-100 dark:border-neutral-850 rounded-xl">
                     <strong className="block text-gray-850 dark:text-neutral-200 mb-1 text-[11px]">3. 하위 스레드 활용 (Thread Breakdown)</strong>
                     <p className="text-[11px] leading-relaxed">
                       소속 팀원인 전주임은 해당 프로젝트 내에서 <strong>'독일 프리미엄 딜러 발송 메일 초안 작성 방'</strong>을 개설하여 작업하였고, 이대리는 <strong>'현지 유튜브 바이럴 카피 추출 방'</strong>을 개설해 활용했습니다. 서로의 대화 창을 간섭하지 않으면서도 상위 폴더에 적재된 동일한 리뷰 데이터와 단가 엑셀 지식을 고유 배경으로 삼아 완벽히 일치된 실무 답변을 취합하는 성과를 냈습니다.
                     </p>
                   </div>
-                  <div className="p-5 bg-gray-50 dark:bg-[#0A0A0B] border border-gray-100 dark:border-neutral-850">
+                  <div className="p-5 bg-gray-50 dark:bg-[#0A0A0B] border border-gray-100 dark:border-neutral-850 rounded-xl">
                     <strong className="block text-gray-850 dark:text-neutral-200 mb-1 text-[11px]">4. 정량적 성과 (Performance Outcome)</strong>
                     <p className="text-[11px] leading-relaxed">
                       이를 통해 매일 아침 평균 25분이 소요되던 자료 재업로드 및 시스템 지시 사항 복사 붙여넣기 과정이 완전 소멸되었습니다. 부서 내 데이터 활용 정합성이 기존 대비 40% 이상 향상되었으며, 일관성 없는 제안서 카피 문구가 작성되어 마케팅 커뮤니케이션실과 재검토를 반복하는 불필요한 공수가 완전히 사라졌습니다.
@@ -990,7 +990,7 @@ initProjectWorkspace();`;
               </div>
 
               {/* LGE Security Compliance Sidebar */}
-              <div className="p-6 bg-[#A50034]/5 border-l-2 border-[#A50034] text-xs text-gray-650 dark:text-neutral-450 space-y-2">
+              <div className="p-6 bg-[#A50034]/5 border-l-2 border-[#A50034] text-xs text-gray-650 dark:text-neutral-450 space-y-2 rounded-r-xl">
                 <span className="font-bold text-[#A50034] block uppercase tracking-wider text-[10px]">LGE IT Security & Compliance Alert</span>
                 <p className="font-normal leading-relaxed">
                   프로젝트 내에 업로드하는 모든 문건은 LG전자의 보안 관리 규칙을 적용받습니다. 사내 Enterprise 라이선스 계정을 사용해야 하며, 경쟁사 스펙이나 미공개 TV 가격표 등의 1급 기밀 정보를 외부 브라우징 봇이 직접 수집하도록 허용해서는 절대 안 됩니다.
@@ -1003,11 +1003,11 @@ initProjectWorkspace();`;
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 dark:text-white">프로젝트 API 자동 초기화 스크립트</h3>
-                  <p className="text-xs text-gray-500">Node.js 환경에서 OpenAI Assistants API의 프로젝트 가상 오피스를 자동으로 개설해 주는 템플릿 코드입니다.</p>
+                  <p className="text-xs text-gray-550">Node.js 환경에서 OpenAI Assistants API의 프로젝트 가상 오피스를 자동으로 개설해 주는 템플릿 코드입니다.</p>
                 </div>
                 <button
                   onClick={() => handleCopyText(getProjectInitializeCode(), "project")}
-                  className={`px-4 py-2 text-[10px] tracking-wider font-semibold rounded-none cursor-pointer uppercase border transition-all ${
+                  className={`px-4 py-2 text-[10px] tracking-wider font-semibold rounded-full cursor-pointer uppercase border transition-all ${
                     projectCodeCopied
                       ? "bg-emerald-600 border-emerald-600 text-white"
                       : "bg-white dark:bg-neutral-900 border-gray-200 dark:border-neutral-800 text-gray-600 dark:text-neutral-300 hover:border-[#A50034]"
@@ -1016,7 +1016,7 @@ initProjectWorkspace();`;
                   {projectCodeCopied ? "복사 완료" : "코드 복사"}
                 </button>
               </div>
-              <pre className="p-5 bg-gray-900 text-neutral-350 dark:bg-[#141416] rounded-none text-[11px] font-mono overflow-x-auto border border-gray-200 dark:border-neutral-800 leading-relaxed">
+              <pre className="p-5 bg-gray-900 text-neutral-350 dark:bg-[#141416] rounded-2xl text-[11px] font-mono overflow-x-auto border border-gray-200 dark:border-neutral-800 leading-relaxed shadow-sm">
                 {getProjectInitializeCode()}
               </pre>
             </div>
@@ -1036,20 +1036,20 @@ initProjectWorkspace();`;
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white leading-tight">
                 에피소드 2: GPTs - 업무 자동화
               </h1>
-              <p className="text-sm sm:text-base text-gray-500 dark:text-neutral-400 max-w-3xl leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-550 dark:text-neutral-400 max-w-3xl leading-relaxed">
                 나만의 고품격 챗봇을 빌드하고, 구글/유튜브/네이버 검색 API를 Action 스키마로 연동하십시오. 실무 가동 터미널 시뮬레이터를 통해 설정 전(Before)과 설정 후(After)의 극명한 품질 차이를 직접 눈으로 검증할 수 있습니다.
               </p>
             </div>
 
-            {/* Robots Squad Banner */}
-            <div className="w-full bg-white dark:bg-[#141416] p-8 border border-gray-200 dark:border-neutral-800 text-center space-y-6 flex flex-col items-center">
-              <span className="text-[10px] tracking-[0.25em] font-extrabold text-gray-400 uppercase">
+            {/* Robots Squad Banner (rounded-3xl) */}
+            <div className="w-full bg-white dark:bg-[#141416] p-8 border border-gray-200 dark:border-neutral-800 text-center space-y-6 flex flex-col items-center rounded-3xl shadow-sm">
+              <span className="text-[10px] tracking-[0.25em] font-extrabold text-gray-450 uppercase">
                 EPISODE 2: GPTs
               </span>
               <p className="text-xs text-gray-500 max-w-lg leading-relaxed font-normal">
                 Decouple trivial model inputs with custom AI agents. Integrate automation and work automation. WRITER, RESEARCHER, ANALYST, AUTOMATOR, ASSISTANT.
               </p>
-              <div className="w-full max-w-[580px] py-4">
+              <div className="w-full max-w-[580px] py-4 bg-gray-50/50 dark:bg-neutral-900/30 p-4 border border-gray-100 dark:border-neutral-850 rounded-2xl">
                 <Image
                   src="/chapter2_robots.png"
                   alt="GPTs robot squad visual"
@@ -1067,8 +1067,8 @@ initProjectWorkspace();`;
                 <p className="text-xs text-gray-500">에이전트를 선택하고 프롬프트 복사 및 가동 시뮬레이션을 작동해 보십시오.</p>
               </div>
 
-              {/* Minimal Text Selector */}
-              <div className="flex flex-wrap gap-8 border-b border-gray-200 dark:border-neutral-800 pb-3">
+              {/* Minimal Text Selector (rounded GNB shape tab menu) */}
+              <div className="flex flex-wrap gap-4 border-b border-gray-200 dark:border-neutral-800 pb-3">
                 {(Object.keys(agentSpecs) as AgentType[]).map((agentKey) => (
                   <button
                     key={agentKey}
@@ -1077,9 +1077,9 @@ initProjectWorkspace();`;
                       setSimulationLogs([]);
                       setSimulationResult("");
                     }}
-                    className={`pb-2 text-[11px] tracking-[0.2em] font-bold uppercase cursor-pointer transition-all duration-300 ${
+                    className={`py-2 px-5 text-[11px] tracking-wider font-extrabold uppercase transition-all duration-300 rounded-full cursor-pointer ${
                       selectedAgent === agentKey
-                        ? "text-[#A50034] border-b-2 border-[#A50034]"
+                        ? "bg-[#A50034] text-white shadow-sm"
                         : "text-gray-400 hover:text-gray-900 dark:hover:text-white"
                     }`}
                   >
@@ -1094,7 +1094,7 @@ initProjectWorkspace();`;
                 {/* Config and Instructions */}
                 <div className="lg:col-span-6 space-y-6">
                   <div className="space-y-2">
-                    <span className="text-[10px] tracking-wider font-semibold text-gray-405 block uppercase">
+                    <span className="text-[10px] tracking-wider font-semibold text-gray-400 block uppercase">
                       타겟 부서: {currentAgent.division}
                     </span>
                     <h4 className="font-bold text-xl text-[#A50034]">{currentAgent.title}</h4>
@@ -1116,7 +1116,7 @@ initProjectWorkspace();`;
                       <span className="text-xs font-bold text-gray-800 dark:text-neutral-200">1. 전용 지침 (System Instruction)</span>
                       <button
                         onClick={() => handleCopyText(currentAgent.prompt, "prompt")}
-                        className={`text-[9px] tracking-wider font-semibold px-2.5 py-1 rounded-none border transition-all cursor-pointer uppercase ${
+                        className={`text-[9px] tracking-wider font-semibold px-3 py-1.5 rounded-full border transition-all cursor-pointer uppercase ${
                           agentPromptCopied
                             ? "bg-emerald-600 border-emerald-600 text-white"
                             : "bg-white dark:bg-neutral-900 border-gray-200 dark:border-neutral-800 text-gray-500 hover:border-[#A50034]"
@@ -1128,7 +1128,7 @@ initProjectWorkspace();`;
                     <textarea
                       readOnly
                       value={currentAgent.prompt}
-                      className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-none text-xs font-mono resize-none focus:outline-none text-gray-605 dark:text-neutral-450 leading-relaxed"
+                      className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-xl text-xs font-mono resize-none focus:outline-none text-gray-605 dark:text-neutral-450 leading-relaxed"
                     />
                   </div>
 
@@ -1139,7 +1139,7 @@ initProjectWorkspace();`;
                         <span className="text-xs font-bold text-gray-800 dark:text-neutral-200">2. OpenAPI Actions 스키마</span>
                         <button
                           onClick={() => handleCopyText(currentAgent.schema, "schema")}
-                          className={`text-[9px] tracking-wider font-semibold px-2.5 py-1 rounded-none border transition-all cursor-pointer uppercase ${
+                          className={`text-[9px] tracking-wider font-semibold px-3 py-1.5 rounded-full border transition-all cursor-pointer uppercase ${
                             agentSchemaCopied
                               ? "bg-emerald-600 border-emerald-600 text-white"
                               : "bg-white dark:bg-neutral-900 border-gray-200 dark:border-neutral-800 text-gray-500 hover:border-[#A50034]"
@@ -1151,7 +1151,7 @@ initProjectWorkspace();`;
                       <textarea
                         readOnly
                         value={currentAgent.schema}
-                        className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-none text-xs font-mono resize-none focus:outline-none text-gray-655 dark:text-neutral-455 leading-relaxed"
+                        className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-xl text-xs font-mono resize-none focus:outline-none text-gray-605 dark:text-neutral-455 leading-relaxed"
                       />
                     </div>
                   )}
@@ -1162,13 +1162,13 @@ initProjectWorkspace();`;
                   
                   {/* Flat Before vs After */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="p-5 rounded-none bg-white dark:bg-[#141416] border border-gray-200 dark:border-neutral-800">
+                    <div className="p-5 rounded-2xl bg-white dark:bg-[#141416] border border-gray-200 dark:border-neutral-800 shadow-sm">
                       <span className="text-[9px] font-bold text-red-700 block uppercase tracking-widest mb-2">Before / 일반 GPT</span>
-                      <p className="text-[11px] text-gray-605 dark:text-neutral-400 leading-relaxed font-normal">
+                      <p className="text-[11px] text-gray-650 dark:text-neutral-400 leading-relaxed font-normal">
                         {currentAgent.before}
                       </p>
                     </div>
-                    <div className="p-5 rounded-none bg-gray-55 dark:bg-[#141416] border border-gray-200 dark:border-neutral-800">
+                    <div className="p-5 rounded-2xl bg-gray-50 dark:bg-[#141416] border border-gray-200 dark:border-neutral-800 shadow-sm">
                       <span className="text-[9px] font-bold text-[#A50034] block uppercase tracking-widest mb-2">After / 설정 적용</span>
                       <p className="text-[11px] text-gray-900 dark:text-white leading-relaxed font-normal">
                         {currentAgent.after}
@@ -1176,9 +1176,9 @@ initProjectWorkspace();`;
                     </div>
                   </div>
 
-                  {/* Monospaced Simulated Terminal Console */}
-                  <div className="rounded-none bg-[#09090B] p-6 flex flex-col justify-between min-h-[320px] border border-neutral-900">
-                    <div className="space-y-3 font-mono text-[11px] text-left leading-relaxed text-gray-450">
+                  {/* Monospaced Simulated Terminal Console (rounded-2xl) */}
+                  <div className="rounded-2xl bg-[#09090B] p-6 flex flex-col justify-between min-h-[320px] border border-neutral-900 shadow-sm">
+                    <div className="space-y-3 font-mono text-[11px] text-left leading-relaxed text-gray-400">
                       <div className="flex items-center justify-between border-b border-neutral-900 pb-2 mb-2">
                         <span className="text-[9px] text-neutral-600 uppercase tracking-widest">LGE Agent System Sandbox</span>
                         <span className="text-[9px] text-[#A50034] font-bold font-sans">LGE-SIM-CAN-05</span>
@@ -1187,7 +1187,7 @@ initProjectWorkspace();`;
                       <div className="text-neutral-600">$ lge-agent-run --name={selectedAgent}</div>
 
                       {simulationLogs.map((log, idx) => (
-                        <div key={idx} className={log.includes("[SYSTEM]") ? "text-neutral-550" : log.includes("[API]") ? "text-cyan-650" : "text-neutral-200"}>
+                        <div key={idx} className={log.includes("[SYSTEM]") ? "text-neutral-550" : log.includes("[API]") ? "text-cyan-600" : "text-neutral-200"}>
                           {log}
                         </div>
                       ))}
@@ -1197,7 +1197,7 @@ initProjectWorkspace();`;
                       )}
 
                       {simulationResult && (
-                        <div className="mt-4 p-4 bg-[#141416] text-neutral-200 font-sans text-xs whitespace-pre-line leading-relaxed border border-neutral-900">
+                        <div className="mt-4 p-4 bg-[#141416] text-neutral-200 font-sans text-xs whitespace-pre-line leading-relaxed border border-neutral-900 rounded-xl">
                           {simulationResult}
                         </div>
                       )}
@@ -1207,7 +1207,7 @@ initProjectWorkspace();`;
                       <button
                         onClick={handleRunSimulation}
                         disabled={simulationRunning}
-                        className={`text-[9px] tracking-widest font-semibold px-6 py-3 rounded-none transition-all uppercase cursor-pointer ${
+                        className={`text-[9px] tracking-widest font-semibold px-6 py-3 rounded-full transition-all uppercase cursor-pointer ${
                           simulationRunning
                             ? "bg-neutral-900 text-neutral-600"
                             : "bg-[#A50034] text-white hover:bg-[#85002a]"
@@ -1232,15 +1232,15 @@ initProjectWorkspace();`;
                 </p>
               </div>
 
-              {/* Minimal Text Selector */}
-              <div className="flex gap-8 border-b border-gray-200 dark:border-neutral-800 pb-2">
+              {/* Minimal Text Selector (rounded GNB design) */}
+              <div className="flex gap-4 border-b border-gray-200 dark:border-neutral-855 pb-2">
                 {(Object.keys(apiSchemas) as APIProviderType[]).map((apiId) => (
                   <button
                     key={apiId}
                     onClick={() => setSelectedAPI(apiId)}
-                    className={`pb-2 text-[10px] tracking-widest font-bold uppercase cursor-pointer transition-all duration-300 ${
+                    className={`py-2 px-5 text-[10px] tracking-wider font-extrabold uppercase transition-all duration-300 rounded-full cursor-pointer ${
                       selectedAPI === apiId
-                        ? "text-[#A50034] border-b-2 border-[#A50034]"
+                        ? "bg-[#A50034] text-white shadow-sm"
                         : "text-gray-400 hover:text-gray-900 dark:hover:text-white"
                     }`}
                   >
@@ -1254,11 +1254,11 @@ initProjectWorkspace();`;
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
                     <h4 className="text-sm font-bold text-gray-900 dark:text-white">{apiSchemas[selectedAPI].title}</h4>
-                    <p className="text-xs text-gray-500 mt-1">{apiSchemas[selectedAPI].description}</p>
+                    <p className="text-xs text-gray-550 mt-1">{apiSchemas[selectedAPI].description}</p>
                   </div>
                   <button
                     onClick={() => handleCopyText(apiSchemas[selectedAPI].schema, "api")}
-                    className={`px-4 py-2 text-[10px] tracking-wider font-semibold rounded-none cursor-pointer uppercase border transition-all ${
+                    className={`px-4 py-2 text-[10px] tracking-wider font-semibold rounded-full cursor-pointer uppercase border transition-all ${
                       apiCopied
                         ? "bg-emerald-600 border-emerald-600 text-white"
                         : "bg-white dark:bg-neutral-900 border-gray-200 dark:border-neutral-800 text-gray-600 hover:border-[#A50034]"
@@ -1267,13 +1267,13 @@ initProjectWorkspace();`;
                     {apiCopied ? "복사 완료" : "스키마 복사"}
                   </button>
                 </div>
-                <pre className="p-5 bg-gray-900 text-neutral-300 dark:bg-[#141416] rounded-none text-[11px] font-mono overflow-x-auto border border-gray-200 dark:border-neutral-800 leading-relaxed max-h-[300px]">
+                <pre className="p-5 bg-gray-900 text-neutral-300 dark:bg-[#141416] rounded-xl border border-gray-200 dark:border-neutral-800 leading-relaxed max-h-[300px] overflow-x-auto text-[11px] font-mono shadow-sm">
                   {apiSchemas[selectedAPI].schema}
                 </pre>
               </div>
 
               {/* Actions Setup Guide */}
-              <div className="p-6 bg-gray-50 dark:bg-[#141416] border border-gray-200 dark:border-neutral-850 text-xs text-gray-655 dark:text-neutral-400 space-y-4">
+              <div className="p-6 bg-gray-50 dark:bg-[#141416] border border-gray-200 dark:border-neutral-850 text-xs text-gray-655 dark:text-neutral-400 space-y-4 rounded-xl">
                 <h4 className="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[10px]">LGE Actions API 인증 세부 매뉴얼</h4>
                 <p className="leading-relaxed font-normal">
                   Actions를 통신 연동할 때는 **인증 방식 (Authentication)** 설정에 주의해 주십시오. 구글이나 네이버 API의 경우, 스키마 내에 API Key 변수 전달을 정의하거나 GPTs의 [Authentication] 설정 팝업에서 `API Key`를 선택한 후 헤더(Custom Header: `Authorization` 또는 `X-Naver-Client-Id` 등)에 값을 매핑해야만 정상적인 Status Code 200 데이터를 수신받을 수 있습니다.
@@ -1286,14 +1286,14 @@ initProjectWorkspace();`;
 
       </main>
 
-      {/* 3. Call-to-Action (CTA) White-Red Banner (Reference Image Style) */}
+      {/* 3. Call-to-Action (CTA) White-Red Banner (Reference Image Style - rounded-3xl) */}
       {currentPage === "home" && (
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16">
-          <div className="bg-white dark:bg-[#141416] p-12 sm:p-16 border-t-4 border-[#A50034] text-center space-y-8 border border-[#EBF0F5] dark:border-neutral-900 shadow-sm relative">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 py-16 animate-fadeIn">
+          <div className="bg-white dark:bg-[#141416] p-12 sm:p-16 border-t-4 border-[#A50034] text-center space-y-8 border border-[#EBF0F5] dark:border-neutral-900 shadow-md relative rounded-3xl">
             
-            {/* LGE Satbyeal star logo badge */}
+            {/* LGE Satbyeal star logo badge (rounded-full) */}
             <div className="flex justify-center">
-              <div className="flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-neutral-800 rounded-none bg-gray-50 dark:bg-[#0A0A0B]">
+              <div className="flex items-center gap-2 px-5 py-2 border border-gray-200 dark:border-neutral-800 rounded-full bg-gray-50 dark:bg-[#0A0A0B]">
                 <span className="text-[#A50034] font-black text-xs">★</span>
                 <span className="text-xs font-bold text-gray-800 dark:text-neutral-200">샛별자문단 5기</span>
               </div>
@@ -1302,13 +1302,13 @@ initProjectWorkspace();`;
             <h2 className="text-3xl font-black text-gray-900 dark:text-white leading-tight">
               AI 전략의 수준을 높일 <span className="text-[#A50034]">준비가 되셨나요?</span>
             </h2>
-            <p className="text-xs sm:text-sm text-gray-500 dark:text-neutral-400 leading-relaxed font-normal max-w-xl mx-auto">
+            <p className="text-xs sm:text-sm text-gray-505 dark:text-neutral-400 leading-relaxed font-normal max-w-xl mx-auto">
               샛별자문단 5기와 함께하세요. 진화된 업무의 다음 10년을 맞이할 세미나의 문이 활짝 열려 있습니다.
             </p>
             
             <button
               onClick={() => setQuizOpen(true)}
-              className="bg-[#A50034] hover:bg-red-800 text-white font-extrabold text-xs px-8 py-4 tracking-wider uppercase transition-all shadow-md cursor-pointer inline-block rounded-none"
+              className="bg-[#A50034] hover:bg-red-800 text-white font-extrabold text-xs px-8 py-4 tracking-wider uppercase transition-all shadow-md hover:shadow-lg cursor-pointer inline-block rounded-full"
             >
               지금 빌딩 시작하기
             </button>
@@ -1339,15 +1339,15 @@ initProjectWorkspace();`;
         </div>
       </footer>
 
-      {/* ==================== 5. ONBOARDING QUIZ MODAL ==================== */}
+      {/* ==================== 5. ONBOARDING QUIZ MODAL (rounded-3xl) ==================== */}
       {quizOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/10 backdrop-blur-sm p-4 animate-fadeIn">
-          <div className="bg-white dark:bg-[#141416] p-10 rounded-none max-w-xl w-full border border-gray-250 dark:border-neutral-850 shadow-sm relative text-left">
+          <div className="bg-white dark:bg-[#141416] p-10 rounded-3xl max-w-xl w-full border border-gray-250 dark:border-neutral-850 shadow-2xl relative text-left">
             
             {/* Close */}
             <button
               onClick={() => setQuizOpen(false)}
-              className="absolute top-6 right-6 p-2 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer"
+              className="absolute top-6 right-6 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer transition-colors"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -1359,7 +1359,7 @@ initProjectWorkspace();`;
               {[1, 2, 3].map((step) => (
                 <div
                   key={step}
-                  className={`h-0.5 flex-1 transition-all duration-300 ${
+                  className={`h-0.5 flex-1 transition-all duration-300 rounded-full ${
                     quizStep >= step ? "bg-[#A50034]" : "bg-gray-100 dark:bg-neutral-850"
                   }`}
                 />
@@ -1374,7 +1374,7 @@ initProjectWorkspace();`;
                 : "메일 및 진단 분석 보고서 발행용 소속 이메일을 등록해 주세요."}
             </h3>
 
-            {/* Quiz Step 1 */}
+            {/* Quiz Step 1 (rounded-xl choices) */}
             {quizStep === 1 && (
               <div className="space-y-2">
                 {[
@@ -1389,7 +1389,7 @@ initProjectWorkspace();`;
                       setUserDivision(d.id);
                       setQuizStep(2);
                     }}
-                    className="w-full text-left p-4 rounded-none border border-gray-100 dark:border-neutral-850 hover:border-[#A50034] dark:hover:border-[#A50034] hover:bg-gray-50 dark:hover:bg-neutral-900 dark:bg-[#0B0B0C] transition-all font-semibold text-xs cursor-pointer text-gray-800 dark:text-neutral-200"
+                    className="w-full text-left p-4 rounded-xl border border-gray-100 dark:border-neutral-850 hover:border-[#A50034] dark:hover:border-[#A50034] hover:bg-gray-50 dark:hover:bg-neutral-900 dark:bg-[#0B0B0C] transition-all font-semibold text-xs cursor-pointer text-gray-800 dark:text-neutral-200"
                   >
                     {d.label}
                   </button>
@@ -1397,7 +1397,7 @@ initProjectWorkspace();`;
               </div>
             )}
 
-            {/* Quiz Step 2 */}
+            {/* Quiz Step 2 (rounded-xl choices) */}
             {quizStep === 2 && (
               <div className="space-y-2">
                 {[
@@ -1412,7 +1412,7 @@ initProjectWorkspace();`;
                       setUserPainPoint(p.id);
                       setQuizStep(3);
                     }}
-                    className="w-full text-left p-4 rounded-none border border-gray-100 dark:border-neutral-850 hover:border-[#A50034] dark:hover:border-[#A50034] hover:bg-gray-50 dark:hover:bg-neutral-900 dark:bg-[#0B0B0C] transition-all font-semibold text-xs cursor-pointer text-gray-800 dark:text-neutral-200"
+                    className="w-full text-left p-4 rounded-xl border border-gray-100 dark:border-neutral-850 hover:border-[#A50034] dark:hover:border-[#A50034] hover:bg-gray-50 dark:hover:bg-neutral-900 dark:bg-[#0B0B0C] transition-all font-semibold text-xs cursor-pointer text-gray-800 dark:text-neutral-200"
                   >
                     {p.label}
                   </button>
@@ -1430,12 +1430,12 @@ initProjectWorkspace();`;
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                     placeholder="example@lge.com"
-                    className="w-full p-3.5 border border-gray-100 dark:border-neutral-850 dark:bg-[#0B0B0C] rounded-none focus:outline-none focus:ring-1 focus:ring-[#A50034] text-xs font-semibold text-gray-800 dark:text-neutral-200"
+                    className="w-full p-3.5 border border-gray-100 dark:border-neutral-850 dark:bg-[#0B0B0C] rounded-xl focus:outline-none focus:ring-1 focus:ring-[#A50034] text-xs font-semibold text-gray-800 dark:text-neutral-200"
                   />
                 </div>
 
                 {quizResultFileReady && (
-                  <div className="p-4 rounded-none bg-emerald-500/5 border border-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-medium leading-relaxed">
+                  <div className="p-4 rounded-xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-medium leading-relaxed">
                     [진단 완료] LGE {userDivision} 최적화 {userPainPoint === "market" ? "Research" : userPainPoint === "report" ? "Analytics" : userPainPoint === "copy" ? "Copywriting" : "Automation"} GPTs 설정 분석이 완료되었습니다. 아래 버튼을 눌러 JSON 설정 파일을 다운로드하십시오.
                   </div>
                 )}
@@ -1446,14 +1446,14 @@ initProjectWorkspace();`;
                       setQuizResultFileReady(false);
                       setQuizStep(2);
                     }}
-                    className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-850 dark:hover:bg-neutral-750 text-gray-600 dark:text-neutral-200 font-semibold text-[10px] tracking-widest uppercase px-5 py-3 rounded-none transition-colors cursor-pointer"
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-855 dark:hover:bg-neutral-750 text-gray-655 dark:text-neutral-250 font-semibold text-[10px] tracking-widest uppercase px-5 py-3.5 rounded-full transition-colors cursor-pointer"
                   >
                     이전
                   </button>
                   {quizResultFileReady ? (
                     <button
                       onClick={downloadQuizConfig}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-[10px] tracking-widest uppercase px-6 py-3 rounded-none transition-all cursor-pointer"
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-[10px] tracking-widest uppercase px-6 py-3.5 rounded-full transition-all cursor-pointer shadow-sm"
                     >
                       JSON 설정 다운로드
                     </button>
@@ -1466,7 +1466,7 @@ initProjectWorkspace();`;
                         }
                         setQuizResultFileReady(true);
                       }}
-                      className="bg-[#A50034] hover:bg-[#85002a] text-white font-semibold text-[10px] tracking-widest uppercase px-6 py-3 rounded-none transition-all cursor-pointer"
+                      className="bg-[#A50034] hover:bg-[#85002a] text-white font-semibold text-[10px] tracking-widest uppercase px-6 py-3.5 rounded-full transition-all cursor-pointer shadow-sm"
                     >
                       결과 분석 실행
                     </button>
@@ -1479,15 +1479,15 @@ initProjectWorkspace();`;
         </div>
       )}
 
-      {/* ==================== 6. FLOATING CHATBOT WIDGET ==================== */}
+      {/* ==================== 6. FLOATING CHATBOT WIDGET (rounded-3xl, circle toggle) ==================== */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
         {chatbotOpen && (
-          <div className="w-[340px] h-[440px] rounded-none border shadow-none flex flex-col mb-4 overflow-hidden transition-all duration-300 animate-fadeIn bg-white border-gray-250 dark:bg-[#141416] dark:border-neutral-800 text-[#1D1D1F] dark:text-neutral-350">
+          <div className="w-[340px] h-[440px] rounded-3xl border shadow-2xl flex flex-col mb-4 overflow-hidden transition-all duration-300 animate-fadeIn bg-white border-gray-200 dark:bg-[#141416] dark:border-neutral-800 text-[#1D1D1F] dark:text-neutral-350">
             
             {/* Header */}
             <div className="flex items-center justify-between bg-gray-900 px-5 py-4 text-white">
               <span className="font-semibold text-[10px] tracking-widest uppercase">LGE FAQ Helper</span>
-              <button onClick={() => setChatbotOpen(false)} className="text-gray-400 hover:text-white cursor-pointer">
+              <button onClick={() => setChatbotOpen(false)} className="text-gray-400 hover:text-white cursor-pointer p-1 rounded-full hover:bg-white/10 transition-colors">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -1500,12 +1500,12 @@ initProjectWorkspace();`;
             }`}>
               {chatbotMessages.map((msg, i) => (
                 <div key={i} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                  <div className={`p-3 rounded-none max-w-[80%] text-left font-normal ${
+                  <div className={`p-3.5 px-4 rounded-2xl max-w-[80%] text-left font-normal ${
                     msg.sender === "user"
-                      ? "bg-gray-900 text-white"
+                      ? "bg-gray-900 text-white rounded-tr-none"
                       : darkMode
-                      ? "bg-neutral-850 text-neutral-350 border border-neutral-750"
-                      : "bg-white text-gray-800 border border-gray-200 shadow-sm"
+                      ? "bg-neutral-850 text-neutral-350 border border-neutral-750 rounded-tl-none"
+                      : "bg-white text-gray-800 border border-gray-200 shadow-sm rounded-tl-none"
                   }`}>
                     {msg.text}
                   </div>
@@ -1534,7 +1534,7 @@ initProjectWorkspace();`;
                 <button
                   key={q}
                   onClick={() => sendQuickQuestion(q)}
-                  className={`text-[9px] font-semibold py-1 px-2.5 rounded-none border transition-all cursor-pointer ${
+                  className={`text-[9px] font-semibold py-1.5 px-3 rounded-full border transition-all cursor-pointer ${
                     darkMode
                       ? "border-neutral-700 bg-neutral-800 text-neutral-400 hover:border-[#A50034] hover:text-white"
                       : "border-gray-200 bg-gray-50 text-gray-655 hover:border-[#A50034] hover:text-[#A50034]"
@@ -1553,11 +1553,11 @@ initProjectWorkspace();`;
                 type="text"
                 name="chatInput"
                 placeholder="질문 입력..."
-                className={`flex-1 px-3 py-2 text-xs rounded-none border focus:outline-none focus:ring-1 focus:ring-[#A50034] font-normal ${
+                className={`flex-1 px-4 py-2 text-xs rounded-full border focus:outline-none focus:ring-1 focus:ring-[#A50034] font-normal ${
                   darkMode ? "bg-neutral-900 border-neutral-800 text-white" : "bg-white border-gray-200 text-[#1D1D1F]"
                 }`}
               />
-              <button type="submit" className="bg-gray-900 text-white hover:bg-black rounded-none px-4 text-xs font-semibold tracking-wider transition-colors cursor-pointer uppercase">
+              <button type="submit" className="bg-gray-900 text-white hover:bg-black rounded-full px-4 text-xs font-semibold tracking-wider transition-colors cursor-pointer uppercase">
                 Send
               </button>
             </form>
@@ -1565,17 +1565,17 @@ initProjectWorkspace();`;
           </div>
         )}
 
-        {/* Toggle Button */}
+        {/* Toggle Button (perfect circle with shadow) */}
         <button
           onClick={() => setChatbotOpen(!chatbotOpen)}
-          className="h-10 w-10 rounded-none bg-gray-900 hover:bg-black text-white flex items-center justify-center transition-all cursor-pointer border border-neutral-800 shadow-none"
+          className="h-12 w-12 rounded-full bg-gray-900 hover:bg-black text-white flex items-center justify-center transition-all cursor-pointer border border-neutral-800 shadow-2xl hover:scale-105 active:scale-95 duration-200"
         >
           {chatbotOpen ? (
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
           )}
