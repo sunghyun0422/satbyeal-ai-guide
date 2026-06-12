@@ -454,41 +454,56 @@ initProjectWorkspace();`;
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 font-sans antialiased ${darkMode ? "bg-[#0C0C0E] text-[#D1D1D6]" : "bg-[#FDFDFD] text-[#1D1D1F]"}`}>
+    <div className={`min-h-screen transition-colors duration-300 font-sans antialiased ${darkMode ? "bg-[#0A0A0B] text-[#E4E4E7]" : "bg-[#FCFCFD] text-[#111113]"}`}>
       
-      {/* Editorial Top Bar (Double line style) */}
-      <div className={`w-full text-center py-4 text-[10px] tracking-[0.25em] font-semibold uppercase border-b-4 border-double ${darkMode ? "bg-[#0C0C0E] border-[#1C1C1E] text-neutral-500" : "bg-white border-gray-205 text-gray-400"}`}>
-        LG Electronics — Satbyeal Advisory Group 5th AI Editorial — Volume 05
+      {/* High-End Editorial Header Block */}
+      <div className={`w-full py-4 text-center text-[10px] tracking-[0.3em] font-medium uppercase border-b ${darkMode ? "border-neutral-900 text-neutral-500" : "border-gray-100 text-gray-400"}`}>
+        LG Electronics — Satbyeal Advisory Group 5th AI Integration Journal
       </div>
 
-      {/* Minimalist GNB Header */}
-      <header className={`sticky top-0 z-45 w-full transition-all duration-300 border-b ${isScrolled ? "py-4" : "py-8"} ${darkMode ? "bg-[#0C0C0E]/95 border-[#1C1C1E]" : "bg-white/95 border-gray-100"}`}>
+      {/* Classic Magazine Title Banner */}
+      <div className="max-w-6xl mx-auto px-6 pt-12 pb-8 text-center space-y-4">
+        <span className="text-[9px] tracking-[0.4em] font-semibold text-gray-400 uppercase dark:text-neutral-500">
+          THE PLATFORM STANDARD FOR WORKFLOW ACCELERATION
+        </span>
+        <h1 className="font-serif font-bold text-6xl md:text-8xl tracking-[0.1em] text-gray-900 dark:text-white uppercase leading-none select-none">
+          SATBYEAL
+        </h1>
+        
+        {/* Double Border Detail */}
+        <div className={`border-t-4 border-b border-double py-1.5 flex items-center justify-between text-[9px] tracking-[0.2em] font-bold uppercase ${darkMode ? "border-neutral-800 text-neutral-450" : "border-gray-900 text-gray-500"}`}>
+          <span>VOL. 05 // JUNE 2026</span>
+          <span className="text-[#A50034]">SPECIAL REPORT: PERSISTENT CONTEXT</span>
+          <span>LGE ADVISORY GROUP</span>
+        </div>
+      </div>
+
+      {/* GNB Navigation Header */}
+      <header className={`sticky top-0 z-45 w-full transition-all duration-300 border-b backdrop-blur-md ${isScrolled ? "py-4 shadow-sm" : "py-6"} ${darkMode ? "bg-[#0A0A0B]/95 border-neutral-900" : "bg-[#FCFCFD]/95 border-gray-100"}`}>
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 sm:px-8">
           
-          {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => handlePageChange("home")}>
-            <div className="h-4.5 w-4.5 bg-[#A50034] rounded-none flex items-center justify-center text-white font-bold text-[9px] tracking-tighter">L</div>
-            <span className="font-semibold text-xs tracking-widest uppercase text-gray-900 dark:text-white">SATBYEAL ADVISORY</span>
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => handlePageChange("home")}>
+            <div className="h-4 w-4 bg-[#A50034] rounded-none flex items-center justify-center text-white font-bold text-[8px]">L</div>
+            <span className="font-bold text-[10px] tracking-widest uppercase text-gray-950 dark:text-white">INDEX</span>
           </div>
 
-          {/* Minimal Router Navigation */}
           <nav className="flex items-center gap-10 md:gap-14">
             <button
               onClick={() => handlePageChange("home")}
               className={`text-[10px] tracking-[0.2em] uppercase font-bold transition-all duration-300 pb-1 cursor-pointer ${
                 currentPage === "home"
                   ? "text-[#A50034] border-b border-[#A50034]"
-                  : "text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-neutral-100"
+                  : "text-gray-400 dark:text-neutral-500 hover:text-gray-950 dark:hover:text-white"
               }`}
             >
-              HOME
+              00 COVER
             </button>
             <button
               onClick={() => handlePageChange("part1")}
               className={`text-[10px] tracking-[0.2em] uppercase font-bold transition-all duration-300 pb-1 cursor-pointer ${
                 currentPage === "part1"
                   ? "text-[#A50034] border-b border-[#A50034]"
-                  : "text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-neutral-100"
+                  : "text-gray-400 dark:text-neutral-500 hover:text-gray-950 dark:hover:text-white"
               }`}
             >
               01 PROJECTS
@@ -498,181 +513,193 @@ initProjectWorkspace();`;
               className={`text-[10px] tracking-[0.2em] uppercase font-bold transition-all duration-300 pb-1 cursor-pointer ${
                 currentPage === "part2"
                   ? "text-[#A50034] border-b border-[#A50034]"
-                  : "text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-neutral-100"
+                  : "text-gray-400 dark:text-neutral-500 hover:text-gray-950 dark:hover:text-white"
               }`}
             >
               02 GPTS & API
             </button>
           </nav>
 
-          {/* Theme Switch & Quick Quiz */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-1 text-gray-400 hover:text-gray-950 dark:hover:text-white cursor-pointer"
+              className="p-1 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer"
               title="Toggle Theme"
             >
               {darkMode ? (
-                <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
                 </svg>
               ) : (
-                <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                 </svg>
               )}
             </button>
             <button
               onClick={() => setQuizOpen(true)}
-              className="text-[10px] tracking-wider uppercase font-semibold text-[#A50034] hover:text-red-800 transition-all cursor-pointer border-b border-[#A50034] pb-0.5"
+              className="text-[9px] tracking-widest uppercase font-bold text-[#A50034] border-b border-[#A50034] pb-0.5 hover:text-red-800"
             >
-              자가진단
+              퀴즈 빌더
             </button>
           </div>
         </div>
       </header>
 
       {/* Main Container */}
-      <main className="max-w-5xl mx-auto w-full px-6 sm:px-8 py-20 sm:py-32">
+      <main className="max-w-6xl mx-auto w-full px-6 sm:px-8 py-20 sm:py-28">
         
-        {/* ==================== 1. HOME VIEW ==================== */}
+        {/* ==================== 0. HOME VIEW (3-COLUMN PRINT STYLE) ==================== */}
         {currentPage === "home" && (
-          <div className="space-y-32 animate-fadeIn text-left">
+          <div className="space-y-28 animate-fadeIn">
             
-            {/* Minimalist Cover Hero */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              <div className="lg:col-span-7 space-y-8">
-                <span className="text-[10px] tracking-[0.25em] font-semibold text-[#A50034] uppercase block">
-                  LGE Special Editorial Issue
+            {/* The Classic 3-Column Front Page Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+              
+              {/* Column 1: Manifesto */}
+              <div className="md:col-span-4 space-y-6 text-left md:border-r border-gray-100 dark:border-neutral-900 md:pr-8">
+                <span className="text-[9px] tracking-widest font-bold text-[#A50034] uppercase block">
+                  I. Editorial Manifesto
                 </span>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.12]">
-                  AI를 단순한 도구가 아닌,<br />
-                  생산성의 표준으로.
-                </h1>
+                <h3 className="font-serif font-bold text-2xl text-gray-900 dark:text-white leading-tight">
+                  일회성 채팅에서<br />사내 지식 자산으로의 전환
+                </h3>
+                <div className="border-b border-gray-105 dark:border-neutral-900 pb-2"></div>
                 
-                {/* Manifesto Paragraph with Drop Cap */}
-                <div className="text-sm sm:text-base text-gray-600 dark:text-neutral-400 leading-relaxed font-normal max-w-xl">
-                  <span className="text-[#A50034] text-5xl font-black float-left mr-3 mt-1 leading-[0.8] font-serif">M</span>
-                  매번 소속 본부명과 지시 사항을 복사하여 대화창에 수동으로 붙여넣고 계십니까? 샛별자문단 5기가 발행하는 이번 프리미엄 에디션은 임직원 및 임원진들이 일회성 대화라는 구조적 한계를 탈피할 수 있도록 유도합니다. AI 모델을 개인의 단순 비서로 가볍게 소모하는 차원을 넘어, 부서의 지속적인 지식 자산으로 고정하고 협업 환경에 안착시키는 실무 로드맵을 제공합니다.
-                </div>
-
-                <p className="text-xs text-gray-550 dark:text-neutral-500 leading-relaxed max-w-xl">
-                  본 가이드는 대용량 문건을 상시 참조하여 여러 분석 목적에 맞춰 대화 세션을 분할 관리하는 <strong>ChatGPT Projects (1편)</strong>와 전용 페르소나 설계 및 실시간 검색 API Actions 연동을 다루는 <strong>Custom GPTs & API (2편)</strong>로 나뉘어 구성되어 있습니다.
+                {/* Drop Cap Paragraph */}
+                <p className="text-xs sm:text-[13px] text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
+                  <span className="text-[#A50034] text-5xl font-serif font-bold float-left mr-2.5 mt-1 leading-[0.8]">M</span>
+                  매번 소속 본부명과 지시 사항을 복사하여 대화창에 수동으로 붙여넣고 계십니까? 샛별자문단 5기가 발행하는 이번 프리미엄 에디션은 임직원 및 임원진들이 일회성 대화라는 기존 생성형 AI의 구조적 한계를 탈피하도록 유도합니다. AI 모델을 가볍게 소모하는 차원을 넘어, 부서의 영구적인 지식 자산으로 고정하고 협업 환경에 안착시키는 실무 로드맵을 제공합니다.
                 </p>
-
-                <div className="flex flex-wrap gap-6 pt-4">
-                  <button
-                    onClick={() => handlePageChange("part1")}
-                    className="bg-gray-950 dark:bg-white text-white dark:text-black hover:bg-black dark:hover:bg-neutral-100 text-[10px] tracking-widest font-semibold px-8 py-4 rounded-none transition-all cursor-pointer uppercase border border-gray-900 dark:border-white"
-                  >
-                    01 Projects 가상오피스
-                  </button>
-                  <button
-                    onClick={() => handlePageChange("part2")}
-                    className="bg-[#A50034] hover:bg-[#85002a] text-white text-[10px] tracking-widest font-semibold px-8 py-4 rounded-none transition-all cursor-pointer uppercase"
-                  >
-                    02 GPTs 직무자동화
-                  </button>
-                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  자문단이 제안하는 솔루션은 간단하지만 파급적입니다. 지식과 맥락을 보존하는 가상 사무실 구축(Projects)과 외부 검색 채널을 연결해 동작하는 자동화 에이전트(GPTs)의 결합입니다.
+                </p>
               </div>
-              <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <div className="w-full max-w-[340px] aspect-square rounded-none bg-gray-50 dark:bg-[#141416] p-8 flex items-center justify-center border border-gray-100 dark:border-neutral-800">
+
+              {/* Column 2: Projects Overview */}
+              <div className="md:col-span-4 space-y-6 text-left md:border-r border-gray-100 dark:border-neutral-900 md:pr-8">
+                <span className="text-[9px] tracking-widest font-bold text-gray-450 dark:text-neutral-500 uppercase block">
+                  II. Workspace Context
+                </span>
+                <h3 className="font-serif font-bold text-2xl text-gray-900 dark:text-white leading-tight">
+                  ChatGPT Projects:<br />영구 맥락 가상오피스
+                </h3>
+                <div className="border-b border-gray-105 dark:border-neutral-900 pb-2"></div>
+                
+                <p className="text-xs sm:text-[13px] text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
+                  프로젝트 기능은 최대 20개의 핵심 비즈니스 보고서 및 시장 점유율 데이터(.csv, .pdf 등)를 단 한 번 업로드함으로써 지식 맥락을 영구 고정합니다. 부서원들을 초대하여 동일한 지식 베이스를 상시 공유하고, 하위에서 각 용도에 맞게 대화 스레드를 분할하여 협업 능률을 극대화합니다.
+                </p>
+                <button
+                  onClick={() => handlePageChange("part1")}
+                  className="inline-flex items-center gap-1.5 text-[10px] tracking-widest font-bold text-[#A50034] uppercase hover:underline cursor-pointer pt-2"
+                >
+                  READ SECTION 01 →
+                </button>
+
+                <div className="w-full aspect-video bg-gray-50 dark:bg-[#141416] flex items-center justify-center p-4 border border-gray-100 dark:border-neutral-850">
                   <Image
-                    src="/hero_3d_trophy.png"
-                    alt="LG Active Intel Hero Graphic"
-                    width={260}
-                    height={260}
+                    src="/chapter1_network.png"
+                    alt="Projects Network Concept Illustration"
+                    width={160}
+                    height={160}
                     className="object-contain"
-                    priority
                   />
                 </div>
               </div>
-            </div>
 
-            {/* Editorial Line divider */}
-            <div className="border-t border-gray-150 dark:border-neutral-800 w-full"></div>
-
-            {/* In-depth Technical Specs (Expanded Content) */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-start">
-              
-              <div className="md:col-span-4 space-y-8">
-                <span className="text-[10px] tracking-[0.25em] font-semibold text-gray-400 dark:text-neutral-500 uppercase block">
-                  Column & Pull Quote
+              {/* Column 3: Custom GPTs Overview */}
+              <div className="md:col-span-4 space-y-6 text-left">
+                <span className="text-[9px] tracking-widest font-bold text-gray-450 dark:text-neutral-500 uppercase block">
+                  III. Job Automation
                 </span>
-                
-                {/* Pull Quote */}
-                <div className="border-l-2 border-[#A50034] pl-6 py-2">
-                  <p className="text-base font-serif italic text-gray-800 dark:text-neutral-200 leading-relaxed">
-                    "AI는 일회성 소모품이 아닙니다. 단 한 번의 설정과 지식 축적을 통해 부서의 고유한 브레인 자산으로 영구 고정되어야 합니다."
-                  </p>
-                  <span className="text-[10px] font-semibold text-gray-400 block mt-2">— 샛별자문단 5기 에디토리얼 발췌</span>
-                </div>
-
-                <p className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
-                  일반적인 챗봇 대화는 임직원 개인의 프롬프트 수준에 의존하며, 대화방을 닫으면 그동안 투입된 데이터 정보 맥락이 즉시 유실됩니다. 이러한 일시적 채팅 형태는 비즈니스 문서 보안이나 업무 연속성 유지 측면에서 치명적 비효율을 가집니다.
-                </p>
-              </div>
-
-              {/* Technical Matrix Table */}
-              <div className="md:col-span-8 space-y-8">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  ChatGPT Projects vs Custom GPTs 상세 비교
+                <h3 className="font-serif font-bold text-2xl text-gray-900 dark:text-white leading-tight">
+                  Custom GPTs & API:<br />특화 직무 에이전트
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-650 dark:text-neutral-400 leading-relaxed">
-                  생산성 표준을 설계할 때 가장 먼저 결정해야 하는 것은 사용 범위와 목적에 맞는 기술 구조의 정립입니다. 두 연동 플랫폼의 기술적 제원과 주 사용 시나리오는 다음과 같이 구분됩니다.
+                <div className="border-b border-gray-105 dark:border-neutral-900 pb-2"></div>
+                
+                <p className="text-xs sm:text-[13px] text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
+                  특화 가전 마케팅 카피 작성을 보장하는 Writer, 외부 API 검색 Actions를 호출해 실시간 보고서를 완성하는 Researcher, 파이썬 코드 인터프리터 샌드박스로 엑셀 시각화를 그리는 Analyst 등을 조립합니다. 단 한 단어만 쳐도 부서 규격화 결과가 출력됩니다.
                 </p>
+                <button
+                  onClick={() => handlePageChange("part2")}
+                  className="inline-flex items-center gap-1.5 text-[10px] tracking-widest font-bold text-[#A50034] uppercase hover:underline cursor-pointer pt-2"
+                >
+                  READ SECTION 02 →
+                </button>
 
-                {/* Flat Table */}
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-xs border-collapse">
-                    <thead>
-                      <tr className="border-b border-gray-200 dark:border-neutral-850 text-gray-450 dark:text-neutral-500 font-bold uppercase tracking-wider">
-                        <th className="py-3 pr-4">비교 항목</th>
-                        <th className="py-3 px-4">ChatGPT Projects (1편)</th>
-                        <th className="py-3 pl-4">Custom GPTs & Actions (2편)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-100 dark:divide-neutral-850 text-gray-600 dark:text-neutral-400">
-                      <tr>
-                        <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">주요 목적</td>
-                        <td className="py-4 px-4 leading-relaxed">대규모 지식 파일의 공유 및 부서 단위 다각도 다중 협업</td>
-                        <td className="py-4 pl-4 leading-relaxed">특정 직무 프로세스의 단일화 및 API 백그라운드 자동화</td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">업로드 리소스</td>
-                        <td className="py-4 px-4 leading-relaxed">최대 20개 파일 (PDF, CSV, DOCX 등), 최대 200,000 토큰</td>
-                        <td className="py-4 pl-4 leading-relaxed">최대 20개 파일 지원 (개인화 또는 스토어 배포용 지식)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">공유 및 보안 범위</td>
-                        <td className="py-4 px-4 leading-relaxed">지정된 팀 멤버 초대 및 사내 Enterprise 도메인 내부 공유</td>
-                        <td className="py-4 pl-4 leading-relaxed">비공개(개인), 링크 공유(부서), GPT Store(사내/글로벌 공개)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">API 연동 지원</td>
-                        <td className="py-4 px-4 leading-relaxed">외부 Actions 호출 불가 (내부 파일 서치 위주)</td>
-                        <td className="py-4 pl-4 leading-relaxed">OpenAPI JSON 연동 (구글/네이버/유튜브 등 외부 호출 가능)</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="w-full aspect-video bg-gray-50 dark:bg-[#141416] flex items-center justify-center p-4 border border-gray-100 dark:border-neutral-850">
+                  <Image
+                    src="/chapter2_robots.png"
+                    alt="GPTs Actions Robots Concept Illustration"
+                    width={160}
+                    height={160}
+                    className="object-contain"
+                  />
                 </div>
               </div>
 
             </div>
 
-            {/* Subtle Divider Line */}
-            <div className="border-t border-gray-150 dark:border-neutral-800 w-full"></div>
+            {/* Pull Quote Section */}
+            <div className="border-t border-b border-gray-100 dark:border-neutral-900 py-12 text-center max-w-3xl mx-auto">
+              <p className="font-serif italic text-2xl sm:text-3xl text-gray-800 dark:text-neutral-100 leading-relaxed">
+                "AI 비서를 다루는 기술은 단순히 프롬프트를 화려하게 짜는 것에서 출발하지 않는다. 부서의 맥락(Context)을 고정하고, 이를 사내 자산으로 축적하는 아키텍처의 설계가 본질이다."
+              </p>
+              <span className="text-[10px] tracking-[0.2em] font-semibold text-gray-400 uppercase block mt-4">
+                — SATBYEAL ADVISORY GROUP 5TH EDITORIAL
+              </span>
+            </div>
 
-            {/* Minimalist CTA Area */}
-            <div className="py-20 text-center space-y-8 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 p-8 sm:p-12 rounded-none">
+            {/* Table of Specification Details */}
+            <div className="space-y-6 text-left max-w-4xl mx-auto">
+              <h4 className="font-serif font-bold text-xl text-gray-900 dark:text-white">
+                ChatGPT Projects vs Custom GPTs 기술적 스펙 비교
+              </h4>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs border-collapse">
+                  <thead>
+                    <tr className="border-b border-gray-200 dark:border-neutral-850 text-gray-450 dark:text-neutral-500 font-bold uppercase tracking-wider">
+                      <th className="py-3 pr-4">비교 분류</th>
+                      <th className="py-3 px-4">ChatGPT Projects (1편)</th>
+                      <th className="py-3 pl-4">Custom GPTs & API Actions (2편)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100 dark:divide-neutral-850 text-gray-600 dark:text-neutral-400">
+                    <tr>
+                      <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">개념 및 용도</td>
+                      <td className="py-4 px-4 leading-relaxed">대규모 지식을 고정한 가상 부서 회의실 및 동시 다중 스레드 협업 공간</td>
+                      <td className="py-4 pl-4 leading-relaxed">단일 직무 특화(카피라이터, 리서처, 데이터 차트 메이커) 자동화 미니앱</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">컨텍스트 제원</td>
+                      <td className="py-4 px-4 leading-relaxed">최대 20개 지식 파일 업로드 지원, 최대 200,000 토큰 내재 가능</td>
+                      <td className="py-4 pl-4 leading-relaxed">최대 20개 지식 파일 업로드, 외부 API Actions 전용 스키마 입력 연동</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">보안 및 공유범위</td>
+                      <td className="py-4 px-4 leading-relaxed">LGE 사내 Enterprise 멤버 지정 초대 및 내부 도메인 내 안전 공유</td>
+                      <td className="py-4 pl-4 leading-relaxed">나만 사용(Private), 링크 공유(유관부서), GPT Store(사내 전체 배포)</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 pr-4 font-bold text-gray-900 dark:text-white">외부 연동 한계</td>
+                      <td className="py-4 px-4 leading-relaxed">외부 API 실시간 호출 불가 (정적 업로드 파일 기반 탐색만 지원)</td>
+                      <td className="py-4 pl-4 leading-relaxed">구글/네이버/유튜브 등 OpenAPI Actions 통합 호출 및 데이터 파싱 지원</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Diagnostic Onboarding Quiz CTA Block */}
+            <div className="py-20 text-center space-y-8 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-900 p-8 sm:p-12 rounded-none">
               <div className="max-w-2xl mx-auto space-y-6">
                 <span className="text-[10px] tracking-[0.25em] font-semibold text-[#A50034] uppercase block">
                   Interactive Diagnosis Tool
                 </span>
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h2 className="font-serif font-bold text-3xl tracking-tight text-gray-900 dark:text-white">
                   부서 맞춤형 GPTs 설정을 진단해 드립니다.
                 </h2>
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-neutral-400 leading-relaxed max-w-xl mx-auto font-normal">
+                <p className="text-xs sm:text-sm text-gray-650 dark:text-neutral-400 leading-relaxed max-w-xl mx-auto font-normal">
                   본인의 소속 사업본부(HE, H&A, VS 등)와 현재 업무상 마주하고 있는 주요 비효율 Pain Point를 선택해 주십시오. 즉시 시스템 프롬프트(Instructions)로 이식할 수 있는 최적의 설정 구조 분석안과 커스텀 `.json` 파일을 빌드하여 제공합니다.
                 </p>
                 <button
@@ -691,30 +718,31 @@ initProjectWorkspace();`;
           </div>
         )}
 
-        {/* ==================== 2. PART 1: PROJECTS ==================== */}
+        {/* ==================== 1. PART 1: PROJECTS (SECTION INTERFACE) ==================== */}
         {currentPage === "part1" && (
-          <div className="space-y-20 animate-fadeIn text-left">
+          <div className="space-y-24 animate-fadeIn text-left">
             
-            {/* Header */}
-            <div className="border-b border-gray-100 dark:border-neutral-800 pb-8 space-y-4">
-              <span className="text-[10px] tracking-[0.2em] font-semibold text-[#A50034] uppercase block">
-                Chapter 01
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.12]">
-                1편: ChatGPT Projects - 가상 사무실 구축
+            {/* Section Cover Page Deco */}
+            <div className="border-b border-gray-150 dark:border-neutral-850 pb-8 space-y-4">
+              <div className="flex items-center justify-between text-[11px] tracking-[0.3em] font-bold text-gray-400 uppercase">
+                <span>SECTION 01 // WORKSPACE PERSISTENCE</span>
+                <span className="text-[#A50034]">CHAPTER ONE</span>
+              </div>
+              <h1 className="font-serif font-bold text-4xl sm:text-5xl text-gray-900 dark:text-white tracking-tight leading-tight">
+                Projects: 가상 사무실 구축
               </h1>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-neutral-400 max-w-3xl leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-650 dark:text-neutral-400 max-w-3xl leading-relaxed">
                 다수의 부서원들이 올레드 스마트 TV 로드맵과 시장점유율 데이터를 매번 다시 수동으로 업로드할 필요가 없습니다. Projects 기능은 일관된 백그라운드 지식을 유지하며 대화방을 안전하게 분할 분석해 줍니다.
               </p>
             </div>
 
-            {/* Flat Illustration Block */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-gray-50 dark:bg-[#141416] p-8 sm:p-12 rounded-none border border-gray-100 dark:border-neutral-850">
+            {/* Concept Info with Drop Cap */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-gray-50 dark:bg-[#141416] p-8 sm:p-12 border border-gray-100 dark:border-neutral-900">
               <div className="lg:col-span-5 flex justify-center">
-                <div className="w-full max-w-[280px] aspect-square rounded-none bg-white dark:bg-[#0C0C0E] p-4 border border-gray-150 dark:border-neutral-800 flex items-center justify-center">
+                <div className="w-full max-w-[280px] aspect-square bg-white dark:bg-[#0A0A0B] p-4 border border-gray-150 dark:border-neutral-800 flex items-center justify-center">
                   <Image
                     src="/chapter1_network.png"
-                    alt="Projects Network Concept Illustration"
+                    alt="Projects Network Concept"
                     width={220}
                     height={220}
                     className="object-contain"
@@ -722,29 +750,25 @@ initProjectWorkspace();`;
                 </div>
               </div>
               <div className="lg:col-span-7 space-y-4">
-                <span className="text-[9px] tracking-wider font-semibold text-gray-450 uppercase block">Workspace Knowledge</span>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">"파일 업로드 1회로 부서의 영구 브레인 셋업"</h3>
-                
-                {/* Paragraph with Drop Cap */}
-                <div className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
-                  <span className="text-[#A50034] text-3xl font-black float-left mr-2.5 mt-1 font-serif">K</span>
+                <span className="text-[9px] tracking-wider font-bold text-gray-400 uppercase block">Context Retention System</span>
+                <h3 className="font-serif font-bold text-xl text-gray-900 dark:text-white">단 한 번의 업로드로 구축되는 팀의 영구 브레인</h3>
+                <p className="text-xs sm:text-[13px] text-gray-600 dark:text-neutral-450 leading-relaxed font-normal">
+                  <span className="text-[#A50034] text-4xl font-serif font-bold float-left mr-2 mt-1 leading-[0.8]">K</span>
                   Knowledge 고정 기능은 최대 20개의 핵심 비즈니스 데이터를 프로젝트 폴더 내부에 영구 바인딩합니다. 개별 임직원들이 마케팅 보고서, 기술 사양표, 어조 톤앤매너 규칙 파일을 대화창을 켤 때마다 드래그앤드롭하여 분석하던 수동 데이터 낭비가 근본적으로 소멸됩니다. 부서 팀원들을 해당 프로젝트에 초대하는 것만으로, 모든 구성원이 동일한 지식 컨텍스트 위에서 안전하고 다채로운 분석 채팅 세션(Threads)을 개별 생성 및 병렬 구동할 수 있습니다.
-                </div>
-
+                </p>
                 <div className="flex gap-2 pt-2">
-                  <span className="px-2.5 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-750">지식 지속 유지</span>
-                  <span className="px-2.5 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-750">대화 스레드 분할</span>
+                  <span className="px-3 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-800">지식 지속 유지</span>
+                  <span className="px-3 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-800">대화 스레드 분할</span>
                 </div>
               </div>
             </div>
 
-            {/* Before vs After - Flat styling */}
+            {/* Before vs After (Split by vertical dotted line) */}
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">설정 적용 여부에 따른 비포 & 애프터 비교</h3>
+                <h3 className="font-serif font-bold text-2xl text-gray-900 dark:text-white">설정 적용 여부에 따른 비포 & 애프터 비교</h3>
                 
-                {/* Minimal tab controller */}
-                <div className="flex border border-gray-100 dark:border-neutral-800 p-0.5 rounded-none self-start">
+                <div className="flex border border-gray-150 dark:border-neutral-800 p-0.5 rounded-none self-start">
                   <button
                     onClick={() => setProjectBeforeAfterTab("sideBySide")}
                     className={`px-4 py-1.5 text-[10px] tracking-wider font-semibold rounded-none cursor-pointer uppercase transition-all duration-300 ${
@@ -769,11 +793,11 @@ initProjectWorkspace();`;
               </div>
 
               {projectBeforeAfterTab === "sideBySide" ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
                   {/* Before */}
                   <div className="p-8 rounded-none border border-gray-150 dark:border-neutral-800 bg-white dark:bg-[#141416] space-y-4">
                     <span className="text-[10px] tracking-widest font-bold text-red-700 block uppercase">
-                      Before / 미설정 환경
+                      Before / 미설정 기존 환경
                     </span>
                     <ul className="space-y-4 text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-normal list-disc pl-4">
                       <li>매 대화방을 새로 열 때마다 대용량 <strong>LG HE 스마트 TV 글로벌 마케팅 가이드라인 PDF</strong>와 <strong>경쟁사 판매율 엑셀 파일</strong>을 수동 드래그앤드롭으로 재업로드.</li>
@@ -784,7 +808,7 @@ initProjectWorkspace();`;
                   </div>
 
                   {/* After */}
-                  <div className="p-8 rounded-none border border-gray-150 dark:border-neutral-800 bg-gray-50/50 dark:bg-[#141416] space-y-4">
+                  <div className="p-8 rounded-none border border-gray-150 dark:border-neutral-800 bg-gray-50/50 dark:bg-[#141416] space-y-4 md:border-l-0 md:pl-8">
                     <span className="text-[10px] tracking-widest font-bold text-[#A50034] block uppercase">
                       After / Projects 도입 환경
                     </span>
@@ -808,9 +832,9 @@ initProjectWorkspace();`;
               )}
             </div>
 
-            {/* In-depth Case Study (Expanded Content) */}
+            {/* Case Study */}
             <div className="p-8 sm:p-12 rounded-none border border-gray-150 dark:border-neutral-800 bg-white dark:bg-[#141416] space-y-8">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white border-b border-gray-100 dark:border-neutral-850 pb-4">
+              <h3 className="font-serif font-bold text-xl text-gray-900 dark:text-white border-b border-gray-100 dark:border-neutral-850 pb-4">
                 LG HE사업본부 스마트 TV 유럽 런칭 프로젝트 실무 사례
               </h3>
               
@@ -831,15 +855,15 @@ initProjectWorkspace();`;
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
-                  <div className="p-5 bg-gray-50 dark:bg-[#0C0C0E] border border-gray-100 dark:border-neutral-850">
-                    <strong className="block text-gray-800 dark:text-neutral-200 mb-1 text-[11px]">3. 하위 스레드 활용 (Thread Breakdown)</strong>
-                    <p className="text-[11px]">
+                  <div className="p-5 bg-gray-50 dark:bg-[#0A0A0B] border border-gray-100 dark:border-neutral-850">
+                    <strong className="block text-gray-850 dark:text-neutral-200 mb-1 text-[11px]">3. 하위 스레드 활용 (Thread Breakdown)</strong>
+                    <p className="text-[11px] leading-relaxed">
                       소속 팀원인 전주임은 해당 프로젝트 내에서 <strong>'독일 프리미엄 딜러 발송 메일 초안 작성 방'</strong>을 개설하여 작업하였고, 이대리는 <strong>'현지 유튜브 바이럴 카피 추출 방'</strong>을 개설해 활용했습니다. 서로의 대화 창을 간섭하지 않으면서도 상위 폴더에 적재된 동일한 리뷰 데이터와 단가 엑셀 지식을 고유 배경으로 삼아 완벽히 일치된 실무 답변을 취합하는 성과를 냈습니다.
                     </p>
                   </div>
-                  <div className="p-5 bg-gray-50 dark:bg-[#0C0C0E] border border-gray-100 dark:border-neutral-850">
-                    <strong className="block text-gray-800 dark:text-neutral-200 mb-1 text-[11px]">4. 정량적 성과 (Performance Outcome)</strong>
-                    <p className="text-[11px]">
+                  <div className="p-5 bg-gray-50 dark:bg-[#0A0A0B] border border-gray-100 dark:border-neutral-850">
+                    <strong className="block text-gray-850 dark:text-neutral-200 mb-1 text-[11px]">4. 정량적 성과 (Performance Outcome)</strong>
+                    <p className="text-[11px] leading-relaxed">
                       이를 통해 매일 아침 평균 25분이 소요되던 자료 재업로드 및 시스템 지시 사항 복사 붙여넣기 과정이 완전 소멸되었습니다. 부서 내 데이터 활용 정합성이 기존 대비 40% 이상 향상되었으며, 일관성 없는 제안서 카피 문구가 작성되어 마케팅 커뮤니케이션실과 재검토를 반복하는 불필요한 공수가 완전히 사라졌습니다.
                     </p>
                   </div>
@@ -848,7 +872,7 @@ initProjectWorkspace();`;
               </div>
 
               {/* LGE Security Compliance Sidebar */}
-              <div className="p-6 bg-red-500/5 border-l-2 border-[#A50034] text-xs text-gray-650 dark:text-neutral-400 space-y-2">
+              <div className="p-6 bg-[#A50034]/5 border-l-2 border-[#A50034] text-xs text-gray-650 dark:text-neutral-400 space-y-2">
                 <span className="font-bold text-[#A50034] block uppercase tracking-wider text-[10px]">LGE IT Security & Compliance Alert</span>
                 <p className="font-normal leading-relaxed">
                   프로젝트 내에 업로드하는 모든 문건은 LG전자의 보안 관리 규칙을 적용받습니다. 퍼블릭 브라우저 서버로 외부 유출되지 않도록 사내 Enterprise 라이선스 계정을 사용해야 하며, 경쟁사 스펙이나 미공개 TV 가격표 등의 1급 기밀 정보를 외부 브라우징 봇이 직접 수집하도록 허용해서는 절대 안 됩니다.
@@ -861,7 +885,7 @@ initProjectWorkspace();`;
             <div className="space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">프로젝트 API 자동 초기화 스크립트</h3>
+                  <h3 className="font-serif font-bold text-xl text-gray-900 dark:text-white">프로젝트 API 자동 초기화 스크립트</h3>
                   <p className="text-xs text-gray-500">Node.js 환경에서 OpenAI Assistants API의 프로젝트 가상 오피스를 자동으로 개설해 주는 템플릿 코드입니다.</p>
                 </div>
                 <button
@@ -883,30 +907,31 @@ initProjectWorkspace();`;
           </div>
         )}
 
-        {/* ==================== 3. PART 2: GPTS & API ==================== */}
+        {/* ==================== 2. PART 2: GPTS & ACTIONS ==================== */}
         {currentPage === "part2" && (
-          <div className="space-y-20 animate-fadeIn text-left">
+          <div className="space-y-24 animate-fadeIn text-left">
             
-            {/* Header */}
-            <div className="border-b border-gray-100 dark:border-neutral-800 pb-8 space-y-4">
-              <span className="text-[10px] tracking-[0.2em] font-semibold text-[#A50034] uppercase block">
-                Chapter 02
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.12]">
-                2편: Custom GPTs & OpenAPI Actions
+            {/* Section Cover Page Deco */}
+            <div className="border-b border-gray-150 dark:border-neutral-850 pb-8 space-y-4">
+              <div className="flex items-center justify-between text-[11px] tracking-[0.3em] font-bold text-gray-400 uppercase">
+                <span>SECTION 02 // AGENT AUTOMATION</span>
+                <span className="text-[#A50034]">CHAPTER TWO</span>
+              </div>
+              <h1 className="font-serif font-bold text-4xl sm:text-5xl text-gray-900 dark:text-white tracking-tight leading-tight">
+                Custom GPTs & API Actions
               </h1>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-neutral-400 max-w-3xl leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-650 dark:text-neutral-400 max-w-3xl leading-relaxed">
                 나만의 고품격 챗봇을 빌드하고, 구글/유튜브/네이버 검색 API를 Action 스키마로 연동하십시오. 실무 가동 터미널 시뮬레이터를 통해 설정 전(Before)과 설정 후(After)의 극명한 품질 차이를 직접 눈으로 검증할 수 있습니다.
               </p>
             </div>
 
             {/* Flat Illustration Block */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-gray-50 dark:bg-[#141416] p-8 sm:p-12 rounded-none border border-gray-100 dark:border-neutral-850">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-gray-50 dark:bg-[#141416] p-8 sm:p-12 border border-gray-100 dark:border-neutral-900">
               <div className="lg:col-span-5 flex justify-center">
-                <div className="w-full max-w-[280px] aspect-square rounded-none bg-white dark:bg-[#0C0C0E] p-4 border border-gray-150 dark:border-neutral-800 flex items-center justify-center">
+                <div className="w-full max-w-[280px] aspect-square bg-white dark:bg-[#0A0A0B] p-4 border border-gray-150 dark:border-neutral-800 flex items-center justify-center">
                   <Image
                     src="/chapter2_robots.png"
-                    alt="GPTs Actions Robots Concept Illustration"
+                    alt="GPTs Actions Robots Illustration"
                     width={220}
                     height={220}
                     className="object-contain"
@@ -914,18 +939,15 @@ initProjectWorkspace();`;
                 </div>
               </div>
               <div className="lg:col-span-7 space-y-4">
-                <span className="text-[9px] tracking-wider font-semibold text-gray-450 uppercase block">Agent Automations</span>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">"나만의 실시간 AI 에이전트 구동"</h3>
-                
-                {/* Paragraph with Drop Cap */}
-                <div className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
-                  <span className="text-[#A50034] text-3xl font-black float-left mr-2.5 mt-1 font-serif">A</span>
+                <span className="text-[9px] tracking-wider font-bold text-gray-400 uppercase block">Agent Automations</span>
+                <h3 className="font-serif font-bold text-xl text-gray-900 dark:text-white">나만의 실시간 AI 에이전트 구동</h3>
+                <p className="text-xs sm:text-[13px] text-gray-600 dark:text-neutral-450 leading-relaxed font-normal">
+                  <span className="text-[#A50034] text-4xl font-serif font-bold float-left mr-2 mt-1 leading-[0.8]">A</span>
                   Actions 외부 API 연동 아키텍처는 정적인 AI 데이터 학습 범위를 확장하여 완전히 살아 움직이는 인터랙티브 실시간 모니터링 환경을 만듭니다. 일반적인 ChatGPT는 업그레이드 전의 지식 베이스만을 참조하여 업계 출하 점유율 분석이나 오늘 자 경쟁사 보도 뉴스를 찾지 못하고 한계에 직면하지만, GPTs Configure에 OpenAPI 규격 검색 스키마를 로드하면 외부 구글/유튜브/네이버 채널 서버를 직간접적으로 원격 통신 호출(Trigger API)하여 원스톱 실시간 가공 요약을 알아서 수행해 냅니다.
-                </div>
-
+                </p>
                 <div className="flex gap-2 pt-2">
-                  <span className="px-2.5 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-750">OpenAPI Actions</span>
-                  <span className="px-2.5 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-750">실시간 서치 연동</span>
+                  <span className="px-3 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-800">OpenAPI Actions</span>
+                  <span className="px-3 py-1 text-[9px] font-bold bg-white dark:bg-neutral-850 text-gray-500 border border-gray-150 dark:border-neutral-800">실시간 서치 연동</span>
                 </div>
               </div>
             </div>
@@ -933,7 +955,7 @@ initProjectWorkspace();`;
             {/* Agent Playground */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">LG전자 현업 특화 4대 에이전트 플레이그라운드</h3>
+                <h3 className="font-serif font-bold text-2xl text-gray-900 dark:text-white">LG전자 현업 특화 4대 에이전트 플레이그라운드</h3>
                 <p className="text-xs text-gray-500">에이전트를 선택하고 프롬프트 복사 및 가동 시뮬레이션을 작동해 보십시오.</p>
               </div>
 
@@ -967,15 +989,15 @@ initProjectWorkspace();`;
                     <span className="text-[10px] tracking-wider font-semibold text-gray-400 block uppercase">
                       타겟 부서: {currentAgent.division}
                     </span>
-                    <h4 className="text-xl font-bold text-gray-900 dark:text-white">{currentAgent.title}</h4>
-                    <p className="text-xs text-gray-650 dark:text-neutral-400">{currentAgent.subtitle}</p>
+                    <h4 className="font-serif font-bold text-xl text-[#A50034]">{currentAgent.title}</h4>
+                    <p className="text-xs text-gray-650 dark:text-neutral-450">{currentAgent.subtitle}</p>
                   </div>
 
                   <div className="space-y-2">
                     <span className="text-xs font-bold text-gray-800 dark:text-neutral-200 block">설정 매뉴얼 (Instructions)</span>
-                    <ol className="list-decimal pl-4 space-y-1.5 text-xs text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
+                    <ol className="list-decimal pl-4 space-y-1.5 text-xs text-gray-605 dark:text-neutral-400 leading-relaxed font-normal">
                       {currentAgent.guide.map((step, idx) => (
-                        <li key={idx}>{step}</li>
+                        <li key={idx} className="text-gray-600 dark:text-neutral-400">{step}</li>
                       ))}
                     </ol>
                   </div>
@@ -998,7 +1020,7 @@ initProjectWorkspace();`;
                     <textarea
                       readOnly
                       value={currentAgent.prompt}
-                      className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-none text-xs font-mono resize-none focus:outline-none text-gray-600 dark:text-neutral-400 leading-relaxed"
+                      className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-none text-xs font-mono resize-none focus:outline-none text-gray-605 dark:text-neutral-450 leading-relaxed"
                     />
                   </div>
 
@@ -1013,17 +1035,17 @@ initProjectWorkspace();`;
                             agentSchemaCopied
                               ? "bg-emerald-600 border-emerald-600 text-white"
                               : "bg-white dark:bg-neutral-900 border-gray-200 dark:border-neutral-800 text-gray-500 hover:border-[#A50034]"
-                          }`}
-                        >
-                          {agentSchemaCopied ? "복사 완료" : "복사"}
-                        </button>
-                      </div>
-                      <textarea
-                        readOnly
-                        value={currentAgent.schema}
-                        className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-none text-xs font-mono resize-none focus:outline-none text-gray-600 dark:text-neutral-400 leading-relaxed"
-                      />
+                        }`}
+                      >
+                        {agentSchemaCopied ? "복사 완료" : "복사"}
+                      </button>
                     </div>
+                    <textarea
+                      readOnly
+                      value={currentAgent.schema}
+                      className="w-full h-36 p-3 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 rounded-none text-xs font-mono resize-none focus:outline-none text-gray-605 dark:text-neutral-455 leading-relaxed"
+                    />
+                  </div>
                   )}
                 </div>
 
@@ -1063,7 +1085,7 @@ initProjectWorkspace();`;
                       ))}
 
                       {simulationRunning && (
-                        <div className="text-neutral-605 animate-pulse">Running process pipelines...</div>
+                        <div className="text-neutral-600 animate-pulse">Running process pipelines...</div>
                       )}
 
                       {simulationResult && (
@@ -1096,7 +1118,7 @@ initProjectWorkspace();`;
             {/* OpenAPI Search schemas */}
             <div className="border-t border-gray-150 dark:border-neutral-800 pt-16 space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">OpenAPI Actions 실시간 외부 검색 연동 스키마</h3>
+                <h3 className="font-serif font-bold text-2xl text-gray-900 dark:text-white">OpenAPI Actions 실시간 외부 검색 연동 스키마</h3>
                 <p className="text-xs text-gray-500">
                   Custom GPTs의 Configure 메뉴 최하단에 있는 'Actions' 기능을 사용해 외부 검색 엔진을 연동하면 실시간 최신 정보를 탐색하여 결과물을 도출해 냅니다.
                 </p>
@@ -1143,7 +1165,7 @@ initProjectWorkspace();`;
               </div>
 
               {/* Actions Setup Guide */}
-              <div className="p-6 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 text-xs text-gray-650 dark:text-neutral-400 space-y-4">
+              <div className="p-6 bg-gray-50 dark:bg-[#141416] border border-gray-100 dark:border-neutral-850 text-xs text-gray-650 dark:text-neutral-450 space-y-4">
                 <h4 className="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[10px]">LGE Actions API 인증 세부 매뉴얼</h4>
                 <p className="leading-relaxed font-normal">
                   Actions를 통신 연동할 때는 **인증 방식 (Authentication)** 설정에 주의해 주십시오. 구글이나 네이버 API의 경우, 스키마 내에 API Key 변수 전달을 정의하거나 GPTs의 [Authentication] 설정 팝업에서 `API Key`를 선택한 후 헤더(Custom Header: `Authorization` 또는 `X-Naver-Client-Id` 등)에 값을 매핑해야만 정상적인 Status Code 200 데이터를 수신받을 수 있습니다.
@@ -1156,16 +1178,18 @@ initProjectWorkspace();`;
 
       </main>
 
-      {/* Minimalist Footer */}
-      <footer className={`border-t py-12 text-[10px] text-center space-y-3 font-medium ${darkMode ? "bg-[#0C0C0E] border-[#1C1C1E] text-neutral-600" : "bg-gray-50 border-gray-100 text-gray-400"}`}>
+      {/* Footer */}
+      <footer className={`border-t py-12 text-[10px] text-center space-y-3 font-medium ${darkMode ? "bg-[#0A0A0B] border-[#1C1C1E] text-neutral-600" : "bg-gray-50 border-gray-100 text-gray-450"}`}>
         <p>샛별자문단 5기 프리미엄 AI 가이드 매거진 © 2026 LG Electronics. All Rights Reserved.</p>
-        <p className="tracking-wide text-neutral-450 dark:text-neutral-550 max-w-xl mx-auto leading-relaxed px-4">본 사이트의 콘텐츠는 LG전자 임직원 교육 및 업무 활용 목적으로 제공되며, 외부 유출 및 영리 목적 배포를 금합니다.</p>
+        <p className="tracking-wide text-neutral-500 dark:text-neutral-500 max-w-xl mx-auto leading-relaxed px-4 font-normal">
+          본 사이트의 콘텐츠는 LG전자 임직원 교육 및 업무 활용 목적으로 제공되며, 외부 유출 및 영리 목적 배포를 엄격히 금합니다.
+        </p>
       </footer>
 
       {/* ==================== 4. ONBOARDING QUIZ MODAL ==================== */}
       {quizOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/10 backdrop-blur-sm p-4 animate-fadeIn">
-          <div className="bg-white dark:bg-[#141416] p-10 rounded-none max-w-xl w-full border border-gray-250 dark:border-neutral-850 shadow-sm relative">
+          <div className="bg-white dark:bg-[#141416] p-10 rounded-none max-w-xl w-full border border-gray-250 dark:border-neutral-850 shadow-sm relative text-left">
             
             {/* Close */}
             <button
@@ -1183,13 +1207,13 @@ initProjectWorkspace();`;
                 <div
                   key={step}
                   className={`h-0.5 flex-1 transition-all duration-300 ${
-                    quizStep >= step ? "bg-[#A50034]" : "bg-gray-105 dark:bg-neutral-850"
+                    quizStep >= step ? "bg-[#A50034]" : "bg-gray-100 dark:bg-neutral-850"
                   }`}
                 />
               ))}
             </div>
 
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6 text-left leading-snug">
+            <h3 className="font-serif font-bold text-lg text-gray-900 dark:text-white mb-6 leading-snug">
               {quizStep === 1
                 ? "현재 근무하고 계신 사업본부는 어디입니까?"
                 : quizStep === 2
@@ -1269,7 +1293,7 @@ initProjectWorkspace();`;
                       setQuizResultFileReady(false);
                       setQuizStep(2);
                     }}
-                    className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-850 dark:hover:bg-neutral-750 text-gray-600 dark:text-neutral-200 font-semibold text-[10px] tracking-widest uppercase px-5 py-3 rounded-none transition-colors cursor-pointer"
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-850 dark:hover:bg-neutral-750 text-gray-650 dark:text-neutral-200 font-semibold text-[10px] tracking-widest uppercase px-5 py-3 rounded-none transition-colors cursor-pointer"
                   >
                     이전
                   </button>
@@ -1305,11 +1329,11 @@ initProjectWorkspace();`;
       {/* ==================== 5. MINIMALIST CHATBOT WIDGET ==================== */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
         {chatbotOpen && (
-          <div className="w-[340px] h-[440px] rounded-none border shadow-none flex flex-col mb-4 overflow-hidden transition-all duration-300 animate-fadeIn bg-white border-gray-200 dark:bg-[#141416] dark:border-neutral-800 text-[#1D1D1F] dark:text-neutral-350">
+          <div className="w-[340px] h-[440px] rounded-none border shadow-none flex flex-col mb-4 overflow-hidden transition-all duration-300 animate-fadeIn bg-white border-gray-250 dark:bg-[#141416] dark:border-neutral-800 text-[#1D1D1F] dark:text-neutral-350">
             
             {/* Header */}
             <div className="flex items-center justify-between bg-gray-900 px-5 py-4 text-white">
-              <span className="font-semibold text-xs tracking-widest uppercase">LGE FAQ Helper</span>
+              <span className="font-semibold text-[10px] tracking-widest uppercase">LGE FAQ Helper</span>
               <button onClick={() => setChatbotOpen(false)} className="text-gray-400 hover:text-white cursor-pointer">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -1319,7 +1343,7 @@ initProjectWorkspace();`;
 
             {/* Chat Messages */}
             <div className={`flex-1 p-4 overflow-y-auto space-y-3 text-xs leading-relaxed ${
-              darkMode ? "bg-[#0C0C0E]" : "bg-neutral-55/30"
+              darkMode ? "bg-[#09090B]" : "bg-neutral-50/50"
             }`}>
               {chatbotMessages.map((msg, i) => (
                 <div key={i} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
@@ -1360,7 +1384,7 @@ initProjectWorkspace();`;
                   className={`text-[9px] font-semibold py-1 px-2.5 rounded-none border transition-all cursor-pointer ${
                     darkMode
                       ? "border-neutral-700 bg-neutral-800 text-neutral-400 hover:border-[#A50034] hover:text-white"
-                      : "border-gray-200 bg-gray-50 text-gray-600 hover:border-[#A50034] hover:text-[#A50034]"
+                      : "border-gray-200 bg-gray-50 text-gray-655 hover:border-[#A50034] hover:text-[#A50034]"
                   }`}
                 >
                   {q}
