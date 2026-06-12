@@ -19,6 +19,27 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState<PageType>("home");
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Simulation Interval Ref
+  const simulationIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Dark Mode Toggle Effect
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  // Clean up simulation interval on unmount
+  useEffect(() => {
+    return () => {
+      if (simulationIntervalRef.current) {
+        clearInterval(simulationIntervalRef.current);
+      }
+    };
+  }, []);
+
   // GNB Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
@@ -328,20 +349,24 @@ initProjectWorkspace();`;
 
   const currentAgent = agentSpecs[selectedAgent];
 
-  const handleCopyText = (text: string, type: "prompt" | "schema" | "project" | "api") => {
-    navigator.clipboard.writeText(text);
-    if (type === "prompt") {
-      setAgentPromptCopied(true);
-      setTimeout(() => setAgentPromptCopied(false), 2000);
-    } else if (type === "schema") {
-      setAgentSchemaCopied(true);
-      setTimeout(() => setAgentSchemaCopied(false), 2000);
-    } else if (type === "project") {
-      setProjectCodeCopied(true);
-      setTimeout(() => setProjectCodeCopied(false), 2000);
-    } else if (type === "api") {
-      setApiCopied(true);
-      setTimeout(() => setApiCopied(false), 2000);
+  const handleCopyText = async (text: string, type: "prompt" | "schema" | "project" | "api") => {
+    try {
+      await navigator.clipboard.writeText(text);
+      if (type === "prompt") {
+        setAgentPromptCopied(true);
+        setTimeout(() => setAgentPromptCopied(false), 2000);
+      } else if (type === "schema") {
+        setAgentSchemaCopied(true);
+        setTimeout(() => setAgentSchemaCopied(false), 2000);
+      } else if (type === "project") {
+        setProjectCodeCopied(true);
+        setTimeout(() => setProjectCodeCopied(false), 2000);
+      } else if (type === "api") {
+        setApiCopied(true);
+        setTimeout(() => setApiCopied(false), 2000);
+      }
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
     }
   };
 
@@ -353,12 +378,12 @@ initProjectWorkspace();`;
 
     let logIndex = 0;
     const logs = currentAgent.simulationLogs;
-    const interval = setInterval(() => {
+    simulationIntervalRef.current = setInterval(() => {
       if (logIndex < logs.length) {
         setSimulationLogs((prev) => [...prev, logs[logIndex]]);
         logIndex++;
       } else {
-        clearInterval(interval);
+        if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
         setSimulationRunning(false);
         setSimulationResult(currentAgent.after);
       }
@@ -447,7 +472,19 @@ initProjectWorkspace();`;
     setIsTyping(true);
 
     setTimeout(() => {
-      let reply = `'${text}'에 대해 답변해 드립니다. LG전자 업무 환경에서 ChatGPT Projects는 데이터 유출 방지 조치와 파일 20개 통합 관리에 매우 뛰어나며, GPTs는 OpenAPI Actions 연동을 통해 수동 리서치를 획기적으로 줄여줍니다. 상세 단계는 본 매거진의 1편과 2편 상단 클릭형 메뉴를 이동하여 복사 가능한 프롬프트 및 예제 스키마를 확인하십시오.`;
+      let reply = "";
+      const q = text.toLowerCase();
+      if (q.includes("5기") || q.includes("샛별") || q.includes("satbyeal")) {
+        reply = "샛별자문단 5기는 LG전자 임직원들이 생성형 AI를 영구적인 사내 업무 지식 자산으로 전환하도록 돕는 가이드 매거진 제작 협의체입니다. 경영진과 실무진 모두 실질적 업무 효율을 낼 수 있도록 실전에 즉시 활용 가능한 Projects 및 GPTs 워크플로우를 제공합니다.";
+      } else if (q.includes("프로젝트") || q.includes("project") || q.includes("차이")) {
+        reply = "1편의 'ChatGPT Projects'는 다수의 문서를 올려놓고 여러 팀원들과 함께 맥락을 공유하며 채팅방(Thread)을 나누어 협업하는 '종합 가상 기획 사무실'입니다. 반면 2편의 'Custom GPTs'는 특정 단일 직무(예: 카피 생성, 실시간 시장 리서치, 엑셀 시각화)를 사전에 입력해둔 프롬프트와 외부 OpenAPI(Actions)에 연결하여 고속 반복 수행하는 '직무 자동화 미니 앱'입니다.";
+      } else if (q.includes("before") || q.includes("after") || q.includes("효과") || q.includes("비포")) {
+        reply = "설정을 하지 않은 'Before' 상태에서는 동일한 설정 파일이나 엑셀 데이터를 매 대화 세션마다 업로드하고, 긴 프롬프트를 매번 복사해 붙여넣어야 합니다. 반면 설정을 마친 'After' 상태에서는 단 한 번의 파일 등록과 지침 고정으로, 한글 키워드 한 단어만 입력해도 완벽한 결과물이 즉시 출력되거나 백그라운드 자동화(Actions)가 실행됩니다.";
+      } else if (q.includes("api") || q.includes("action") || q.includes("액션") || q.includes("연동")) {
+        reply = "GPTs 생성 화면의 [Configure] -> [Actions] -> [Create New Action]을 선택하고, 저희 매거진 2편에서 제공하는 Google, YouTube, Naver Search 등의 OpenAPI JSON 스키마를 붙여넣으십시오. 발급받으신 API 인증 키를 헤더 또는 쿼리에 연동하면 GPTs가 최신 웹 자료를 실시간 수집할 수 있게 됩니다.";
+      } else {
+        reply = `'${text}'에 대해 답변해 드립니다. LG전자 업무 환경에서 ChatGPT Projects는 데이터 유출 방지 조치와 파일 20개 통합 관리에 매우 뛰어나며, GPTs는 OpenAPI Actions 연동을 통해 수동 리서치를 획기적으로 줄여줍니다. 상세 단계는 본 매거진의 1편과 2편 상단 클릭형 메뉴를 이동하여 복사 가능한 프롬프트 및 예제 스키마를 확인하십시오.`;
+      }
       setChatbotMessages((prev) => [...prev, { sender: "bot", text: reply }]);
       setIsTyping(false);
     }, 1000);
@@ -505,7 +542,7 @@ initProjectWorkspace();`;
           <div className="flex items-center gap-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-1.5 rounded-full hover:bg-gray-150 dark:hover:bg-neutral-800 text-gray-400 hover:text-gray-955 dark:hover:text-white cursor-pointer transition-colors"
+              className="p-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer transition-colors"
             >
               {darkMode ? (
                 <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -541,7 +578,7 @@ initProjectWorkspace();`;
                 샛별자문단 5기: 프리미엄<br />
                 <span className="text-[#A50034]">AI 가이드</span>
               </h1>
-              <p className="text-sm sm:text-base text-gray-505 dark:text-neutral-400 leading-relaxed max-w-xl font-normal">
+              <p className="text-sm sm:text-base text-gray-500 dark:text-neutral-400 leading-relaxed max-w-xl font-normal">
                 최첨단 AI 인텔리전스로 데이터의 한계를 극복합니다. 직관적인 UI와 구조화된 맥락을 통해 비즈니스 의사결정의 수준을 한 단계 높이세요. 샛별자문단 5기의 프리미엄 AI 가이드를 만나보세요.
               </p>
               <div className="flex gap-4 pt-2">
@@ -675,7 +712,7 @@ initProjectWorkspace();`;
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white leading-tight">
                     에피소드 2: GPTs - 업무 자동화
                   </h2>
-                  <p className="text-xs sm:text-sm text-gray-550 dark:text-neutral-400 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-neutral-400 leading-relaxed font-normal">
                     나만의 커스텀 AI 에이전트를 가동해 보세요. 최고 마케팅 카피라이터, 실시간 트렌드 리서처, 데이터 분석가, 품질 오토메이터 툴을 이용해 나만의 자동화 비서를 셋업할 수 있습니다.
                   </p>
                 </div>
@@ -845,10 +882,10 @@ initProjectWorkspace();`;
               {/* Left explanation & play block */}
               <div className="lg:col-span-7 space-y-6">
                 <span className="text-[9px] tracking-wider font-extrabold text-[#A50034] uppercase block">XML 구조화 맥락 시스템</span>
-                <p className="text-xs sm:text-sm text-gray-650 dark:text-neutral-400 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
                   Knowledge 고정 기능은 최대 20개의 핵심 비즈니스 데이터를 프로젝트 폴더 내부에 영구 바인딩합니다. 개별 임직원들이 마케팅 보고서, 기술 사양표, 어조 톤앤매너 가이드북 파일을 대화창을 켤 때마다 드래그앤드롭하여 분석하던 수동 데이터 낭비가 근본적으로 소멸됩니다. 부서 팀원들을 해당 프로젝트에 초대하는 것만으로, 모든 구성원이 동일한 지식 컨텍스트 위에서 안전하고 다채로운 분석 채팅 세션을 개별 생성 및 병렬 구동할 수 있습니다.
                 </p>
-                <div className="p-4 bg-gray-55 dark:bg-[#0B0B0D] border border-gray-150 dark:border-neutral-850 rounded-xl flex items-center justify-between text-[11px] font-mono text-gray-500">
+                <div className="p-4 bg-gray-50 dark:bg-[#0B0B0D] border border-gray-150 dark:border-neutral-850 rounded-xl flex items-center justify-between text-[11px] font-mono text-gray-500">
                   <span className="truncate">LGE-HE-Context-mode-structured - template active...</span>
                   <button
                     onClick={() => handleCopyText("LGE-HE-Context-mode-structured - template active", "project")}
@@ -947,7 +984,7 @@ initProjectWorkspace();`;
                   <span className="text-[10px] tracking-widest font-bold text-[#A50034] block uppercase">
                     After / Projects 도입 효과 요약
                   </span>
-                  <p className="text-xs text-gray-650 dark:text-neutral-400 leading-relaxed">
+                  <p className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed">
                     프로젝트 폴더 내부에 타겟 고객 분석 보고서, 해외 바이어 협상 가이드, LG 시그니처 톤앤매너 룰을 결합하여 가상 분석 오피스를 셋업합니다. 이후 '독일 마켓 메일 작성방', '경쟁사 스펙 분석방' 등으로 채팅 스레드를 쪼개 사용하면서, 하나의 고정 지식 지휘소 하에서 각 방이 상시 협동하도록 관리할 수 있습니다.
                   </p>
                 </div>
@@ -990,7 +1027,7 @@ initProjectWorkspace();`;
               </div>
 
               {/* LGE Security Compliance Sidebar */}
-              <div className="p-6 bg-[#A50034]/5 border-l-2 border-[#A50034] text-xs text-gray-650 dark:text-neutral-450 space-y-2 rounded-r-xl">
+              <div className="p-6 bg-[#A50034]/5 border-l-2 border-[#A50034] text-xs text-gray-600 dark:text-neutral-400 space-y-2 rounded-r-xl">
                 <span className="font-bold text-[#A50034] block uppercase tracking-wider text-[10px]">LGE IT Security & Compliance Alert</span>
                 <p className="font-normal leading-relaxed">
                   프로젝트 내에 업로드하는 모든 문건은 LG전자의 보안 관리 규칙을 적용받습니다. 사내 Enterprise 라이선스 계정을 사용해야 하며, 경쟁사 스펙이나 미공개 TV 가격표 등의 1급 기밀 정보를 외부 브라우징 봇이 직접 수집하도록 허용해서는 절대 안 됩니다.
@@ -1003,7 +1040,7 @@ initProjectWorkspace();`;
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 dark:text-white">프로젝트 API 자동 초기화 스크립트</h3>
-                  <p className="text-xs text-gray-550">Node.js 환경에서 OpenAI Assistants API의 프로젝트 가상 오피스를 자동으로 개설해 주는 템플릿 코드입니다.</p>
+                  <p className="text-xs text-gray-500">Node.js 환경에서 OpenAI Assistants API의 프로젝트 가상 오피스를 자동으로 개설해 주는 템플릿 코드입니다.</p>
                 </div>
                 <button
                   onClick={() => handleCopyText(getProjectInitializeCode(), "project")}
@@ -1036,14 +1073,14 @@ initProjectWorkspace();`;
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white leading-tight">
                 에피소드 2: GPTs - 업무 자동화
               </h1>
-              <p className="text-sm sm:text-base text-gray-550 dark:text-neutral-400 max-w-3xl leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-500 dark:text-neutral-400 max-w-3xl leading-relaxed">
                 나만의 고품격 챗봇을 빌드하고, 구글/유튜브/네이버 검색 API를 Action 스키마로 연동하십시오. 실무 가동 터미널 시뮬레이터를 통해 설정 전(Before)과 설정 후(After)의 극명한 품질 차이를 직접 눈으로 검증할 수 있습니다.
               </p>
             </div>
 
             {/* Robots Squad Banner (rounded-3xl) */}
             <div className="w-full bg-white dark:bg-[#141416] p-8 border border-gray-200 dark:border-neutral-800 text-center space-y-6 flex flex-col items-center rounded-3xl shadow-sm">
-              <span className="text-[10px] tracking-[0.25em] font-extrabold text-gray-450 uppercase">
+              <span className="text-[10px] tracking-[0.25em] font-extrabold text-gray-400 uppercase">
                 EPISODE 2: GPTs
               </span>
               <p className="text-xs text-gray-500 max-w-lg leading-relaxed font-normal">
@@ -1073,6 +1110,10 @@ initProjectWorkspace();`;
                   <button
                     key={agentKey}
                     onClick={() => {
+                      if (simulationIntervalRef.current) {
+                        clearInterval(simulationIntervalRef.current);
+                      }
+                      setSimulationRunning(false);
                       setSelectedAgent(agentKey);
                       setSimulationLogs([]);
                       setSimulationResult("");
@@ -1098,7 +1139,7 @@ initProjectWorkspace();`;
                       타겟 부서: {currentAgent.division}
                     </span>
                     <h4 className="font-bold text-xl text-[#A50034]">{currentAgent.title}</h4>
-                    <p className="text-xs text-gray-655 dark:text-neutral-450">{currentAgent.subtitle}</p>
+                    <p className="text-xs text-gray-600 dark:text-neutral-400">{currentAgent.subtitle}</p>
                   </div>
 
                   <div className="space-y-2">
@@ -1164,7 +1205,7 @@ initProjectWorkspace();`;
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="p-5 rounded-2xl bg-white dark:bg-[#141416] border border-gray-200 dark:border-neutral-800 shadow-sm">
                       <span className="text-[9px] font-bold text-red-700 block uppercase tracking-widest mb-2">Before / 일반 GPT</span>
-                      <p className="text-[11px] text-gray-650 dark:text-neutral-400 leading-relaxed font-normal">
+                      <p className="text-[11px] text-gray-600 dark:text-neutral-400 leading-relaxed font-normal">
                         {currentAgent.before}
                       </p>
                     </div>
@@ -1233,7 +1274,7 @@ initProjectWorkspace();`;
               </div>
 
               {/* Minimal Text Selector (rounded GNB design) */}
-              <div className="flex gap-4 border-b border-gray-200 dark:border-neutral-855 pb-2">
+              <div className="flex gap-4 border-b border-gray-200 dark:border-neutral-800 pb-2">
                 {(Object.keys(apiSchemas) as APIProviderType[]).map((apiId) => (
                   <button
                     key={apiId}
@@ -1254,7 +1295,7 @@ initProjectWorkspace();`;
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
                     <h4 className="text-sm font-bold text-gray-900 dark:text-white">{apiSchemas[selectedAPI].title}</h4>
-                    <p className="text-xs text-gray-550 mt-1">{apiSchemas[selectedAPI].description}</p>
+                    <p className="text-xs text-gray-500 mt-1">{apiSchemas[selectedAPI].description}</p>
                   </div>
                   <button
                     onClick={() => handleCopyText(apiSchemas[selectedAPI].schema, "api")}
@@ -1302,7 +1343,7 @@ initProjectWorkspace();`;
             <h2 className="text-3xl font-black text-gray-900 dark:text-white leading-tight">
               AI 전략의 수준을 높일 <span className="text-[#A50034]">준비가 되셨나요?</span>
             </h2>
-            <p className="text-xs sm:text-sm text-gray-505 dark:text-neutral-400 leading-relaxed font-normal max-w-xl mx-auto">
+            <p className="text-xs sm:text-sm text-gray-500 dark:text-neutral-400 leading-relaxed font-normal max-w-xl mx-auto">
               샛별자문단 5기와 함께하세요. 진화된 업무의 다음 10년을 맞이할 세미나의 문이 활짝 열려 있습니다.
             </p>
             
@@ -1417,6 +1458,14 @@ initProjectWorkspace();`;
                     {p.label}
                   </button>
                 ))}
+                <div className="pt-4 flex justify-start">
+                  <button
+                    onClick={() => setQuizStep(1)}
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-gray-600 dark:text-neutral-300 font-semibold text-[10px] tracking-widest uppercase px-5 py-2.5 rounded-full transition-colors cursor-pointer"
+                  >
+                    이전
+                  </button>
+                </div>
               </div>
             )}
 
@@ -1446,7 +1495,7 @@ initProjectWorkspace();`;
                       setQuizResultFileReady(false);
                       setQuizStep(2);
                     }}
-                    className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-855 dark:hover:bg-neutral-750 text-gray-655 dark:text-neutral-250 font-semibold text-[10px] tracking-widest uppercase px-5 py-3.5 rounded-full transition-colors cursor-pointer"
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-gray-655 dark:text-neutral-250 font-semibold text-[10px] tracking-widest uppercase px-5 py-3.5 rounded-full transition-colors cursor-pointer"
                   >
                     이전
                   </button>
@@ -1537,7 +1586,7 @@ initProjectWorkspace();`;
                   className={`text-[9px] font-semibold py-1.5 px-3 rounded-full border transition-all cursor-pointer ${
                     darkMode
                       ? "border-neutral-700 bg-neutral-800 text-neutral-400 hover:border-[#A50034] hover:text-white"
-                      : "border-gray-200 bg-gray-50 text-gray-655 hover:border-[#A50034] hover:text-[#A50034]"
+                      : "border-gray-200 bg-gray-50 text-gray-600 hover:border-[#A50034] hover:text-[#A50034]"
                   }`}
                 >
                   {q}
