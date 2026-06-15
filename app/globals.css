@@ -1,124 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Geist:wght@400;600&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #fff8f7;
-  --foreground: #291615;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
-  
-  --color-lg-red: #A50034;
-  --color-primary: #b7001e;
-  --color-primary-container: #e60028;
-  --color-on-primary: #ffffff;
-  --color-lg-heritage: #a50034;
-  --color-surface-container: #ffe9e7;
-  --color-surface-container-low: #fff0ef;
   --color-surface-container-high: #ffe1df;
-  --color-surface-container-highest: #fedad7;
-  --color-border-subtle: #e5e5e5;
-  --color-on-surface-variant: #5e3f3d;
-  --color-surface-tint: #fff5f6;
   --color-surface-dim: #f5d2cf;
-  --color-text-muted: #666666;
+  --color-inverse-primary: #ffb3ae;
+  --color-on-error: #ffffff;
+  --color-surface-container: #ffe9e7;
+  --color-secondary-fixed: #e5e2e1;
+  --color-primary: #b7001e;
+  --color-on-tertiary-container: #f5f9ff;
+  --color-background: #fff8f7;
+  --color-on-background: #291615;
+  --color-on-secondary: #ffffff;
+  --color-surface-tint: #c0001f;
   --color-on-surface: #291615;
+  --color-on-primary-fixed-variant: #930015;
+  --color-tertiary-fixed-dim: #86cfff;
+  --color-tertiary-container: #007aac;
+  --color-surface-bright: #fff8f7;
+  --color-tertiary: #006088;
+  --color-surface-container-highest: #fedad7;
+  --color-secondary-container: #e2dfde;
+  --color-border-subtle: #e5e5e5;
+  --color-on-primary: #ffffff;
+  --color-inverse-surface: #412b29;
+  --color-tertiary-fixed: #c7e7ff;
+  --color-primary-container: #e60028;
+  --color-outline: #936e6b;
+  --color-surface: #fff8f7;
+  --color-error: #ba1a1a;
+  --color-text-muted: #666666;
+  --color-on-surface-variant: #5e3f3d;
+  --color-on-tertiary-fixed-variant: #004c6d;
+  --color-on-primary-fixed: #410005;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-on-secondary-fixed: #1b1c1c;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-tertiary-fixed: #001e2e;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-outline-variant: #e8bcb9;
+  --color-primary-fixed: #ffdad7;
+  --color-surface-container-low: #fff0ef;
+  --color-on-secondary-container: #636262;
+  --color-on-error-container: #93000a;
+  --color-secondary: #5f5e5e;
+  --color-on-tertiary: #ffffff;
+  --color-lg-heritage: #a50034;
+  --color-on-primary-container: #fff8f7;
+  --color-primary-fixed-dim: #ffb3ae;
+  --color-surface-variant: #fedad7;
+  --color-inverse-on-surface: #ffedeb;
+  --color-error-container: #ffdad6;
+
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 32px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-desktop: 40px;
+  --spacing-stack-xl: 64px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 20px;
+
+  --font-label-sm: 'Inter';
+  --font-headline-xl: 'Inter';
+  --font-headline-lg: 'Inter';
+  --font-body-lg: 'Inter';
+  --font-display-lg: 'Inter';
+  --font-body-md: 'Inter';
+  --font-headline-lg-mobile: 'Inter';
+  --font-label-lg: 'Inter';
+  --font-headline-md: 'Inter';
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-headline-xl: 48px;
+  --text-headline-xl--line-height: 56px;
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-display-lg: 64px;
+  --text-display-lg--line-height: 72px;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #09090B;
-    --foreground: #F4F4F5;
-  }
-}
+body { font-family: 'Inter', sans-serif; background-color: #fff8f7; }
+.glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.card-hover-effect { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover-effect:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(183, 0, 30, 0.08); }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 
-.dark {
-  --background: #09090B;
-  --foreground: #F4F4F5;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #E4E4E7;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: #27272A;
-}
-
-/* Custom Utility Classes from Stitch designs */
-.ambient-shadow {
-  box-shadow: 0 20px 40px -10px rgba(183, 0, 30, 0.08);
-}
-.ambient-shadow-hover:hover {
-  box-shadow: 0 30px 60px -12px rgba(183, 0, 30, 0.12);
-}
-.glass {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-.btn-glow:hover {
-  box-shadow: 0 0 20px rgba(230, 0, 40, 0.4);
-  transform: translateY(-2px);
-}
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: #b7001e;
-  z-index: 100;
-}
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-.vertical-text {
-  writing-mode: vertical-rl;
-}
-.magazine-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 24px;
-}
-.nav-link-active {
-  position: relative;
-}
-.nav-link-active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #b7001e;
-}
-.glass-header {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
 
