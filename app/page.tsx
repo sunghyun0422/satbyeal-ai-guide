@@ -8,7 +8,7 @@ export default function Page() {
 
 {/*  TopNavBar  */}
 <header className="bg-surface/80 glass-header sticky top-0 z-50 border-b border-border-subtle">
-<div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto w-full"><a className="flex items-center h-12" href="#"><div className="h-full w-auto flex items-center"><span className="text-headline-md font-bold tracking-widest bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent drop-shadow-sm">샛별자문단 5기</span></div></a></div>
+<div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto w-full"><Link className="flex items-center h-12" href="/"><div className="h-full w-auto flex items-center"><span className="text-headline-md font-bold tracking-widest bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent drop-shadow-sm">샛별자문단 5기</span></div></Link></div>
 </header>
 <main className="w-full">
 {/*  Hero Section  */}

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 @theme inline {
   --color-surface-container-high: #ffe1df;
@@ -61,15 +62,15 @@
   --spacing-gutter: 24px;
   --spacing-margin-mobile: 20px;
 
-  --font-label-sm: 'Inter';
-  --font-headline-xl: 'Inter';
-  --font-headline-lg: 'Inter';
-  --font-body-lg: 'Inter';
-  --font-display-lg: 'Inter';
-  --font-body-md: 'Inter';
-  --font-headline-lg-mobile: 'Inter';
-  --font-label-lg: 'Inter';
-  --font-headline-md: 'Inter';
+  --font-label-sm: 'Pretendard', sans-serif;
+  --font-headline-xl: 'Pretendard', sans-serif;
+  --font-headline-lg: 'Pretendard', sans-serif;
+  --font-body-lg: 'Pretendard', sans-serif;
+  --font-display-lg: 'Pretendard', sans-serif;
+  --font-body-md: 'Pretendard', sans-serif;
+  --font-headline-lg-mobile: 'Pretendard', sans-serif;
+  --font-label-lg: 'Pretendard', sans-serif;
+  --font-headline-md: 'Pretendard', sans-serif;
 
   --text-label-sm: 12px;
   --text-label-sm--line-height: 16px;
@@ -91,7 +92,7 @@
   --text-headline-md--line-height: 32px;
 }
 
-body { font-family: 'Inter', sans-serif; background-color: #fff8f7; }
+body { font-family: 'Pretendard', sans-serif; background-color: #fff8f7; letter-spacing: -0.01em; }
 .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .card-hover-effect { transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card-hover-effect:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(183, 0, 30, 0.08); }
