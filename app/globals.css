@@ -1,18 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Geist:wght@400;600&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #FCFCFD;
-  --foreground: #111113;
+  --background: #fff8f7;
+  --foreground: #291615;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-serif: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
   
   --color-lg-red: #A50034;
+  --color-primary: #b7001e;
+  --color-primary-container: #e60028;
+  --color-on-primary: #ffffff;
+  --color-lg-heritage: #a50034;
+  --color-surface-container: #ffe9e7;
+  --color-surface-container-low: #fff0ef;
+  --color-surface-container-high: #ffe1df;
+  --color-surface-container-highest: #fedad7;
+  --color-border-subtle: #e5e5e5;
+  --color-on-surface-variant: #5e3f3d;
+  --color-surface-tint: #fff5f6;
+  --color-surface-dim: #f5d2cf;
+  --color-text-muted: #666666;
+  --color-on-surface: #291615;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,7 +44,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -48,3 +62,63 @@ body {
 .dark ::-webkit-scrollbar-thumb {
   background: #27272A;
 }
+
+/* Custom Utility Classes from Stitch designs */
+.ambient-shadow {
+  box-shadow: 0 20px 40px -10px rgba(183, 0, 30, 0.08);
+}
+.ambient-shadow-hover:hover {
+  box-shadow: 0 30px 60px -12px rgba(183, 0, 30, 0.12);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(230, 0, 40, 0.4);
+  transform: translateY(-2px);
+}
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #b7001e;
+  z-index: 100;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+.magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+.nav-link-active {
+  position: relative;
+}
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #b7001e;
+}
+.glass-header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
