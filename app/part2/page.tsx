@@ -15,7 +15,7 @@ export default function Page() {
 <h1 className="font-display-lg text-display-lg md:text-headline-xl mb-6 max-w-3xl leading-tight">에피소드 2. 나만의 AI 비서 만들기: GPTs</h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">반복되는 프롬프트 입력에서 벗어나, 당신의 업무 스타일을 완벽히 이해하는 전담 어시스턴트를 구축하는 여정을 시작합니다.</p>
 <div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-[21/9]">
-<img alt="Premium AI Robots" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvvbzAQqQY1z5RNCxcDe4rPNZWjh3MtAccSJbFJRcCR44dZ4H18SzlkzSb4_FOI98BiUCqmi9dE6uMD-RNDqTzhm9iYqkyurZ-VNzftQJ7DL4sTeQc6hQQBu53Qx86EiQzti2SCa5Np58_2ziWaACkVf_-dwP8z1D1EdKaP9hIB_lk-GnLlWbs4o6NPdTpMp0MBoYA51AQa3bgUSGpCxKGwb1SWgE4TYr0g2MejKw_x4YdoDWRVBrGfTQ"/>
+<img alt="Premium AI Robots" className="w-full h-full object-cover" src="/images/premium_ai_robots.png" />
 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 </div>
 </header>
@@ -108,7 +108,7 @@ export default function Page() {
 </div>
 <div className="lg:col-span-8">
 <div className="rounded-3xl overflow-hidden border border-border-subtle shadow-2xl">
-<img alt="LG AI Center Branding with Crystal" className="w-full h-full object-cover aspect-video" src="https://lh3.googleusercontent.com/aida/AP1WRLsjGuYSnjyVmFHbN_Nqh3iEcYOL9ob3PnC4GD-XHScS8IuJpmBejSMJr0UgYBlpp49EXtZvIUzZPj2r3XP858lApo4SYSiT6cHd9HLz2P8SjILQZtaiuL4UPxHsCLapckd9EJv4t-z_jSv7gvc2Zyx2jSEr6tR_DxaHafw2yl1JR2sUNtGdVbA8ZzI2JBZHshjOCuy_2sl24GewjJ7r9BIBXD1WSINqCK7zxxBLhUpSjQ090-hylVYTdt8"/>
+<img alt="LG AI Center Branding with Crystal" className="w-full h-full object-cover aspect-video" src="/images/lg_ai_center.png" />
 </div>
 </div>
 </div>

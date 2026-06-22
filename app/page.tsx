@@ -14,7 +14,7 @@ export default function Page() {
 {/*  Hero Section  */}
 <section className="relative w-full h-[80vh] overflow-hidden flex items-center bg-[#f0f2f5]">
 <div className="absolute inset-0">
-<img alt="Premium AI Background" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvvbzAQqQY1z5RNCxcDe4rPNZWjh3MtAccSJbFJRcCR44dZ4H18SzlkzSb4_FOI98BiUCqmi9dE6uMD-RNDqTzhm9iYqkyurZ-VNzftQJ7DL4sTeQc6hQQBu53Qx86EiQzti2SCa5Np58_2ziWaACkVf_-dwP8z1D1EdKaP9hIB_lk-GnLlWbs4o6NPdTpMp0MBoYA51AQa3bgUSGpCxKGwb1SWgE4TYr0g2MejKw_x4YdoDWRVBrGfTQ" />
+<img alt="Premium AI Background" className="w-full h-full object-cover" src="/images/premium_ai_bg.png" />
 </div>
 <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent"></div>
 <div className="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full text-on-surface">
@@ -52,7 +52,7 @@ export default function Page() {
 {/*  Episode 1 Card  */}
 <article className="flex flex-col bg-surface-container-lowest border border-border-subtle overflow-hidden card-hover-effect cursor-pointer" onClick={() => { window.location.href='/part1' }}>
 <div className="aspect-[16/9] overflow-hidden group">
-<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuALUCjCKnBtSE9KDghASZr4e1GSw1MkcQIVTpRUio633vSLj42S81X-GfvU9xVXDR-CfZa9ZGpiXbA8xax50ocQIuj4moXTmXjVVWnwWXUon9hDB-RxQd2gu7Ioo9lynOMYcqdcBIEQNL4l0M4NLToopDxkjmx9Xu0h5c6gFju0_8X5JxrZv-k2WWp2OQDOMJHB6MBBewfjZ_P1FazgyODaWoTj8zVV9In5Ql3iAvuySIEc2McUOs1MKc" style={{"transform":"scale(1)"}} />
+<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/step_by_step_ui.png" style={{"transform":"scale(1)"}} />
 </div>
 <div className="p-stack-lg flex flex-col h-full">
 <div className="flex items-center gap-2 mb-stack-sm">
@@ -78,7 +78,7 @@ export default function Page() {
 {/*  Episode 2 Card  */}
 <article className="flex flex-col bg-surface-container-lowest border border-border-subtle overflow-hidden card-hover-effect cursor-pointer" onClick={() => { window.location.href='/part2' }}>
 <div className="aspect-[16/9] overflow-hidden group">
-<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsjGuYSnjyVmFHbN_Nqh3iEcYOL9ob3PnC4GD-XHScS8IuJpmBejSMJr0UgYBlpp49EXtZvIUzZPj2r3XP858lApo4SYSiT6cHd9HLz2P8SjILQZtaiuL4UPxHsCLapckd9EJv4t-z_jSv7gvc2Zyx2jSEr6tR_DxaHafw2yl1JR2sUNtGdVbA8ZzI2JBZHshjOCuy_2sl24GewjJ7r9BIBXD1WSINqCK7zxxBLhUpSjQ090-hylVYTdt8" style={{"transform":"scale(1)"}} />
+<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/lg_ai_center.png" style={{"transform":"scale(1)"}} />
 </div>
 <div className="p-stack-lg flex flex-col h-full">
 <div className="flex items-center gap-2 mb-stack-sm">

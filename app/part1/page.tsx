@@ -22,7 +22,7 @@ export default function Page() {
                     </p>
 </div>
 <div className="relative h-[400px] lg:h-[600px]">
-<img alt="Premium AI Workspace Visual" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvvbzAQqQY1z5RNCxcDe4rPNZWjh3MtAccSJbFJRcCR44dZ4H18SzlkzSb4_FOI98BiUCqmi9dE6uMD-RNDqTzhm9iYqkyurZ-VNzftQJ7DL4sTeQc6hQQBu53Qx86EiQzti2SCa5Np58_2ziWaACkVf_-dwP8z1D1EdKaP9hIB_lk-GnLlWbs4o6NPdTpMp0MBoYA51AQa3bgUSGpCxKGwb1SWgE4TYr0g2MejKw_x4YdoDWRVBrGfTQ" />
+<img alt="Premium AI Workspace Visual" className="w-full h-full object-cover" src="/images/premium_ai_bg.png" />
 <div className="absolute inset-0 hero-gradient"></div>
 </div>
 </div>
@@ -57,7 +57,7 @@ export default function Page() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
 <div className="group cursor-pointer">
 <div className="aspect-[16/9] overflow-hidden rounded-xl mb-4">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional team in a modern LG office setting, brainstorming around a minimalist white table with digital displays in the background. The lighting is soft and neutral with signature red accents in the decor. High-end corporate editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGxHd_ghONs3Xc8j43FC2_fuevEuLy3WhT42Bh6X81x569T38AdfCu0wnt1UJXzH952B8RvEWtvKOO_urbaUzm4m_tbc50FHGt2dQFLg2u4WB3wIWMCaQHD7Kcv_KdMHQTNVURCQf-6RGjuAF5qAvVcxl97i2R02j5SBLYZqChr0wkTDXgwk76DPsYrgvWf1vEZByMqP7JBRtnZkuTTFJULHasSpj3tYKkH6NQ6gdvkSRKqNPGxPQ36hkDlvyk2GWKwAFfDBe43qM" />
+<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional team in a modern LG office setting, brainstorming around a minimalist white table with digital displays in the background. The lighting is soft and neutral with signature red accents in the decor. High-end corporate editorial style." src="/images/lg_office_team.png" />
 </div>
 <span className="text-primary font-label-lg">SCENARIO 01</span>
 <h3 className="font-headline-md text-headline-md mt-2">반복적인 상황 설명이 지칠 때</h3>
@@ -65,7 +65,7 @@ export default function Page() {
 </div>
 <div className="group cursor-pointer">
 <div className="aspect-[16/9] overflow-hidden rounded-xl mb-4">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist desktop workspace featuring high-tech gadgets and multiple thin documents laid out in an organized grid. The color palette is composed of cool grays and crisp whites with a single vibrant red desk lamp providing a focused surgical accent light. Professional and authoritative mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB447CCXpMu6oi_8sTHaDewwJ4FcdH7ZTqM-gDGUbsOrYTlfEI9TlYUkvyrjG_SL_9VHdusNzpRenygbMUl9y62qr8chiB6p9-Ub3DoKHjKpslFKKCfe1Zdy6vassAD_0LO7_njgjfDnkZhx8LDn_8KLtuu95yMHPwkAhPcl1OiiP5Tvsv0ECbMUH6-xMw4EgxIn_26aU8FcsGFEYvkoPCnnVMGzgI9ywVAwFJ9yMkzsFMfJKGOmNXQwSgUxJToVS6rrUFm3pFO_RU" />
+<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist desktop workspace featuring high-tech gadgets and multiple thin documents laid out in an organized grid. The color palette is composed of cool grays and crisp whites with a single vibrant red desk lamp providing a focused surgical accent light. Professional and authoritative mood." src="/images/minimalist_workspace.png" />
 </div>
 <span className="text-primary font-label-lg">SCENARIO 02</span>
 <h3 className="font-headline-md text-headline-md mt-2">방대한 참고 자료가 있을 때</h3>
@@ -138,7 +138,7 @@ export default function Page() {
 </div>
 </div>
 <div className="flex-1 order-1 md:order-2 rounded-xl overflow-hidden shadow-xl border border-border-subtle">
-<img alt="Step-by-step UI Illustration" className="w-full h-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLuALUCjCKnBtSE9KDghASZr4e1GSw1MkcQIVTpRUio633vSLj42S81X-GfvU9xVXDR-CfZa9ZGpiXbA8xax50ocQIuj4moXTmXjVVWnwWXUon9hDB-RxQd2gu7Ioo9lynOMYcqdcBIEQNL4l0M4NLToopDxkjmx9Xu0h5c6gFju0_8X5JxrZv-k2WWp2OQDOMJHB6MBBewfjZ_P1FazgyODaWoTj8zVV9In5Ql3iAvuySIEc2McUOs1MKc" />
+<img alt="Step-by-step UI Illustration" className="w-full h-auto" src="/images/step_by_step_ui.png" />
 </div>
 </section>
 {/*  05/06 지침 가이드 Prompt Templates  */}
