@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://satbyeal-ai-guide.vercel.app"),
   title: "LG AI Advisory - Satbyeal AI Guide Magazine",
   description: "LG전자 샛별자문단 5기가 제안하는 실무 밀착형 AI 활용 가이드",
+  verification: {
+    other: {
+      "naver-site-verification": ["0a659f99f48a78d3dffa3daeb8e27534a1bb6681"],
+    },
+  },
 };
 
 export default function RootLayout({
