@@ -245,7 +245,7 @@ export default function Page() {
 </div>
 </div>
 <div className="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-surface-variant/60 font-body-md">
-<p className="">© 2024 LG Electronics. All rights reserved. Premium AI Advisory Group.</p>
+<p className="">© 2026 LG Electronics. All rights reserved. 5th Satbyeal Advisory Group.</p>
 </div>
 </footer>
 

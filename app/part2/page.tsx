@@ -222,7 +222,7 @@ export default function Page() {
 </section>
 </main>
 {/*  Footer CTA  */}
-<footer className="bg-secondary py-stack-xl border-t border-white/10"><div className="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-lg w-full"><div className="flex flex-col gap-4"><p className="font-body-md text-surface-variant/80 max-w-xs">Premium AI Advisory Group. 실무자를 위한 최적의 AI 경험을 디자인합니다.</p></div></div><div className="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-surface-variant/60 font-body-md"><p className="">© 2024 LG Electronics. All rights reserved. Premium AI Advisory Group.</p></div></footer>
+<footer className="bg-secondary py-stack-xl border-t border-white/10"><div className="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-lg w-full"><div className="flex flex-col gap-4"><p className="font-body-md text-surface-variant/80 max-w-xs">Premium AI Advisory Group. 실무자를 위한 최적의 AI 경험을 디자인합니다.</p></div></div><div className="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-surface-variant/60 font-body-md"><p className="">© 2026 LG Electronics. All rights reserved. 5th Satbyeal Advisory Group.</p></div></footer>
 {/*  FAB for quick action  */}
 
     </>
