@@ -61,7 +61,8 @@ export default function Page() {
 <span className="text-on-surface-variant font-label-lg">PROJECTS</span>
 </div>
 <h3 className="font-headline-lg text-headline-lg mb-stack-md leading-tight text-on-surface break-keep">
-                            또 학습시키고 시작해요? 저도요. 🔥 🙋
+                            <span className="block">또 학습시키고 시작해요?</span>
+                            <span className="block">저도요. 🔥 🙋</span>
                         </h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow break-keep">
                             매번 똑같은 배경 설명을 반복하고 계신가요? 같은 자료를 팀원 수만큼 각자 AI에 넣고 있다면, 이제 "공유 프로젝트"로 팀 전체가 같은 맥락에서 작업할 수 있는 환경을 만들어 보세요.
@@ -87,7 +88,8 @@ export default function Page() {
 <span className="text-on-surface-variant font-label-lg">GPTS</span>
 </div>
 <h3 className="font-headline-lg text-headline-lg mb-stack-md leading-tight text-on-surface break-keep">
-                            매번 똑같은 지시 내릴 건가요? 저도 지겨워서요🥱
+                            <span className="block">매번 똑같은 지시 내릴 건가요?</span>
+                            <span className="block">저도 지겨워서요🥱</span>
                         </h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow break-keep">
                             회의록 요약, 보고서 정리 등 같은 업무인데 결과물 형식이 제각각이라면? 반복되는 업무 루틴을 저장해두는 우리 팀 전용 맞춤형 AI 비서, GPTs 활용법을 알아봅니다.
