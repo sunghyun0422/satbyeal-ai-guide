@@ -37,7 +37,7 @@ export default function Page() {
               </div>
             </div>
             <div className="relative h-[400px] lg:h-[600px] bg-secondary-container flex items-center justify-center overflow-hidden">
-              <img alt="Hero Visual" className="w-full h-full object-cover opacity-80" src="/images/ai-magazine/image 10.png" />
+              <img alt="Hero Visual" className="w-full h-full object-cover" src="/images/ai-magazine/exhausted_worker_meme.png" />
               <div className="absolute inset-0 hero-gradient"></div>
             </div>
           </div>
@@ -70,12 +70,12 @@ export default function Page() {
         {/* 02 프로젝트와 GPTs 차이 */}
         <section className="mt-stack-xl bg-surface-container-low p-stack-lg rounded-xl">
           <h2 className="font-headline-lg text-headline-lg mb-8 text-primary">02. 프로젝트와 GPTs는 어떻게 다를까?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div className="bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
               <h3 className="font-headline-md font-bold text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-primary">folder_open</span> 프로젝트</h3>
               <p className="font-body-md text-on-surface-variant mt-2"><strong>업무별 작업방🧑‍💻</strong><br/>관련 파일, 대화, 지침을 한곳에 모아두고 긴 업무를 이어갈 때 유용해요. (예: 2030 타겟 신제품 개발)</p>
             </div>
-            <div>
+            <div className="bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
               <h3 className="font-headline-md font-bold text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-primary">smart_toy</span> GPTs</h3>
               <p className="font-body-md text-on-surface-variant mt-2"><strong>목적별 AI 비서🤖</strong><br/>특정 기능을 반복해서 수행하도록 만든 전문 도구. (예: 매거진 도입부 작성 GPT, 보고서 검수 GPT)</p>
             </div>
@@ -107,8 +107,8 @@ export default function Page() {
         <section className="mt-stack-xl">
           <h2 className="font-headline-lg text-headline-lg mb-6 border-l-4 border-primary pl-4">03. GPTs는 언제 사용할까?</h2>
           <p className="font-body-md text-on-surface-variant mb-6">GPTs는 <strong>반복되는 작업, 결과물의 형식이 정해진 작업, 특정 기준을 계속 지켜야 하는 작업</strong>에 잘 맞아요.</p>
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="flex-1 space-y-4">
+          <div className="flex flex-col gap-8">
+            <div className="w-full space-y-4">
               <div className="bg-white p-4 border border-border-subtle rounded text-body-sm text-text-muted">
                 <strong>GPTs가 필요한 상황⚠️</strong><br/>
                 - 매번 같은 역할을 AI에게 설명할 때<br/>
@@ -118,9 +118,9 @@ export default function Page() {
               </div>
               <p className="font-body-md">일반 채팅에선 매번 긴 지시사항(형식, 말투 등)을 적어줘야 하지만, GPTs를 쓰면 <strong>회의록 내용만 복붙</strong>해도 완벽한 결과물이 나옵니다!</p>
             </div>
-            <div className="flex-1 flex flex-col md:flex-row gap-6">
-              <ZoomableImage src="/images/ai-magazine/image 8.png" className="rounded-lg shadow-sm border border-border-subtle w-full md:w-1/2 object-contain" alt="일반 프롬프트 복잡함"/>
-              <ZoomableImage src="/images/ai-magazine/image 9.png" className="rounded-lg shadow-sm border border-border-subtle w-full md:w-1/2 object-contain" alt="GPTs 깔끔함"/>
+            <div className="w-full flex flex-col gap-6">
+              <ZoomableImage src="/images/ai-magazine/image 8.png" className="rounded-lg shadow-sm border border-border-subtle w-full object-contain" alt="일반 프롬프트 복잡함"/>
+              <ZoomableImage src="/images/ai-magazine/image 9.png" className="rounded-lg shadow-sm border border-border-subtle w-full object-contain" alt="GPTs 깔끔함"/>
             </div>
           </div>
         </section>
@@ -264,31 +264,31 @@ export default function Page() {
           <h2 className="font-headline-lg text-headline-lg mb-8 text-primary">07. GPTs를 효율적으로 사용하는 팁 😽</h2>
           
           <div className="space-y-8">
-            <div className="flex flex-col lg:flex-row gap-6 items-start">
-              <div className="lg:w-2/3">
+            <div className="flex flex-col gap-6 items-start">
+              <div className="w-full">
                 <h3 className="font-headline-md font-bold mb-2">팁 1. 필요한 능력만 켜주세요 👀</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">웹 검색, 캔버스, 이미지 생성, 코드 인터프리터. 목적 없는 '기능 다 켜기'는 응답 속도만 늦춥니다. <strong>정말 필요한 기능만 딱 켜두는 게 고수의 세팅법</strong>입니다.</p>
               </div>
-              <ZoomableImage src="/images/ai-magazine/image 21.png" className="rounded-lg border border-border-subtle w-full lg:w-1/3" alt="기능 켜기"/>
+              <ZoomableImage src="/images/ai-magazine/image 21.png" className="rounded-lg border border-border-subtle w-full" alt="기능 켜기"/>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-6 items-start border-t border-border-subtle pt-8">
-              <div className="lg:w-2/3">
+            <div className="flex flex-col gap-6 items-start border-t border-border-subtle pt-8">
+              <div className="w-full">
                 <h3 className="font-headline-md font-bold mb-2">팁 2. Knowledge에는 기준이 되는 자료를 ⬅️</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">기존 회의록 형식, 프로젝트 일정 가이드, FAQ 문서, 정책 문서 등. 자주 바뀌는 자료보다 오래 참고할 <strong>기준 자료</strong>를 넣는 것이 좋습니다.</p>
               </div>
-              <ZoomableImage src="/images/ai-magazine/image 22.png" className="rounded-lg border border-border-subtle w-full lg:w-1/3" alt="지식 자료"/>
+              <ZoomableImage src="/images/ai-magazine/image 22.png" className="rounded-lg border border-border-subtle w-full" alt="지식 자료"/>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-6 items-start border-t border-border-subtle pt-8">
-              <div className="lg:w-2/3">
+            <div className="flex flex-col gap-6 items-start border-t border-border-subtle pt-8">
+              <div className="w-full">
                 <h3 className="font-headline-md font-bold mb-2">팁 3. 파일을 넣을 땐 역할까지 정해주세요 🧑‍💼</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">Knowledge에 파일만 두지 말고 Instructions에 역할을 명시하세요. (예: "브랜드 가이드는 금지 표현의 기준으로 써줘")</p>
                 <div className="bg-white p-4 rounded text-sm mb-4">
                   "답변할 때는 업로드된 Knowledge 파일을 우선적으로 참고해줘. 자료에 없는 내용은 단정하지 마."
                 </div>
               </div>
-              <div className="flex flex-col gap-6 w-full lg:w-1/3">
+              <div className="flex flex-col gap-6 w-full">
                 <ZoomableImage src="/images/ai-magazine/image 23.png" className="rounded-lg border border-border-subtle w-full" alt="파일 역할"/>
                 <ZoomableImage src="/images/ai-magazine/image 24.png" className="rounded-lg border border-border-subtle w-full" alt="지식 우선"/>
               </div>
