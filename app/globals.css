@@ -92,7 +92,7 @@
   --text-headline-md--line-height: 32px;
 }
 
-body { font-family: 'Pretendard', sans-serif; background-color: #fff8f7; letter-spacing: -0.01em; }
+body { font-family: 'Pretendard', sans-serif; background-color: #fff8f7; letter-spacing: -0.01em; word-break: keep-all; overflow-wrap: break-word; }
 .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .card-hover-effect { transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card-hover-effect:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(183, 0, 30, 0.08); }

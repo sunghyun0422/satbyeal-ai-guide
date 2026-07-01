@@ -20,8 +20,8 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-stack-lg">
             <div className="p-stack-lg lg:p-16 z-10">
               <span className="text-primary font-label-lg tracking-widest block mb-4">EPISODE 01</span>
-              <h1 className="font-headline-xl text-headline-xl mb-6">또 학습시키고 시작해요?<br/>저도요. 🔥 🙋</h1>
-              <div className="font-body-lg text-body-lg text-on-surface-variant max-w-md space-y-4">
+              <h1 className="font-headline-xl text-headline-xl mb-6 break-keep">또 학습시키고 시작해요?<br/>저도요. 🔥 🙋</h1>
+              <div className="font-body-lg text-body-lg text-on-surface-variant max-w-md space-y-4 break-keep">
                 <blockquote className="border-l-4 border-primary pl-4 italic text-on-surface">
                   "당신은 지금까지 AI를 완전히 잘못 사용하고 있었다."
                 </blockquote>
