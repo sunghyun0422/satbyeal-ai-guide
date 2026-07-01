@@ -135,7 +135,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</div>
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">GPT 만들기 화면 열기</h3>
-                <div className="flex flex-col gap-6 max-w-3xl">
+                <div className="flex flex-col gap-6 w-full">
                   <ZoomableImage src="/images/ai-magazine/image 11.png" className="rounded-lg border border-border-subtle w-full" alt="만들기"/>
                   <ZoomableImage src="/images/ai-magazine/image 12.png" className="rounded-lg border border-border-subtle w-full" alt="만들기 진입"/>
                 </div>
@@ -146,7 +146,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</div>
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">이름과 설명, 지침(Instructions) 입력</h3>
-                <div className="flex flex-col gap-6 max-w-3xl">
+                <div className="flex flex-col gap-6 w-full">
                   <ZoomableImage src="/images/ai-magazine/image 14.png" className="rounded-lg border border-border-subtle w-full" alt="지침 입력"/>
                   <ZoomableImage src="/images/ai-magazine/image 15.png" className="rounded-lg border border-border-subtle w-full" alt="지침 상세"/>
                 </div>
@@ -157,7 +157,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</div>
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">Knowledge(지식)에 참고 자료 업로드 & 기능 켜기</h3>
-                <div className="flex flex-col gap-6 max-w-3xl">
+                <div className="flex flex-col gap-6 w-full">
                   <ZoomableImage src="/images/ai-magazine/image 16.png" className="rounded-lg border border-border-subtle w-full" alt="지식 업로드"/>
                   <ZoomableImage src="/images/ai-magazine/image 17.png" className="rounded-lg border border-border-subtle w-full" alt="기능 설정"/>
                 </div>
@@ -169,7 +169,7 @@ export default function Page() {
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">실제 질문으로 테스트 및 수정</h3>
                 <p className="font-body-md text-on-surface-variant mb-2">GPTs는 한 번에 완성되지 않아요. 실제 질문을 넣어가며 Instructions를 계속 다듬는 게 중요해요.</p>
-                <div className="flex flex-col gap-6 max-w-3xl">
+                <div className="flex flex-col gap-6 w-full">
                   <ZoomableImage src="/images/ai-magazine/image 18.png" className="rounded-lg border border-border-subtle w-full" alt="테스트 1"/>
                   <ZoomableImage src="/images/ai-magazine/image 19.png" className="rounded-lg border border-border-subtle w-full" alt="테스트 2"/>
                 </div>
@@ -181,7 +181,7 @@ export default function Page() {
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">공유 범위 설정</h3>
                 <p className="font-body-md text-on-surface-variant mb-2">내부용 GPT라면 링크가 있는 사람만 볼 수 있게 하거나 워크스페이스 전용으로 설정해 보안을 지키세요.</p>
-                <ZoomableImage src="/images/ai-magazine/image 20.png" className="rounded-lg border border-border-subtle w-full max-w-3xl" alt="공유 범위"/>
+                <ZoomableImage src="/images/ai-magazine/image 20.png" className="rounded-lg border border-border-subtle w-full" alt="공유 범위"/>
               </div>
             </div>
           </div>
@@ -235,7 +235,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">cancel</span>
                 BEFORE: 팀이 각자 AI를 따로 쓸 때
               </h3>
-              <ZoomableImage src="/images/ai-magazine/IMG_1343.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top border border-border-subtle" alt="Before"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1343.jpeg" className="rounded-lg mb-4 w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="Before"/>
               <ul className="space-y-3 font-body-md text-on-surface-variant">
                 <li>• 팀원마다 AI에게 다르게 물어봐서 결과물 형식이 제각각이에요.</li>
                 <li>• 같은 업무를 매번 처음부터 세팅해야 해요.</li>
@@ -248,7 +248,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">check_circle</span>
                 AFTER: 팀 GPT를 만들고 나서 🙌
               </h3>
-              <ZoomableImage src="/images/ai-magazine/IMG_1340.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top border border-border-subtle" alt="After"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1340.jpeg" className="rounded-lg mb-4 w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="After"/>
               <ul className="space-y-3 font-body-md text-white/90">
                 <li>• 팀원 누가 써도 같은 형식, 같은 기준으로 결과물이 나와요.</li>
                 <li>• 내부 기준이 GPT 안에 담겨 따로 설명할 필요가 없어요.</li>

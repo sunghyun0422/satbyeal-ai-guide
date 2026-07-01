@@ -219,7 +219,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">cancel</span>
                 BEFORE: 각자 AI를 따로 쓸 때
               </h3>
-              <ZoomableImage src="/images/ai-magazine/IMG_1344.jpeg" className="rounded-lg mb-4 w-full border border-border-subtle" alt="Before"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1344.jpeg" className="rounded-lg mb-4 w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="Before"/>
               <ul className="space-y-3 font-body-md text-on-surface-variant">
                 <li>• 장원영 씨, 김재원 씨 모두 각자의 AI에 같은 배경 설명을 처음부터 다시 입력해요.</li>
                 <li>• 사람마다 AI 설정이 달라 결과물 품질에 편차가 생겨요.</li>
@@ -232,7 +232,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">check_circle</span>
                 AFTER: 공유 프로젝트를 쓸 때
               </h3>
-              <ZoomableImage src="/images/ai-magazine/IMG_1341.jpeg" className="rounded-lg mb-4 w-full border border-border-subtle" alt="After"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1341.jpeg" className="rounded-lg mb-4 w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="After"/>
               <ul className="space-y-3 font-body-md text-white/90">
                 <li>• 자료는 한 번만 넣으면 팀 전체가 같은 맥락에서 시작해요.</li>
                 <li>• "이 방향으로 초안 잡아줘" 본론만 물어보면 끝!</li>
@@ -260,7 +260,7 @@ export default function Page() {
             <div>
               <h3 className="font-headline-md font-bold mb-2">팁 2. 방을 ‘1회성 작업실’로 인식</h3>
               <p className="font-body-md text-on-surface-variant mb-4">대화가 너무 길어지면 앞선 맥락을 잊을 수 있어요. 작업 단계가 끝나면 `+ New Chat`을 누르세요. 새 방을 열 땐 이전 작업 요약을 꼭 함께 넣어주면 흐름이 끊기지 않아요.</p>
-              <div className="flex flex-col gap-6 w-full max-w-3xl">
+              <div className="flex flex-col gap-6 w-full">
                 <ZoomableImage src="/images/ai-magazine/image 4.png" className="rounded-lg border border-border-subtle w-full" alt="팁 4"/>
                 <ZoomableImage src="/images/ai-magazine/IMG_1361.jpeg" className="rounded-lg border border-border-subtle w-full" alt="팁 1361"/>
                 <ZoomableImage src="/images/ai-magazine/image 5.png" className="rounded-lg border border-border-subtle w-full" alt="팁 5"/>
@@ -270,9 +270,9 @@ export default function Page() {
             <div>
               <h3 className="font-headline-md font-bold mb-2">09. ChatGPT가 아니어도 활용할 수 있어요</h3>
               <p className="font-body-md text-on-surface-variant mb-4">Claude의 Projects나 Gemini의 Notebook에서도 비슷하게 활용할 수 있답니다. 🏘️</p>
-              <div className="flex flex-col md:flex-row gap-6">
-                <ZoomableImage src="/images/ai-magazine/image 6.png" className="rounded-lg border border-border-subtle w-full md:w-1/2 object-cover" alt="클로드"/>
-                <ZoomableImage src="/images/ai-magazine/image 7.png" className="rounded-lg border border-border-subtle w-full md:w-1/2 object-cover" alt="제미나이"/>
+              <div className="flex flex-col gap-8 w-full">
+                <ZoomableImage src="/images/ai-magazine/image 6.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="클로드"/>
+                <ZoomableImage src="/images/ai-magazine/image 7.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="제미나이"/>
               </div>
             </div>
           </div>
