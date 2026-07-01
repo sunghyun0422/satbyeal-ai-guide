@@ -21,7 +21,10 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-stack-lg">
             <div className="p-stack-lg lg:p-16 z-10">
               <span className="text-primary font-label-lg tracking-widest block mb-4">EPISODE 01</span>
-              <h1 className="font-headline-xl text-headline-xl mb-6 break-keep">또 학습시키고 시작해요?<br/>저도요. 🔥 🙋</h1>
+              <h1 className="font-headline-xl text-headline-xl mb-6 break-keep">
+                <span className="block">또 학습시키고 시작해요?</span>
+                <span className="block">저도요. 🔥 🙋</span>
+              </h1>
               <div className="font-body-lg text-body-lg text-on-surface-variant max-w-md space-y-4 break-keep">
                 <blockquote className="border-l-4 border-primary pl-4 italic text-on-surface">
                   "당신은 지금까지 AI를 완전히 잘못 사용하고 있었다."
@@ -30,8 +33,14 @@ export default function Page() {
                 <p className="bg-white p-4 rounded-lg shadow-sm text-body-md text-text-muted">
                   A가 자료를 AI에 넣고 초안을 만들어요. B가 그걸 받아서 본인 AI에 다시 넣고, C가 최종본 만들 때 또 처음부터 넣어요.
                 </p>
-                <p>같은 자료를 팀원 수만큼 반복해서 AI에 넣고 있다면, 문제는 AI가 아니라 <strong>AI를 쓰는 구조</strong>예요.</p>
-                <p>답답한 거 못 참는 성격이라 제가 직접 해결책을 가져왔습니다🕴️. 판을 뒤집을 '진짜' 비기. 이름하여 👉 <strong>"공유 프로젝트"</strong> 👈</p>
+                <p className="leading-relaxed">
+                  <span className="block mb-2">같은 자료를 팀원 수만큼 반복해서 AI에 넣고 있다면,</span>
+                  <span className="block">문제는 AI가 아니라 <strong>AI를 쓰는 구조</strong>예요.</span>
+                </p>
+                <p className="leading-relaxed mt-4">
+                  <span className="block mb-2">답답한 거 못 참는 성격이라 제가 직접 해결책을 가져왔습니다🕴️.</span>
+                  <span className="block">판을 뒤집을 '진짜' 비기. 이름하여 👉 <strong>"공유 프로젝트"</strong> 👈</span>
+                </p>
               </div>
             </div>
             <div className="relative h-[400px] lg:h-[600px]">
