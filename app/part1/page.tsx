@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import ZoomableImage from '../components/ZoomableImage';
 
 export default function Page() {
   return (
@@ -109,9 +110,9 @@ export default function Page() {
                 <h3 className="font-headline-md text-primary mb-2">Step 1. 새 프로젝트 만들기</h3>
                 <p className="font-body-md text-on-surface-variant">ChatGPT 왼쪽 사이드바에서 <strong>프로젝트</strong> 메뉴를 선택하고 새 프로젝트를 만들어요.</p>
               </div>
-              <div className="lg:w-2/3 grid grid-cols-2 gap-4">
-                <img src="/images/ai-magazine/IMG_1353.jpeg" className="rounded-lg shadow-md w-full" alt="새 프로젝트 만들기 1"/>
-                <img src="/images/ai-magazine/image 1.png" className="rounded-lg shadow-md w-full" alt="새 프로젝트 만들기 2"/>
+              <div className="lg:w-2/3 flex flex-col gap-6">
+                <ZoomableImage src="/images/ai-magazine/IMG_1353.jpeg" className="rounded-lg border border-border-subtle w-full" alt="새 프로젝트 만들기 1"/>
+                <ZoomableImage src="/images/ai-magazine/image 1.png" className="rounded-lg border border-border-subtle w-full" alt="새 프로젝트 만들기 2"/>
               </div>
             </div>
 
@@ -126,9 +127,9 @@ export default function Page() {
                   - 신제품 브리프 문서
                 </div>
               </div>
-              <div className="lg:w-2/3 grid grid-cols-2 gap-4">
-                <img src="/images/ai-magazine/image 2.png" className="rounded-lg shadow-md w-full" alt="파일 업로드 1"/>
-                <img src="/images/ai-magazine/IMG_1354.jpeg" className="rounded-lg shadow-md w-full" alt="파일 업로드 2"/>
+              <div className="lg:w-2/3 flex flex-col gap-6">
+                <ZoomableImage src="/images/ai-magazine/image 2.png" className="rounded-lg border border-border-subtle w-full" alt="파일 업로드 1"/>
+                <ZoomableImage src="/images/ai-magazine/IMG_1354.jpeg" className="rounded-lg border border-border-subtle w-full" alt="파일 업로드 2"/>
               </div>
             </div>
 
@@ -143,9 +144,9 @@ export default function Page() {
                   <li><strong>특정 요구 사항:</strong> 피해야 할 표현이나 행동</li>
                 </ul>
               </div>
-              <div className="lg:w-2/3 grid grid-cols-2 gap-4">
-                <img src="/images/ai-magazine/IMG_1355.jpeg" className="rounded-lg shadow-md w-full" alt="지침 설정 1"/>
-                <img src="/images/ai-magazine/IMG_1356.jpeg" className="rounded-lg shadow-md w-full" alt="지침 설정 2"/>
+              <div className="lg:w-2/3 flex flex-col gap-6">
+                <ZoomableImage src="/images/ai-magazine/IMG_1355.jpeg" className="rounded-lg border border-border-subtle w-full" alt="지침 설정 1"/>
+                <ZoomableImage src="/images/ai-magazine/IMG_1356.jpeg" className="rounded-lg border border-border-subtle w-full" alt="지침 설정 2"/>
               </div>
             </div>
 
@@ -154,11 +155,11 @@ export default function Page() {
                 <h3 className="font-headline-md text-primary mb-2">Step 4. 팀원 초대 및 권한 설정 👥</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">1. Share(공유) 버튼 클릭<br/>2. 팀원 이메일 검색 및 추가<br/>3. 권한(Chat 또는 Edit) 설정<br/>4. Invite(초대) 발송</p>
               </div>
-              <div className="lg:w-2/3 grid grid-cols-2 gap-4">
-                <img src="/images/ai-magazine/IMG_1357.jpeg" className="rounded-lg shadow-md w-full" alt="권한 1"/>
-                <img src="/images/ai-magazine/IMG_1358.jpeg" className="rounded-lg shadow-md w-full" alt="권한 2"/>
-                <img src="/images/ai-magazine/IMG_1359.jpeg" className="rounded-lg shadow-md w-full" alt="권한 3"/>
-                <img src="/images/ai-magazine/IMG_1360.jpeg" className="rounded-lg shadow-md w-full" alt="권한 4"/>
+              <div className="lg:w-2/3 flex flex-col gap-6">
+                <ZoomableImage src="/images/ai-magazine/IMG_1357.jpeg" className="rounded-lg border border-border-subtle w-full" alt="권한 1"/>
+                <ZoomableImage src="/images/ai-magazine/IMG_1358.jpeg" className="rounded-lg border border-border-subtle w-full" alt="권한 2"/>
+                <ZoomableImage src="/images/ai-magazine/IMG_1359.jpeg" className="rounded-lg border border-border-subtle w-full" alt="권한 3"/>
+                <ZoomableImage src="/images/ai-magazine/IMG_1360.jpeg" className="rounded-lg border border-border-subtle w-full" alt="권한 4"/>
               </div>
             </div>
           </div>
@@ -218,7 +219,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">cancel</span>
                 BEFORE: 각자 AI를 따로 쓸 때
               </h3>
-              <img src="/images/ai-magazine/IMG_1344.jpeg" className="rounded-lg mb-4 w-full" alt="Before"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1344.jpeg" className="rounded-lg mb-4 w-full border border-border-subtle" alt="Before"/>
               <ul className="space-y-3 font-body-md text-on-surface-variant">
                 <li>• 장원영 씨, 김재원 씨 모두 각자의 AI에 같은 배경 설명을 처음부터 다시 입력해요.</li>
                 <li>• 사람마다 AI 설정이 달라 결과물 품질에 편차가 생겨요.</li>
@@ -231,7 +232,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">check_circle</span>
                 AFTER: 공유 프로젝트를 쓸 때
               </h3>
-              <img src="/images/ai-magazine/IMG_1341.jpeg" className="rounded-lg mb-4 w-full" alt="After"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1341.jpeg" className="rounded-lg mb-4 w-full border border-border-subtle" alt="After"/>
               <ul className="space-y-3 font-body-md text-white/90">
                 <li>• 자료는 한 번만 넣으면 팀 전체가 같은 맥락에서 시작해요.</li>
                 <li>• "이 방향으로 초안 잡아줘" 본론만 물어보면 끝!</li>
@@ -259,19 +260,19 @@ export default function Page() {
             <div>
               <h3 className="font-headline-md font-bold mb-2">팁 2. 방을 ‘1회성 작업실’로 인식</h3>
               <p className="font-body-md text-on-surface-variant mb-4">대화가 너무 길어지면 앞선 맥락을 잊을 수 있어요. 작업 단계가 끝나면 `+ New Chat`을 누르세요. 새 방을 열 땐 이전 작업 요약을 꼭 함께 넣어주면 흐름이 끊기지 않아요.</p>
-              <div className="flex gap-4 overflow-x-auto">
-                <img src="/images/ai-magazine/image 4.png" className="rounded h-40" alt="팁 4"/>
-                <img src="/images/ai-magazine/IMG_1361.jpeg" className="rounded h-40" alt="팁 1361"/>
-                <img src="/images/ai-magazine/image 5.png" className="rounded h-40" alt="팁 5"/>
+              <div className="flex flex-col gap-6 w-full max-w-3xl">
+                <ZoomableImage src="/images/ai-magazine/image 4.png" className="rounded-lg border border-border-subtle w-full" alt="팁 4"/>
+                <ZoomableImage src="/images/ai-magazine/IMG_1361.jpeg" className="rounded-lg border border-border-subtle w-full" alt="팁 1361"/>
+                <ZoomableImage src="/images/ai-magazine/image 5.png" className="rounded-lg border border-border-subtle w-full" alt="팁 5"/>
               </div>
             </div>
 
             <div>
               <h3 className="font-headline-md font-bold mb-2">09. ChatGPT가 아니어도 활용할 수 있어요</h3>
               <p className="font-body-md text-on-surface-variant mb-4">Claude의 Projects나 Gemini의 Notebook에서도 비슷하게 활용할 수 있답니다. 🏘️</p>
-              <div className="flex gap-4">
-                <img src="/images/ai-magazine/image 6.png" className="rounded w-1/2 object-cover" alt="클로드"/>
-                <img src="/images/ai-magazine/image 7.png" className="rounded w-1/2 object-cover" alt="제미나이"/>
+              <div className="flex flex-col md:flex-row gap-6">
+                <ZoomableImage src="/images/ai-magazine/image 6.png" className="rounded-lg border border-border-subtle w-full md:w-1/2 object-cover" alt="클로드"/>
+                <ZoomableImage src="/images/ai-magazine/image 7.png" className="rounded-lg border border-border-subtle w-full md:w-1/2 object-cover" alt="제미나이"/>
               </div>
             </div>
           </div>

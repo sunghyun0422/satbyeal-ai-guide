@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import ZoomableImage from '../components/ZoomableImage';
 
 export default function Page() {
   return (
@@ -117,9 +118,9 @@ export default function Page() {
               </div>
               <p className="font-body-md">일반 채팅에선 매번 긴 지시사항(형식, 말투 등)을 적어줘야 하지만, GPTs를 쓰면 <strong>회의록 내용만 복붙</strong>해도 완벽한 결과물이 나옵니다!</p>
             </div>
-            <div className="flex-1 grid grid-cols-2 gap-4">
-              <img src="/images/ai-magazine/image 8.png" className="rounded-lg shadow border" alt="일반 프롬프트 복잡함"/>
-              <img src="/images/ai-magazine/image 9.png" className="rounded-lg shadow border" alt="GPTs 깔끔함"/>
+            <div className="flex-1 flex flex-col md:flex-row gap-6">
+              <ZoomableImage src="/images/ai-magazine/image 8.png" className="rounded-lg shadow-sm border border-border-subtle w-full md:w-1/2 object-contain" alt="일반 프롬프트 복잡함"/>
+              <ZoomableImage src="/images/ai-magazine/image 9.png" className="rounded-lg shadow-sm border border-border-subtle w-full md:w-1/2 object-contain" alt="GPTs 깔끔함"/>
             </div>
           </div>
         </section>
@@ -134,8 +135,10 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</div>
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">GPT 만들기 화면 열기</h3>
-                <img src="/images/ai-magazine/image 11.png" className="rounded shadow w-full max-w-2xl mb-2" alt="만들기"/>
-                <img src="/images/ai-magazine/image 12.png" className="rounded shadow w-full max-w-2xl" alt="만들기 진입"/>
+                <div className="flex flex-col gap-6 max-w-3xl">
+                  <ZoomableImage src="/images/ai-magazine/image 11.png" className="rounded-lg border border-border-subtle w-full" alt="만들기"/>
+                  <ZoomableImage src="/images/ai-magazine/image 12.png" className="rounded-lg border border-border-subtle w-full" alt="만들기 진입"/>
+                </div>
               </div>
             </div>
 
@@ -143,8 +146,10 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</div>
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">이름과 설명, 지침(Instructions) 입력</h3>
-                <img src="/images/ai-magazine/image 14.png" className="rounded shadow w-full max-w-2xl mb-2" alt="지침 입력"/>
-                <img src="/images/ai-magazine/image 15.png" className="rounded shadow w-full max-w-2xl" alt="지침 상세"/>
+                <div className="flex flex-col gap-6 max-w-3xl">
+                  <ZoomableImage src="/images/ai-magazine/image 14.png" className="rounded-lg border border-border-subtle w-full" alt="지침 입력"/>
+                  <ZoomableImage src="/images/ai-magazine/image 15.png" className="rounded-lg border border-border-subtle w-full" alt="지침 상세"/>
+                </div>
               </div>
             </div>
 
@@ -152,8 +157,10 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</div>
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">Knowledge(지식)에 참고 자료 업로드 & 기능 켜기</h3>
-                <img src="/images/ai-magazine/image 16.png" className="rounded shadow w-full max-w-2xl mb-2" alt="지식 업로드"/>
-                <img src="/images/ai-magazine/image 17.png" className="rounded shadow w-full max-w-2xl" alt="기능 설정"/>
+                <div className="flex flex-col gap-6 max-w-3xl">
+                  <ZoomableImage src="/images/ai-magazine/image 16.png" className="rounded-lg border border-border-subtle w-full" alt="지식 업로드"/>
+                  <ZoomableImage src="/images/ai-magazine/image 17.png" className="rounded-lg border border-border-subtle w-full" alt="기능 설정"/>
+                </div>
               </div>
             </div>
 
@@ -162,9 +169,9 @@ export default function Page() {
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">실제 질문으로 테스트 및 수정</h3>
                 <p className="font-body-md text-on-surface-variant mb-2">GPTs는 한 번에 완성되지 않아요. 실제 질문을 넣어가며 Instructions를 계속 다듬는 게 중요해요.</p>
-                <div className="grid grid-cols-2 gap-4 max-w-3xl">
-                  <img src="/images/ai-magazine/image 18.png" className="rounded shadow w-full" alt="테스트 1"/>
-                  <img src="/images/ai-magazine/image 19.png" className="rounded shadow w-full" alt="테스트 2"/>
+                <div className="flex flex-col gap-6 max-w-3xl">
+                  <ZoomableImage src="/images/ai-magazine/image 18.png" className="rounded-lg border border-border-subtle w-full" alt="테스트 1"/>
+                  <ZoomableImage src="/images/ai-magazine/image 19.png" className="rounded-lg border border-border-subtle w-full" alt="테스트 2"/>
                 </div>
               </div>
             </div>
@@ -174,7 +181,7 @@ export default function Page() {
               <div className="w-full">
                 <h3 className="font-headline-md mb-2">공유 범위 설정</h3>
                 <p className="font-body-md text-on-surface-variant mb-2">내부용 GPT라면 링크가 있는 사람만 볼 수 있게 하거나 워크스페이스 전용으로 설정해 보안을 지키세요.</p>
-                <img src="/images/ai-magazine/image 20.png" className="rounded shadow max-w-sm" alt="공유 범위"/>
+                <ZoomableImage src="/images/ai-magazine/image 20.png" className="rounded-lg border border-border-subtle w-full max-w-3xl" alt="공유 범위"/>
               </div>
             </div>
           </div>
@@ -228,7 +235,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">cancel</span>
                 BEFORE: 팀이 각자 AI를 따로 쓸 때
               </h3>
-              <img src="/images/ai-magazine/IMG_1343.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top" alt="Before"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1343.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top border border-border-subtle" alt="Before"/>
               <ul className="space-y-3 font-body-md text-on-surface-variant">
                 <li>• 팀원마다 AI에게 다르게 물어봐서 결과물 형식이 제각각이에요.</li>
                 <li>• 같은 업무를 매번 처음부터 세팅해야 해요.</li>
@@ -241,7 +248,7 @@ export default function Page() {
                 <span className="material-symbols-outlined">check_circle</span>
                 AFTER: 팀 GPT를 만들고 나서 🙌
               </h3>
-              <img src="/images/ai-magazine/IMG_1340.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top" alt="After"/>
+              <ZoomableImage src="/images/ai-magazine/IMG_1340.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top border border-border-subtle" alt="After"/>
               <ul className="space-y-3 font-body-md text-white/90">
                 <li>• 팀원 누가 써도 같은 형식, 같은 기준으로 결과물이 나와요.</li>
                 <li>• 내부 기준이 GPT 안에 담겨 따로 설명할 필요가 없어요.</li>
@@ -262,7 +269,7 @@ export default function Page() {
                 <h3 className="font-headline-md font-bold mb-2">팁 1. 필요한 능력만 켜주세요 👀</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">웹 검색, 캔버스, 이미지 생성, 코드 인터프리터. 목적 없는 '기능 다 켜기'는 응답 속도만 늦춥니다. <strong>정말 필요한 기능만 딱 켜두는 게 고수의 세팅법</strong>입니다.</p>
               </div>
-              <img src="/images/ai-magazine/image 21.png" className="rounded shadow w-64 lg:w-1/3" alt="기능 켜기"/>
+              <ZoomableImage src="/images/ai-magazine/image 21.png" className="rounded-lg border border-border-subtle w-full lg:w-1/3" alt="기능 켜기"/>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-6 items-start border-t border-border-subtle pt-8">
@@ -270,7 +277,7 @@ export default function Page() {
                 <h3 className="font-headline-md font-bold mb-2">팁 2. Knowledge에는 기준이 되는 자료를 ⬅️</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">기존 회의록 형식, 프로젝트 일정 가이드, FAQ 문서, 정책 문서 등. 자주 바뀌는 자료보다 오래 참고할 <strong>기준 자료</strong>를 넣는 것이 좋습니다.</p>
               </div>
-              <img src="/images/ai-magazine/image 22.png" className="rounded shadow w-64 lg:w-1/3" alt="지식 자료"/>
+              <ZoomableImage src="/images/ai-magazine/image 22.png" className="rounded-lg border border-border-subtle w-full lg:w-1/3" alt="지식 자료"/>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-6 items-start border-t border-border-subtle pt-8">
@@ -281,9 +288,9 @@ export default function Page() {
                   "답변할 때는 업로드된 Knowledge 파일을 우선적으로 참고해줘. 자료에 없는 내용은 단정하지 마."
                 </div>
               </div>
-              <div className="grid grid-cols-1 gap-4 lg:w-1/3">
-                <img src="/images/ai-magazine/image 23.png" className="rounded shadow w-full" alt="파일 역할"/>
-                <img src="/images/ai-magazine/image 24.png" className="rounded shadow w-full" alt="지식 우선"/>
+              <div className="flex flex-col gap-6 w-full lg:w-1/3">
+                <ZoomableImage src="/images/ai-magazine/image 23.png" className="rounded-lg border border-border-subtle w-full" alt="파일 역할"/>
+                <ZoomableImage src="/images/ai-magazine/image 24.png" className="rounded-lg border border-border-subtle w-full" alt="지식 우선"/>
               </div>
             </div>
           </div>
