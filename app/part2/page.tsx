@@ -1,230 +1,324 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 
 export default function Page() {
   return (
     <>
+      <header className="bg-surface/80 glass-header sticky top-0 z-50 border-b border-border-subtle">
+        <div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto w-full">
+          <Link className="flex items-center h-12" href="/">
+            <div className="h-full w-auto flex items-center">
+              <span className="text-headline-md font-bold tracking-widest bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent drop-shadow-sm">샛별자문단 5기</span>
+            </div>
+          </Link>
+        </div>
+      </header>
+      <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-20">
+        
+        {/* Hero Section */}
+        <section className="mt-stack-xl relative overflow-hidden rounded-xl bg-surface-container-low">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-stack-lg">
+            <div className="p-stack-lg lg:p-16 z-10">
+              <span className="text-primary font-label-lg tracking-widest block mb-4">EPISODE 02</span>
+              <h1 className="font-headline-xl text-headline-xl mb-6">매번 똑같은 지시 내릴 건가요?<br/>저도 지겨워서요🥱</h1>
+              <div className="font-body-lg text-body-lg text-on-surface-variant max-w-md space-y-4">
+                <blockquote className="border-l-4 border-primary pl-4 italic text-on-surface">
+                  "당신은 지금까지 AI를 완전히 잘못 사용하고 있었다."
+                </blockquote>
+                <p>1편에서 공유 프로젝트로 팀의 자료와 맥락을 모았습니다. 그런데 이런 문제 남지 않나요?</p>
+                <div className="bg-white p-4 rounded-lg shadow-sm text-body-md text-text-muted space-y-2">
+                  <p>A: "회의록 요약해줘"</p>
+                  <p>B: "담당자별 할 일까지 뽑아줘"</p>
+                  <p>C: "보고서 형식으로 정리해줘"</p>
+                </div>
+                <p>같은 업무인데 결과물 형식이 제각각. 이럴 때 필요한 것이 바로 👉 <strong>GPTs</strong> 👈 입니다.</p>
+                <p>매번 설명하던 업무 루틴, 이제 <strong>AI 비서</strong>에게 맡겨볼 차례입니다.</p>
+              </div>
+            </div>
+            <div className="relative h-[400px] lg:h-[600px] bg-secondary-container flex items-center justify-center overflow-hidden">
+              <img alt="Hero Visual" className="w-full h-full object-cover opacity-80" src="/images/ai-magazine/image 10.png" />
+              <div className="absolute inset-0 hero-gradient"></div>
+            </div>
+          </div>
+        </section>
 
-{/*  TopNavBar Navigation  */}
-<header className="bg-surface/80 glass-header sticky top-0 z-50 border-b border-border-subtle"><div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto w-full"><Link className="flex items-center h-12" href="/"><div className="h-full w-auto flex items-center"><span className="text-headline-md font-bold tracking-widest bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent drop-shadow-sm">샛별자문단 5기</span></div></Link></div></header>
-<main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-{/*  Hero Section  */}
-<header className="py-stack-xl flex flex-col items-center text-center">
-<div className="inline-block bg-primary text-on-primary px-4 py-1 rounded-sm font-label-sm text-label-sm mb-6 tracking-widest uppercase">Premium Magazine Vol. 02</div>
-<h1 className="font-display-lg text-display-lg md:text-headline-xl mb-6 max-w-3xl leading-tight">에피소드 2. 나만의 AI 비서 만들기: GPTs</h1>
-<p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">반복되는 프롬프트 입력에서 벗어나, 당신의 업무 스타일을 완벽히 이해하는 전담 어시스턴트를 구축하는 여정을 시작합니다.</p>
-<div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-[21/9]">
-<img alt="Premium AI Robots" className="w-full h-full object-cover" src="/images/premium_ai_robots.png" />
-<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-</div>
-</header>
-{/*  01 Introduction: Moving beyond repeating  */}
-<section className="py-stack-xl grid md:grid-cols-2 gap-stack-lg items-center">
-<div>
-<span className="text-primary font-bold text-headline-md block mb-4">01</span>
-<h2 className="font-headline-xl text-headline-xl mb-6">GPTs란 무엇인가?</h2>
-<p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                    단순한 대화형 AI를 넘어, 특정 목적에 맞게 최적화된 맞춤형 ChatGPT입니다. 복잡한 지침(Instructions), 전문 지식(Knowledge), 그리고 외부 도구(Capabilities)를 결합하여 나만의 디지털 페르소나를 생성합니다.
-                </p>
-<div className="space-y-4">
-<div className="flex items-start gap-4 p-4 bg-surface-container rounded-xl border border-outline-variant">
-<span className="material-symbols-outlined text-primary" style={{"fontVariationSettings":"'FILL' 1"}}>list_alt</span>
-<div>
-<div className="font-bold">Instructions</div>
-<div className="text-label-lg text-on-surface-variant">어떻게 행동하고 대답해야 하는지에 대한 정교한 가이드라인</div>
-</div>
-</div>
-<div className="flex items-start gap-4 p-4 bg-surface-container rounded-xl border border-outline-variant">
-<span className="material-symbols-outlined text-primary" style={{"fontVariationSettings":"'FILL' 1"}}>auto_stories</span>
-<div>
-<div className="font-bold">Knowledge</div>
-<div className="text-label-lg text-on-surface-variant">특정 프로젝트나 도메인에 특화된 고유 데이터 파일 업로드</div>
-</div>
-</div>
-</div>
-</div>
-<div className="bg-surface-container-high rounded-3xl p-stack-lg border border-border-subtle aspect-square flex flex-col justify-center items-center text-center">
-<div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
-<span className="material-symbols-outlined text-white text-5xl">smart_toy</span>
-</div>
-<h3 className="font-headline-md text-headline-md mb-2">Custom AI Agent</h3>
-<p className="text-on-surface-variant">No Coding Required. Just Logic.</p>
-</div>
-</section>
-{/*  02 프로젝트 vs GPTs: Comparison table  */}
-<section className="py-stack-xl">
-<div className="text-center mb-stack-lg">
-<span className="text-primary font-bold text-headline-md block mb-4">02</span>
-<h2 className="font-headline-xl text-headline-xl">Project vs GPTs</h2>
-<p className="text-on-surface-variant">워크룸 환경과 어시스턴트 환경의 차이</p>
-</div>
-<div className="grid md:grid-cols-2 gap-px bg-border-subtle border border-border-subtle rounded-2xl overflow-hidden shadow-sm">
-<div className="bg-secondary-fixed p-stack-lg">
-<div className="font-headline-md text-headline-md mb-4 flex items-center gap-2">
-<span className="material-symbols-outlined text-secondary">workspaces</span> 일반 대화 / 프로젝트
-                    </div>
-<ul className="space-y-3 font-body-md text-body-md">
-<li className="flex items-center gap-2 text-on-surface-variant"><span className="material-symbols-outlined text-sm">close</span> 매번 같은 제약사항을 반복 입력</li>
-<li className="flex items-center gap-2 text-on-surface-variant"><span className="material-symbols-outlined text-sm">close</span> 대화가 길어질수록 초기 설정 망각</li>
-<li className="flex items-center gap-2 text-on-surface-variant"><span className="material-symbols-outlined text-sm">close</span> 범용적인 지식 기반 답변 제공</li>
-</ul>
-</div>
-<div className="bg-surface-tint p-stack-lg border-l-2 border-primary">
-<div className="font-headline-md text-headline-md mb-4 flex items-center gap-2 text-primary">
-<span className="material-symbols-outlined" style={{"fontVariationSettings":"'FILL' 1"}}>stars</span> GPTs (어시스턴트)
-                    </div>
-<ul className="space-y-3 font-body-md text-body-md">
-<li className="flex items-center gap-2 text-on-surface"><span className="material-symbols-outlined text-primary text-sm">check_circle</span> 단 한 번의 설정으로 모든 대화에 적용</li>
-<li className="flex items-center gap-2 text-on-surface"><span className="material-symbols-outlined text-primary text-sm">check_circle</span> 가이드라인을 영구적으로 유지 및 준수</li>
-<li className="flex items-center gap-2 text-on-surface"><span className="material-symbols-outlined text-primary text-sm">check_circle</span> 업로드된 전문 문서를 우선적 참고</li>
-</ul>
-</div>
-</div>
-</section>
-{/*  04/05 사용 방법  */}
-<section className="py-stack-xl">
-<div className="grid lg:grid-cols-12 gap-stack-lg">
-<div className="lg:col-span-4">
-<span className="text-primary font-bold text-headline-md block mb-4">04-05</span>
-<h2 className="font-headline-xl text-headline-xl mb-6">시작하기: 생성과 탐색</h2>
-<p className="font-body-md text-body-md text-on-surface-variant mb-8">
-                        기존에 만들어진 글로벌 GPTs를 활용하거나, 단 10분 만에 본인만의 전용 어시스턴트를 구축할 수 있습니다.
-                    </p>
-<div className="space-y-6">
-<div className="flex gap-4">
-<div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold shrink-0">1</div>
-<p className="font-body-md">ChatGPT 메인 화면의 'Explore GPTs' 클릭</p>
-</div>
-<div className="flex gap-4">
-<div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold shrink-0">2</div>
-<p className="font-body-md">'+ Create' 버튼으로 에디터 진입</p>
-</div>
-<div className="flex gap-4">
-<div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold shrink-0">3</div>
-<p className="font-body-md">'Configure' 탭에서 이름, 설명, 지침 입력</p>
-</div>
-</div>
-</div>
-<div className="lg:col-span-8">
-<div className="rounded-3xl overflow-hidden border border-border-subtle shadow-2xl">
-<img alt="LG AI Center Branding with Crystal" className="w-full h-full object-cover aspect-video" src="/images/lg_ai_center.png" />
-</div>
-</div>
-</div>
-</section>
-{/*  06/07 지침 작성법 & 예시: Bento Grid  */}
-<section className="py-stack-xl">
-<h2 className="font-headline-xl text-headline-xl text-center mb-stack-lg">Professional Templates</h2>
-<div className="grid md:grid-cols-3 gap-6">
-{/*  Magazine Editor  */}
-<div className="p-8 bg-white border border-border-subtle rounded-2xl hover:shadow-lg transition-all group">
-<div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-<span className="material-symbols-outlined text-primary group-hover:text-white">auto_awesome</span>
-</div>
-<h3 className="font-headline-md text-headline-md mb-4">Magazine Editor</h3>
-<p className="text-on-surface-variant text-label-lg mb-6 leading-relaxed">
-                        "당신은 프리미엄 매거진 에디터입니다. 모든 답변은 세련된 문체로, 가독성 높은 레이아웃을 추천하며 작성하세요."
-                    </p>
-<div className="text-primary font-bold text-label-sm tracking-widest">#Editorial_Tone</div>
-</div>
-{/*  Review Bot  */}
-<div className="p-8 bg-white border border-border-subtle rounded-2xl hover:shadow-lg transition-all group">
-<div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-<span className="material-symbols-outlined text-primary group-hover:text-white">fact_check</span>
-</div>
-<h3 className="font-headline-md text-headline-md mb-4">Review Bot</h3>
-<p className="text-on-surface-variant text-label-lg mb-6 leading-relaxed">
-                        "고객 피드백 데이터를 분석하여 핵심 인사이트와 개선점 3가지를 표 형식으로 즉시 도출하는 분석 전문가입니다."
-                    </p>
-<div className="text-primary font-bold text-label-sm tracking-widest">#Data_Analysis</div>
-</div>
-{/*  SNS Copywriter  */}
-<div className="p-8 bg-white border border-border-subtle rounded-2xl hover:shadow-lg transition-all group">
-<div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-<span className="material-symbols-outlined text-primary group-hover:text-white">campaign</span>
-</div>
-<h3 className="font-headline-md text-headline-md mb-4">SNS Copywriter</h3>
-<p className="text-on-surface-variant text-label-lg mb-6 leading-relaxed">
-                        "MZ세대의 언어 습관을 반영하여 인스타그램, 스레드에 최적화된 짧고 강렬한 카피와 해시태그를 제안합니다."
-                    </p>
-<div className="text-primary font-bold text-label-sm tracking-widest">#Viral_Marketing</div>
-</div>
-</div>
-</section>
-{/*  08 Before/After Section  */}
-<section className="py-stack-xl bg-surface-container rounded-[2rem] px-margin-mobile md:px-margin-desktop overflow-hidden relative">
-<div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-<div className="relative z-10">
-<span className="text-primary font-bold text-headline-md block mb-4 text-center">08 Efficiency Boost</span>
-<h2 className="font-headline-xl text-headline-xl text-center mb-stack-lg">일반 채팅 vs 특화 GPTs</h2>
-<div className="grid md:grid-cols-2 gap-12 items-stretch">
-<div className="flex flex-col">
-<div className="bg-secondary/10 px-4 py-2 rounded-t-xl font-bold text-secondary flex items-center gap-2">
-<span className="material-symbols-outlined text-sm">history</span> Before: 일반 ChatGPT
-                        </div>
-<div className="bg-white/50 p-6 rounded-b-xl border border-border-subtle flex-grow">
-<div className="space-y-4 opacity-60">
-<div className="h-4 bg-secondary-container rounded w-3/4"></div>
-<div className="h-4 bg-secondary-container rounded w-full"></div>
-<div className="h-4 bg-secondary-container rounded w-5/6"></div>
-<p className="text-label-sm mt-4 text-secondary italic">"매번 톤앤매너를 다시 설명하고 예시 파일을 다시 올리는 중..."</p>
-</div>
-<div className="mt-8 flex justify-between items-end">
-<span className="text-headline-md font-bold text-on-surface">5분 소요</span>
-<span className="text-label-sm text-secondary">준비 단계 포함</span>
-</div>
-</div>
-</div>
-<div className="flex flex-col">
-<div className="active-red-gradient px-4 py-2 rounded-t-xl font-bold text-white flex items-center gap-2">
-<span className="material-symbols-outlined text-sm" style={{"fontVariationSettings":"'FILL' 1"}}>bolt</span> After: LG 전용 GPTs
-                        </div>
-<div className="bg-white p-6 rounded-b-xl border-2 border-primary flex-grow shadow-lg">
-<div className="space-y-4">
-<div className="h-4 bg-primary/20 rounded w-full"></div>
-<div className="h-4 bg-primary/20 rounded w-full"></div>
-<div className="h-4 bg-primary/20 rounded w-full"></div>
-<p className="text-label-sm mt-4 text-primary font-bold">"파일 업로드 없이 즉시 분석 시작. 정해진 양식으로 자동 출력."</p>
-</div>
-<div className="mt-8 flex justify-between items-end">
-<span className="text-headline-md font-bold text-primary">30초 이내</span>
-<span className="text-label-sm text-primary">즉시 실행</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-{/*  09 효율 활용 팁  */}
-<section className="py-stack-xl">
-<h2 className="font-headline-md text-headline-md mb-8 border-l-4 border-primary pl-4">Pro Tips: 더 똑똑한 비서 만들기</h2>
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div className="flex flex-col gap-2">
-<div className="font-bold text-lg flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">language</span> Web Browsing
-                    </div>
-<p className="text-on-surface-variant font-body-md">최신 정보를 검색해야 하는 업무라면 지침에 '항상 실시간 웹 검색을 선행할 것'을 명시하세요.</p>
-</div>
-<div className="flex flex-col gap-2">
-<div className="font-bold text-lg flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">data_object</span> Code Interpreter
-                    </div>
-<p className="text-on-surface-variant font-body-md">복잡한 엑셀 데이터 분석이나 데이터 시각화가 필요한 경우 이 옵션을 반드시 활성화해야 합니다.</p>
-</div>
-<div className="flex flex-col gap-2">
-<div className="font-bold text-lg flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">palette</span> DALL·E 3
-                    </div>
-<p className="text-on-surface-variant font-body-md">보고서용 삽화나 브랜드 이미지를 자동 생성하도록 설정하여 시각적 완성도를 높이세요.</p>
-</div>
-</div>
-</section>
-</main>
-{/*  Footer CTA  */}
-<footer className="bg-secondary py-stack-xl border-t border-white/10"><div className="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-lg w-full"><div className="flex flex-col gap-4"><p className="font-body-md text-surface-variant/80 max-w-xs">Premium AI Advisory Group. 실무자를 위한 최적의 AI 경험을 디자인합니다.</p></div></div><div className="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-surface-variant/60 font-body-md"><p className="">© 2026 LG Electronics. All rights reserved. 5th Satbyeal Advisory Group.</p></div></footer>
-{/*  FAB for quick action  */}
+        {/* 01 GPTs란? */}
+        <section className="mt-stack-xl">
+          <div className="mb-stack-lg">
+            <h2 className="font-headline-lg text-headline-lg border-l-4 border-primary pl-4">01. GPTs란?</h2>
+            <p className="font-body-lg text-body-lg font-bold mt-4">특정 목적에 맞게 만들어둔 맞춤형 ChatGPT예요.</p>
+            <p className="font-body-md text-on-surface-variant mt-2">일반 ChatGPT가 범용 AI라면, GPTs는 특정 역할을 맡은 전문 AI에 가까워요. "내가 매번 설명하던 업무 방식을 미리 넣어둔 AI 비서"라고 이해하면 쉬워요🙆.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
+              <h3 className="font-headline-md text-primary mb-2">지침 (Instructions)</h3>
+              <p className="font-body-md text-on-surface-variant">GPT가 어떤 역할을 할지, 어떤 기준으로 답할지 정하는 부분</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
+              <h3 className="font-headline-md text-primary mb-2">지식 (Knowledge)</h3>
+              <p className="font-body-md text-on-surface-variant">브랜드 가이드, FAQ, 정책 문서 등 GPT가 참고할 자료</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
+              <h3 className="font-headline-md text-primary mb-2">능력 (Capabilities)</h3>
+              <p className="font-body-md text-on-surface-variant">웹 검색, 이미지 생성, 데이터 분석 등 추가 기능</p>
+            </div>
+          </div>
+        </section>
 
+        {/* 02 프로젝트와 GPTs 차이 */}
+        <section className="mt-stack-xl bg-surface-container-low p-stack-lg rounded-xl">
+          <h2 className="font-headline-lg text-headline-lg mb-8 text-primary">02. 프로젝트와 GPTs는 어떻게 다를까?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <h3 className="font-headline-md font-bold text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-primary">folder_open</span> 프로젝트</h3>
+              <p className="font-body-md text-on-surface-variant mt-2"><strong>업무별 작업방🧑‍💻</strong><br/>관련 파일, 대화, 지침을 한곳에 모아두고 긴 업무를 이어갈 때 유용해요. (예: 2030 타겟 신제품 개발)</p>
+            </div>
+            <div>
+              <h3 className="font-headline-md font-bold text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-primary">smart_toy</span> GPTs</h3>
+              <p className="font-body-md text-on-surface-variant mt-2"><strong>목적별 AI 비서🤖</strong><br/>특정 기능을 반복해서 수행하도록 만든 전문 도구. (예: 매거진 도입부 작성 GPT, 보고서 검수 GPT)</p>
+            </div>
+          </div>
+          <table className="w-full text-left bg-white rounded-lg overflow-hidden border border-border-subtle">
+            <thead className="bg-primary-container text-on-primary">
+              <tr>
+                <th className="p-4">구분</th>
+                <th className="p-4">프로젝트</th>
+                <th className="p-4">GPTs</th>
+              </tr>
+            </thead>
+            <tbody className="font-body-sm text-on-surface-variant">
+              <tr className="border-b border-border-subtle">
+                <td className="p-4 font-bold text-on-surface">핵심 개념</td>
+                <td className="p-4">업무별 작업방</td>
+                <td className="p-4">목적별 AI 비서</td>
+              </tr>
+              <tr className="border-b border-border-subtle">
+                <td className="p-4 font-bold text-on-surface">적합한 상황</td>
+                <td className="p-4">자료와 대화를 모아 장기 작업할 때</td>
+                <td className="p-4">반복 업무를 자동화하고 싶을 때</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        {/* 03 GPTs는 언제 사용할까? */}
+        <section className="mt-stack-xl">
+          <h2 className="font-headline-lg text-headline-lg mb-6 border-l-4 border-primary pl-4">03. GPTs는 언제 사용할까?</h2>
+          <p className="font-body-md text-on-surface-variant mb-6">GPTs는 <strong>반복되는 작업, 결과물의 형식이 정해진 작업, 특정 기준을 계속 지켜야 하는 작업</strong>에 잘 맞아요.</p>
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex-1 space-y-4">
+              <div className="bg-white p-4 border border-border-subtle rounded text-body-sm text-text-muted">
+                <strong>GPTs가 필요한 상황⚠️</strong><br/>
+                - 매번 같은 역할을 AI에게 설명할 때<br/>
+                - 매번 같은 출력 형식을 요구할 때<br/>
+                - 회사 내부 자료나 정책을 기준으로 답변해야 할 때<br/>
+                - 팀원들이 같은 기준으로 AI를 사용해야 할 때
+              </div>
+              <p className="font-body-md">일반 채팅에선 매번 긴 지시사항(형식, 말투 등)을 적어줘야 하지만, GPTs를 쓰면 <strong>회의록 내용만 복붙</strong>해도 완벽한 결과물이 나옵니다!</p>
+            </div>
+            <div className="flex-1 grid grid-cols-2 gap-4">
+              <img src="/images/ai-magazine/image 8.png" className="rounded-lg shadow border" alt="일반 프롬프트 복잡함"/>
+              <img src="/images/ai-magazine/image 9.png" className="rounded-lg shadow border" alt="GPTs 깔끔함"/>
+            </div>
+          </div>
+        </section>
+
+        {/* 04 사용 방법 */}
+        <section className="mt-stack-xl">
+          <h2 className="font-headline-lg text-headline-lg mb-8 border-l-4 border-primary pl-4">04. GPTs 직접 만들어 팀원에게 공유하기 🧑‍🤝‍🧑</h2>
+          <p className="font-body-md text-on-surface-variant mb-8">우리 팀 업무 방식과 내부 기준을 담은 '우리 팀 맞춤형 GPT'를 직접 만들 수 있어요.</p>
+          
+          <div className="space-y-12">
+            <div className="flex gap-4 items-start">
+              <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</div>
+              <div className="w-full">
+                <h3 className="font-headline-md mb-2">GPT 만들기 화면 열기</h3>
+                <img src="/images/ai-magazine/image 11.png" className="rounded shadow w-full max-w-2xl mb-2" alt="만들기"/>
+                <img src="/images/ai-magazine/image 12.png" className="rounded shadow w-full max-w-2xl" alt="만들기 진입"/>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</div>
+              <div className="w-full">
+                <h3 className="font-headline-md mb-2">이름과 설명, 지침(Instructions) 입력</h3>
+                <img src="/images/ai-magazine/image 14.png" className="rounded shadow w-full max-w-2xl mb-2" alt="지침 입력"/>
+                <img src="/images/ai-magazine/image 15.png" className="rounded shadow w-full max-w-2xl" alt="지침 상세"/>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</div>
+              <div className="w-full">
+                <h3 className="font-headline-md mb-2">Knowledge(지식)에 참고 자료 업로드 & 기능 켜기</h3>
+                <img src="/images/ai-magazine/image 16.png" className="rounded shadow w-full max-w-2xl mb-2" alt="지식 업로드"/>
+                <img src="/images/ai-magazine/image 17.png" className="rounded shadow w-full max-w-2xl" alt="기능 설정"/>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">4</div>
+              <div className="w-full">
+                <h3 className="font-headline-md mb-2">실제 질문으로 테스트 및 수정</h3>
+                <p className="font-body-md text-on-surface-variant mb-2">GPTs는 한 번에 완성되지 않아요. 실제 질문을 넣어가며 Instructions를 계속 다듬는 게 중요해요.</p>
+                <div className="grid grid-cols-2 gap-4 max-w-3xl">
+                  <img src="/images/ai-magazine/image 18.png" className="rounded shadow w-full" alt="테스트 1"/>
+                  <img src="/images/ai-magazine/image 19.png" className="rounded shadow w-full" alt="테스트 2"/>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">5</div>
+              <div className="w-full">
+                <h3 className="font-headline-md mb-2">공유 범위 설정</h3>
+                <p className="font-body-md text-on-surface-variant mb-2">내부용 GPT라면 링크가 있는 사람만 볼 수 있게 하거나 워크스페이스 전용으로 설정해 보안을 지키세요.</p>
+                <img src="/images/ai-magazine/image 20.png" className="rounded shadow max-w-sm" alt="공유 범위"/>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 05/06 지침은 어떻게 쓸까? */}
+        <section className="mt-stack-xl bg-secondary dark:bg-inverse-surface p-stack-lg rounded-xl text-on-primary">
+          <h2 className="font-headline-lg text-headline-lg mb-8 text-on-primary border-b border-white/20 pb-4">05. 지침은 어떻게 쓸까?</h2>
+          <p className="font-body-lg mb-6">Instructions는 GPTs의 핵심이에요. 지침이 모호하면 결과도 모호해지고, 구체적이면 안정적으로 나와요.</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-headline-md font-bold mb-4 text-primary-fixed">좋은 지침의 8요소</h3>
+              <ul className="space-y-2 font-body-md text-white/80">
+                <li>• GPT의 역할 / 목적</li>
+                <li>• 사용자가 입력할 자료</li>
+                <li>• 만들어야 할 결과물 / 형식</li>
+                <li>• 말투와 문체</li>
+                <li>• 반드시 지켜야 할 기준</li>
+                <li>• 피해야 할 표현이나 행동</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 p-6 rounded-xl">
+              <h3 className="font-headline-md mb-4 text-primary-fixed">지침 템플릿</h3>
+              <pre className="whitespace-pre-wrap font-body-sm text-sm text-white/90">
+                {`너는 [역할]이야.
+이 GPT의 목적은 [목적]이야.
+사용자가 [입력할 내용]을 주면, [해야 할 작업]을 수행해줘.
+
+답변은 항상 [출력 형식]으로 정리해줘.
+말투는 [원하는 톤]으로 작성해줘.
+
+지켜야 할 기준: 1.[기준1] 2.[기준2]
+피해야 할 것: 1.[금지1] 2.[금지2]
+
+자료에 없는 내용은 단정하지 말고 확인 질문을 해.
+결과물은 바로 복사해 쓸 수 있게 구체적으로 작성해줘.`}
+              </pre>
+            </div>
+          </div>
+        </section>
+
+        {/* 07 Before/After */}
+        <section className="mt-stack-xl">
+          <h2 className="font-headline-lg text-headline-lg mb-stack-lg border-l-4 border-primary pl-4">06. Before / After</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle">
+              <h3 className="font-headline-md text-error flex items-center gap-2 mb-6">
+                <span className="material-symbols-outlined">cancel</span>
+                BEFORE: 팀이 각자 AI를 따로 쓸 때
+              </h3>
+              <img src="/images/ai-magazine/IMG_1343.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top" alt="Before"/>
+              <ul className="space-y-3 font-body-md text-on-surface-variant">
+                <li>• 팀원마다 AI에게 다르게 물어봐서 결과물 형식이 제각각이에요.</li>
+                <li>• 같은 업무를 매번 처음부터 세팅해야 해요.</li>
+                <li>• 내가 없으면 새 팀원이 어떻게 해야 할지 몰라요.</li>
+              </ul>
+            </div>
+            
+            <div className="bg-primary-container text-on-primary p-8 rounded-xl">
+              <h3 className="font-headline-md flex items-center gap-2 mb-6 text-on-primary">
+                <span className="material-symbols-outlined">check_circle</span>
+                AFTER: 팀 GPT를 만들고 나서 🙌
+              </h3>
+              <img src="/images/ai-magazine/IMG_1340.jpeg" className="rounded-lg mb-4 w-full h-48 object-cover object-top" alt="After"/>
+              <ul className="space-y-3 font-body-md text-white/90">
+                <li>• 팀원 누가 써도 같은 형식, 같은 기준으로 결과물이 나와요.</li>
+                <li>• 내부 기준이 GPT 안에 담겨 따로 설명할 필요가 없어요.</li>
+                <li>• 내가 없을 때도 팀이 같은 수준으로 AI를 활용할 수 있어요.</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        {/* 08 GPTs 효율적 사용 팁 */}
+        <section className="mt-stack-xl bg-surface-container p-stack-lg rounded-xl">
+          <h2 className="font-headline-lg text-headline-lg mb-8 text-primary">07. GPTs를 효율적으로 사용하는 팁 😽</h2>
+          
+          <div className="space-y-8">
+            <div className="flex flex-col lg:flex-row gap-6 items-start">
+              <div className="lg:w-2/3">
+                <h3 className="font-headline-md font-bold mb-2">팁 1. 필요한 능력만 켜주세요 👀</h3>
+                <p className="font-body-md text-on-surface-variant mb-4">웹 검색, 캔버스, 이미지 생성, 코드 인터프리터. 목적 없는 '기능 다 켜기'는 응답 속도만 늦춥니다. <strong>정말 필요한 기능만 딱 켜두는 게 고수의 세팅법</strong>입니다.</p>
+              </div>
+              <img src="/images/ai-magazine/image 21.png" className="rounded shadow w-64 lg:w-1/3" alt="기능 켜기"/>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-6 items-start border-t border-border-subtle pt-8">
+              <div className="lg:w-2/3">
+                <h3 className="font-headline-md font-bold mb-2">팁 2. Knowledge에는 기준이 되는 자료를 ⬅️</h3>
+                <p className="font-body-md text-on-surface-variant mb-4">기존 회의록 형식, 프로젝트 일정 가이드, FAQ 문서, 정책 문서 등. 자주 바뀌는 자료보다 오래 참고할 <strong>기준 자료</strong>를 넣는 것이 좋습니다.</p>
+              </div>
+              <img src="/images/ai-magazine/image 22.png" className="rounded shadow w-64 lg:w-1/3" alt="지식 자료"/>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-6 items-start border-t border-border-subtle pt-8">
+              <div className="lg:w-2/3">
+                <h3 className="font-headline-md font-bold mb-2">팁 3. 파일을 넣을 땐 역할까지 정해주세요 🧑‍💼</h3>
+                <p className="font-body-md text-on-surface-variant mb-4">Knowledge에 파일만 두지 말고 Instructions에 역할을 명시하세요. (예: "브랜드 가이드는 금지 표현의 기준으로 써줘")</p>
+                <div className="bg-white p-4 rounded text-sm mb-4">
+                  "답변할 때는 업로드된 Knowledge 파일을 우선적으로 참고해줘. 자료에 없는 내용은 단정하지 마."
+                </div>
+              </div>
+              <div className="grid grid-cols-1 gap-4 lg:w-1/3">
+                <img src="/images/ai-magazine/image 23.png" className="rounded shadow w-full" alt="파일 역할"/>
+                <img src="/images/ai-magazine/image 24.png" className="rounded shadow w-full" alt="지식 우선"/>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Outro */}
+        <section className="mt-stack-xl text-center py-16 border-t border-border-subtle">
+          <h2 className="font-headline-xl text-primary mb-6">마치며 😎</h2>
+          <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
+            GPTs는 AI를 완전히 새로운 존재로 바꾸는 기능이 아니에요.<br/>
+            <strong>AI가 특정 일을 더 안정적으로 반복하게 만드는 기능</strong>입니다.<br/><br/>
+            AI를 잘 쓰는 사람은 질문을 길게 쓰는 사람이 아니라,<br/>
+            <strong>반복되는 일을 AI가 바로 처리할 수 있도록 구조화해두는 사람</strong>이에요.
+          </p>
+          <Link href="/">
+            <button className="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-lg hover:bg-primary/90 transition-colors">
+              홈으로 돌아가기
+            </button>
+          </Link>
+        </section>
+
+      </main>
+      
+      <footer className="bg-secondary py-stack-xl border-t border-white/10">
+        <div className="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-lg w-full">
+          <div className="flex flex-col gap-4">
+            <p className="font-body-md text-surface-variant/80 max-w-xs">
+              Premium AI Advisory Group. 실무자를 위한 최적의 AI 경험을 디자인합니다.
+            </p>
+          </div>
+        </div>
+        <div className="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-surface-variant/60 font-body-md">
+          <p className="">© 2026 LG Electronics. All rights reserved. 5th Satbyeal Advisory Group.</p>
+        </div>
+      </footer>
     </>
   );
 }

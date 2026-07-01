@@ -52,7 +52,7 @@ export default function Page() {
 {/*  Episode 1 Card  */}
 <article className="flex flex-col bg-surface-container-lowest border border-border-subtle overflow-hidden card-hover-effect cursor-pointer" onClick={() => { window.location.href='/part1' }}>
 <div className="aspect-[16/9] overflow-hidden group">
-<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/step_by_step_ui.png" style={{"transform":"scale(1)"}} />
+<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/ai-magazine/image.png" style={{"transform":"scale(1)"}} />
 </div>
 <div className="p-stack-lg flex flex-col h-full">
 <div className="flex items-center gap-2 mb-stack-sm">
@@ -61,10 +61,10 @@ export default function Page() {
 <span className="text-on-surface-variant font-label-lg">PROJECTS</span>
 </div>
 <h3 className="font-headline-lg text-headline-lg mb-stack-md leading-tight text-on-surface">
-                            AI가 바로 일할 수 있는 작업방 만들기: 프로젝트
+                            또 학습시키고 시작해요? 저도요. 🔥 🙋
                         </h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">
-                            효과적인 AI 활용의 시작은 맥락(Context)을 구조화하는 것부터 시작됩니다. 슬랙 채널처럼 체계화된 데이터 환경을 구축하여 AI가 기업 특유의 언어와 프로세스를 완벽히 이해하도록 만드는 법을 공개합니다.
+                            매번 똑같은 배경 설명을 반복하고 계신가요? 같은 자료를 팀원 수만큼 각자 AI에 넣고 있다면, 이제 "공유 프로젝트"로 팀 전체가 같은 맥락에서 작업할 수 있는 환경을 만들어 보세요.
                         </p>
 <div className="flex justify-between items-center mt-auto border-t border-border-subtle pt-stack-md">
 
@@ -78,7 +78,7 @@ export default function Page() {
 {/*  Episode 2 Card  */}
 <article className="flex flex-col bg-surface-container-lowest border border-border-subtle overflow-hidden card-hover-effect cursor-pointer" onClick={() => { window.location.href='/part2' }}>
 <div className="aspect-[16/9] overflow-hidden group">
-<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/lg_ai_center.png" style={{"transform":"scale(1)"}} />
+<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/ai-magazine/image 10.png" style={{"transform":"scale(1)"}} />
 </div>
 <div className="p-stack-lg flex flex-col h-full">
 <div className="flex items-center gap-2 mb-stack-sm">
@@ -87,10 +87,10 @@ export default function Page() {
 <span className="text-on-surface-variant font-label-lg">GPTS</span>
 </div>
 <h3 className="font-headline-lg text-headline-lg mb-stack-md leading-tight text-on-surface">
-                            나만의 AI 비서 만들기: GPTs
+                            매번 똑같은 지시 내릴 건가요? 저도 지겨워서요🥱
                         </h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">
-                            범용 AI를 넘어 당신의 특정 직무에 특화된 커스텀 에이전트를 구축하세요. 리서치, 기획서 작성, 코드 리뷰 등 반복되는 업무를 지능적으로 자동화하는 LG 샛별자문단만의 레시피를 제안합니다.
+                            회의록 요약, 보고서 정리 등 같은 업무인데 결과물 형식이 제각각이라면? 반복되는 업무 루틴을 저장해두는 우리 팀 전용 맞춤형 AI 비서, GPTs 활용법을 알아봅니다.
                         </p>
 <div className="flex justify-between items-center mt-auto border-t border-border-subtle pt-stack-md">
 
