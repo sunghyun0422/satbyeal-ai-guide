@@ -63,7 +63,7 @@ export default function Page() {
                 <p>결과물 형식은 두 사람이 달라요. 누구 버전을 쓸지 다시 조율해야 해요.</p>
                 
                 <div className="flex-1 flex flex-col justify-center my-6">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1343.jpeg" className="rounded-lg w-full max-w-full mx-auto object-cover border border-border-subtle" alt="Before"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1343.jpeg" className="rounded-lg w-full object-cover border border-border-subtle max-h-[300px]" alt="Before"/>
                 </div>
                 
                 <p>다음 주에도 같은 일이 반복돼요. 팀원이 바뀌어도, 업무가 바뀌어도, 매번 기준을 다시 맞춰야 해요. 😓</p>
@@ -86,11 +86,31 @@ export default function Page() {
                 </blockquote>
                 
                 <div className="flex-1 flex flex-col justify-center my-6">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1340.jpeg" className="rounded-lg w-full max-w-full mx-auto object-cover border border-white/20" alt="After"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1340.jpeg" className="rounded-lg w-full object-cover border border-white/20 max-h-[300px]" alt="After"/>
                 </div>
                 
                 <p>GPT는 항상 같은 형식으로, 같은 기준으로 정리해줘요. 누가 물어봐도 결과물이 일관돼요. 김재원 씨가 자리를 비워도, 새 팀원이 와도 GPT가 기준을 대신 유지해줘요. 😉</p>
-                
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* GPTs 전환 섹션 */}
+        <section className="mt-stack-xl">
+          <div className="bg-surface-container-low p-10 rounded-2xl border border-border-subtle text-center space-y-6 max-w-3xl mx-auto">
+            <p className="font-headline-md text-on-surface break-keep">
+              자, 이 '팀 회의록 정리 GPT' — 어떻게 만드는 건지 궁금하시죠? 🕴️
+            </p>
+            <p className="font-body-lg text-on-surface-variant break-keep">
+              공유 프로젝트는 자료를 모으는 작업방, 이건 반복 업무 방식 자체를 저장해두는 팀 전용 AI 비서,
+            </p>
+            <p className="text-4xl font-bold text-primary py-4">👉 "GPTs" 👈</p>
+            <p className="font-body-lg text-on-surface-variant break-keep">
+              매번 설명하던 업무 루틴, 이제 비서한테 맡길 차례예요.
+            </p>
+            <p className="font-headline-md font-bold text-on-surface">Let's dig in! 🏃</p>
+          </div>
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <p className="font-bold text-xl">자, 이 ‘팀 회의록 정리 GPT’ — 어떻게 만드는 건지 궁금하시죠? 🕴️</p>
                   <p className="mt-4">공유 프로젝트는 자료를 모으는 작업방, 이건 반복 업무 방식 자체를 저장해두는 팀 전용 AI 비서,</p>
