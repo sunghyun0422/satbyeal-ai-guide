@@ -211,26 +211,30 @@ export default function Page() {
         {/* 07 Before/After */}
         <section className="mt-stack-xl">
           <h2 className="font-headline-lg text-headline-lg mb-stack-lg border-l-4 border-primary pl-4">Before / After</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
-            <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle">
+            <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle flex flex-col h-full hover:shadow-md transition-shadow">
               <h3 className="font-headline-md text-error flex items-center gap-2 mb-6">
                 <span className="material-symbols-outlined">cancel</span>
                 Before — 지금 우리 팀이 AI를 쓰는 방식
               </h3>
-              <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg mb-4 w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="Before 짤방"/>
+              <div className="flex-1 flex flex-col my-4">
+                <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="Before 짤방"/>
+              </div>
               <ul className="space-y-3 font-body-md text-on-surface-variant">
                 <li>• 장원영 씨, 김재원 씨 모두 각자의 AI에 같은 배경 설명을 처음부터 다시 입력해요.</li>
                 <li>• 새 팀원 오면요? "그 자료 어디 있어요?" 다시 처음부터. 🤦</li>
               </ul>
             </div>
             
-            <div className="bg-primary-container text-on-primary p-8 rounded-xl">
+            <div className="bg-primary-container text-on-primary p-8 rounded-xl flex flex-col h-full hover:shadow-md transition-shadow">
               <h3 className="font-headline-md flex items-center gap-2 mb-6 text-on-primary">
                 <span className="material-symbols-outlined">check_circle</span>
                 After — ‘이것’을 더하고 나서 🙊
               </h3>
-              <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg mb-4 w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="After 짤방"/>
+              <div className="flex-1 flex flex-col my-4">
+                <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full aspect-[4/5] object-cover object-top border border-white/20" alt="After 짤방"/>
+              </div>
               <ul className="space-y-3 font-body-md text-white/90">
                 <li>• 김재원 씨가 "팀 공유 프로젝트"를 하나 만들었어요.</li>
                 <li>• AI는 이미 다 알고 있어요. 김재원 씨도 배경 설명 없이 바로 검토 시작.</li>

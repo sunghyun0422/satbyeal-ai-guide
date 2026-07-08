@@ -31,48 +31,56 @@ export default function Page() {
 
         {/* Before / After */}
         <section className="mt-stack-xl">
-          <div className="grid grid-cols-1 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
             {/* Before */}
-            <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle">
+            <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle flex flex-col h-full hover:shadow-md transition-shadow">
               <h2 className="font-headline-lg text-error flex items-center gap-3 mb-6">
                 <span className="material-symbols-outlined text-4xl">cancel</span>
                 Before - 팀이 각자 AI를 따로 쓸 때 😮‍💨
               </h2>
-              <div className="font-body-lg text-on-surface-variant space-y-4 break-keep">
+              <div className="font-body-lg text-on-surface-variant space-y-4 break-keep flex-1 flex flex-col">
                 <p>잠깐, 1편 보고 오셨나요?</p>
                 <p>1편에서 공유 프로젝트로 자료랑 맥락은 이미 한곳에 모았죠. 근데 이런 문제, 아직 남아있지 않나요?</p>
                 
-                <ZoomableImage src="/images/ai-magazine/notion/image 13.png" className="rounded-lg shadow-sm border border-border-subtle w-full max-w-3xl mx-auto my-6 object-contain" alt="팀 각자 쓰는 모습"/>
+                <div className="flex-1 flex flex-col justify-center my-6">
+                  <ZoomableImage src="/images/ai-magazine/notion/image 13.png" className="rounded-lg shadow-sm border border-border-subtle w-full max-w-full mx-auto object-contain" alt="팀 각자 쓰는 모습"/>
+                </div>
                 
                 <p>마케팅팀에서 일하는 장원영 씨는 오늘도 새 채팅창을 열었어요.</p>
                 <p>회의가 끝났고, 팀원들은 각자 회의록을 AI로 정리하기 시작해요.</p>
                 <p>장원영 씨는 본인 ChatGPT에 회의 내용을 붙여넣고 정리를 요청하고, 김재원 씨도 같은 내용을 본인 AI에 넣고 정리해요.</p>
                 <p>결과물 형식은 두 사람이 달라요. 누구 버전을 쓸지 다시 조율해야 해요.</p>
                 
-                <ZoomableImage src="/images/ai-magazine/notion/IMG_1343.jpeg" className="rounded-lg w-full max-w-2xl mx-auto object-cover border border-border-subtle my-6" alt="Before"/>
+                <div className="flex-1 flex flex-col justify-center my-6">
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1343.jpeg" className="rounded-lg w-full max-w-full mx-auto object-cover border border-border-subtle" alt="Before"/>
+                </div>
                 
                 <p>다음 주에도 같은 일이 반복돼요. 팀원이 바뀌어도, 업무가 바뀌어도, 매번 기준을 다시 맞춰야 해요. 😓</p>
               </div>
             </div>
             
             {/* After */}
-            <div className="bg-primary-container text-on-primary p-8 rounded-xl">
+            <div className="bg-primary-container text-on-primary p-8 rounded-xl flex flex-col h-full hover:shadow-md transition-shadow">
               <h2 className="font-headline-lg flex items-center gap-3 mb-6 text-on-primary">
                 <span className="material-symbols-outlined text-4xl">check_circle</span>
                 After - 팀 GPT를 만들고 나서 🙌
               </h2>
-              <div className="font-body-lg text-white/90 space-y-4 break-keep">
+              <div className="font-body-lg text-white/90 space-y-4 break-keep flex-1 flex flex-col">
                 <p>김재원 씨가 &gt;팀 회의록 정리 GPT&lt;를 만들었어요.</p>
                 <p>Knowledge에는 팀의 회의록 작성 가이드라인과 기존 잘 나온 샘플을 넣어뒀어요. Instructions에는 항상 실행 항목, 담당자, 마감일 순서로 정리하도록 기준을 잡아뒀고요. 그리고 팀원들에게 GPT 링크를 공유했어요.</p>
                 <p>이제 장원영 씨든, 새로 온 팀원이든, 회의 내용을 붙여넣기만 하면 돼요.</p>
+                
                 <blockquote className="border-l-4 border-white/50 pl-4 italic text-white my-4 bg-white/10 py-3 rounded-r-lg">
                   "오늘 회의 내용 정리해줘."
                 </blockquote>
                 
-                <ZoomableImage src="/images/ai-magazine/notion/IMG_1340.jpeg" className="rounded-lg w-full max-w-2xl mx-auto object-cover border border-white/20 my-6" alt="After"/>
+                <div className="flex-1 flex flex-col justify-center my-6">
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1340.jpeg" className="rounded-lg w-full max-w-full mx-auto object-cover border border-white/20" alt="After"/>
+                </div>
                 
                 <p>GPT는 항상 같은 형식으로, 같은 기준으로 정리해줘요. 누가 물어봐도 결과물이 일관돼요. 김재원 씨가 자리를 비워도, 새 팀원이 와도 GPT가 기준을 대신 유지해줘요. 😉</p>
+                
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <p className="font-bold text-xl">자, 이 ‘팀 회의록 정리 GPT’ — 어떻게 만드는 건지 궁금하시죠? 🕴️</p>
                   <p className="mt-4">공유 프로젝트는 자료를 모으는 작업방, 이건 반복 업무 방식 자체를 저장해두는 팀 전용 AI 비서,</p>

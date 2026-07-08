@@ -79,7 +79,7 @@ export default function Page() {
 {/*  Episode 2 Card  */}
 <article className="flex flex-col bg-surface-container-lowest border border-border-subtle overflow-hidden card-hover-effect cursor-pointer" onClick={() => { window.location.href='/part2' }}>
 <div className="aspect-[16/9] overflow-hidden group">
-<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/ai-magazine/exhausted_worker_meme.png" style={{"transform":"scale(1)"}} />
+<img alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/images/ai-magazine/notion/image 12.png" style={{"transform":"scale(1)"}} />
 </div>
 <div className="p-stack-lg flex flex-col h-full">
 <div className="flex items-center gap-2 mb-stack-sm">
