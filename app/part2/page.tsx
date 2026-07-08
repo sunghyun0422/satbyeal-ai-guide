@@ -23,8 +23,8 @@ export default function Page() {
             <span className="block">매번 똑같은 지시 내릴 건가요?</span>
             <span className="block">저도 지겨워서요🥱</span>
           </h1>
-          <div className="relative rounded-xl bg-secondary-container flex items-center justify-center overflow-hidden">
-            <img alt="Hero Visual" className="w-full h-auto object-contain" src="/images/ai-magazine/notion/image 12.png" />
+          <div className="relative rounded-xl bg-secondary-container flex items-center justify-center overflow-hidden h-[400px] lg:h-[600px]">
+            <img alt="Hero Visual" className="w-full h-full object-cover object-top" src="/images/ai-magazine/notion/image 12.png" />
           </div>
         </section>
 
@@ -229,7 +229,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">만들고 싶은 GPT의 목적을 정한다.</h4>
-                <div className="bg-surface-variant/50 border border-border-subtle rounded-lg p-6 flex flex-col items-center justify-center max-w-4xl text-on-surface-variant text-center gap-3">
+                <div className="bg-surface-variant/50 border border-border-subtle rounded-lg py-16 px-6 flex flex-col items-center justify-center w-full text-on-surface-variant text-center gap-4">
                   <span className="material-symbols-outlined text-4xl text-primary">lightbulb</span>
                   <p className="font-body-md">어떤 문제를 해결하고 싶은지, 누구를 위한 비서인지 분명히 하는 것이 첫걸음이에요!</p>
                 </div>
