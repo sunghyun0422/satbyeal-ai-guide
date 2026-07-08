@@ -149,7 +149,6 @@ export default function Page() {
               <li className="flex gap-2"><span className="text-primary">✓</span> 톤앤매너나 내부 기준을 유지해야 할 때</li>
             </ul>
             <p className="font-body-md mt-6 text-on-surface-variant">한 번 묻고 끝나는 질문은 일반 채팅이 편해요. 하지만 계속 이어지는 업무라면 프로젝트를 만들어두는 편이 훨씬 효율적이에요.</p>
-            <ZoomableImage src="/images/ai-magazine/notion/image 2.png" className="rounded-lg shadow-sm border border-border-subtle w-full object-contain mt-4" alt="프로젝트 언제 쓸까"/>
           </div>
           <div className="flex-1 bg-primary-container text-on-primary p-8 rounded-xl flex flex-col justify-between">
             <div>
@@ -166,6 +165,11 @@ export default function Page() {
               <span className="material-symbols-outlined text-[100px]">groups</span>
             </div>
           </div>
+        </section>
+
+        {/* 02 & 03 섹션 분리된 짤방 */}
+        <section className="mt-stack-lg flex justify-center">
+          <ZoomableImage src="/images/ai-magazine/notion/image 2.png" className="rounded-xl shadow-md border border-border-subtle w-full max-w-4xl object-contain" alt="해봐야지요"/>
         </section>
 
         {/* 04 시작하는 법 */}
