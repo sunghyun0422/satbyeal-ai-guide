@@ -329,13 +329,13 @@ export default function Page() {
           <div className="flex flex-col gap-8 w-full">
             <ZoomableImage src="/images/ai-magazine/notion/image 9.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="클로드 Project"/>
             <ZoomableImage src="/images/ai-magazine/notion/image 10.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="제미나이 Notebook"/>
-            <ZoomableImage src="/images/ai-magazine/notion/8fe0275e-c0b1-4784-af3d-514855dd5333.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="노트북 화면"/>
           </div>
         </section>
 
         {/* Outro */}
         <section className="mt-stack-xl text-center py-16 border-t border-border-subtle">
           <h2 className="font-headline-xl text-primary mb-6">마치며😎</h2>
+          <ZoomableImage src="/images/ai-magazine/notion/image 11.png" className="rounded-lg shadow-sm border border-border-subtle mx-auto mb-8 max-w-md w-full object-contain" alt="마치며"/>
           <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
             프로젝트는 AI를 더 똑똑하게 만드는게 아니라,<br/>
             <strong>팀 전체가 같은 맥락에서 AI를 쓰게 돕는 기능</strong>이에요.<br/><br/>
