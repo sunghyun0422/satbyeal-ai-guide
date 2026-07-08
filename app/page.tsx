@@ -14,7 +14,7 @@ export default function Page() {
 {/*  Hero Section  */}
 <section className="relative w-full h-[80vh] overflow-hidden flex items-center bg-[#f0f2f5]">
 <div className="absolute inset-0">
-<img alt="Premium AI Background" className="w-full h-full object-cover -scale-x-100" src="/images/premium_ai_bg.png" />
+<img alt="Premium AI Background" className="w-full h-full object-cover" src="/images/premium_ai_bg_right_logo.png" />
 </div>
 <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent"></div>
 <div className="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full text-on-surface">
