@@ -48,6 +48,10 @@ export default function Page() {
                   <span className="block mb-2">초안이 나오면 이번엔 김재원 씨 차례. 본인 ChatGPT에 또 넣어요. 배경 설명 또 처음부터. 😵‍💫</span>
                   <span className="block">새 팀원 오면요? "그 자료 어디 있어요?" 다시 처음부터. 🤦</span>
                 </p>
+                
+                <div className="flex-1 flex flex-col justify-center my-6">
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full object-cover border border-border-subtle max-h-[300px]" alt="Before"/>
+                </div>
               </div>
             </div>
             
@@ -64,6 +68,11 @@ export default function Page() {
                 <blockquote className="border-l-4 border-white/50 pl-4 italic text-white my-4 bg-white/10 py-3 rounded-r-lg">
                   "이 방향으로 초안 잡아줘."
                 </blockquote>
+                
+                <div className="flex-1 flex flex-col justify-center my-6">
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full object-cover border border-white/20 max-h-[300px]" alt="After"/>
+                </div>
+                
                 <p>AI는 이미 다 알고 있어요. 김재원 씨도 배경 설명 없이 바로 검토 시작. 새 팀원이 와도 링크 하나면 끝. 💁</p>
               </div>
             </div>
@@ -71,13 +80,8 @@ export default function Page() {
           </div>
         </section>
 
-        {/* 짤방 + 연결 텍스트 */}
+        {/* 연결 텍스트 */}
         <section className="mt-stack-xl mb-stack-lg space-y-8">
-          {/* 짤방 1: Before */}
-          <div className="flex justify-center">
-            <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-2xl shadow-lg border border-border-subtle max-h-[420px] object-contain" alt="Before 짤방"/>
-          </div>
-
           {/* 연결 텍스트 박스 */}
           <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle space-y-4 text-center max-w-2xl mx-auto">
             <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
@@ -87,11 +91,6 @@ export default function Page() {
               혹시 지금 팀에서 AI 쓰는 방식, 이거랑 똑같지 않나요?<br/>
               근데 여기서 '이것' 하나만 더하면?
             </p>
-          </div>
-
-          {/* 짤방 2: After */}
-          <div className="flex justify-center">
-            <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-2xl shadow-lg border border-border-subtle max-h-[420px] object-contain" alt="After 짤방"/>
           </div>
 
           {/* 마무리 텍스트 박스 */}
