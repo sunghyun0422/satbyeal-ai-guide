@@ -150,7 +150,7 @@ export default function Page() {
             </ul>
             <p className="font-body-md mt-6 text-on-surface-variant">한 번 묻고 끝나는 질문은 일반 채팅이 편해요. 하지만 계속 이어지는 업무라면 프로젝트를 만들어두는 편이 훨씬 효율적이에요.</p>
           </div>
-          <div className="flex-1 bg-primary-container text-on-primary p-8 rounded-xl flex flex-col justify-between">
+          <div className="flex-1 bg-primary-container text-on-primary p-8 rounded-xl flex flex-col justify-center">
             <div>
               <h2 className="font-headline-lg text-headline-lg mb-4">03. 공유 프로젝트 🧑‍🤝‍🧑</h2>
               <p className="font-body-lg font-bold mb-4">공유 프로젝트는 말 그대로 프로젝트를 팀원들과 함께 쓰는 거예요.</p>
@@ -160,9 +160,6 @@ export default function Page() {
               <p className="font-body-md opacity-90">
                 "나 이 자료 AI에 넣어뒀는데, 너도 다시 넣어야 해"는 이제 없어요.
               </p>
-            </div>
-            <div className="mt-8 flex justify-center opacity-80 pb-4">
-              <span className="material-symbols-outlined text-[100px]">groups</span>
             </div>
           </div>
         </section>
@@ -339,7 +336,6 @@ export default function Page() {
         {/* Outro */}
         <section className="mt-stack-xl text-center py-16 border-t border-border-subtle">
           <h2 className="font-headline-xl text-primary mb-6">마치며😎</h2>
-          <ZoomableImage src="/images/ai-magazine/notion/image 11.png" className="rounded-lg shadow-sm border border-border-subtle mx-auto mb-8 max-w-md w-full object-contain" alt="마치며"/>
           <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
             프로젝트는 AI를 더 똑똑하게 만드는게 아니라,<br/>
             <strong>팀 전체가 같은 맥락에서 AI를 쓰게 돕는 기능</strong>이에요.<br/><br/>
