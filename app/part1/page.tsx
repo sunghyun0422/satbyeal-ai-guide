@@ -48,9 +48,6 @@ export default function Page() {
                   <span className="block mb-2">초안이 나오면 이번엔 김재원 씨 차례. 본인 ChatGPT에 또 넣어요. 배경 설명 또 처음부터. 😵‍💫</span>
                   <span className="block">새 팀원 오면요? "그 자료 어디 있어요?" 다시 처음부터. 🤦</span>
                 </p>
-                <div className="flex-1 flex flex-col justify-center my-4">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full aspect-[4/5] object-cover object-top border border-border-subtle" alt="Before 짤방"/>
-                </div>
               </div>
             </div>
             
@@ -68,9 +65,6 @@ export default function Page() {
                   "이 방향으로 초안 잡아줘."
                 </blockquote>
                 <p>AI는 이미 다 알고 있어요. 김재원 씨도 배경 설명 없이 바로 검토 시작. 새 팀원이 와도 링크 하나면 끝. 💁</p>
-                <div className="flex-1 flex flex-col justify-center my-4">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full aspect-[4/5] object-cover object-top border border-white/20" alt="After 짤방"/>
-                </div>
               </div>
             </div>
 
@@ -80,22 +74,37 @@ export default function Page() {
         {/* Intro Section */}
         <section className="mt-stack-xl mb-stack-lg">
           <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle space-y-6">
-            <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
-              여기서 잠깐, 손 좀 들어볼게요🙋
-            </p>
-            <p className="font-body-lg text-on-surface-variant break-keep">
-              혹시 지금 팀에서 AI 쓰는 방식, 이거랑 똑같지 않나요?<br/>
-              근데 여기서 ‘이것’ 하나만 더하면?
-            </p>
-            <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl mt-8">
-              그래서 '이것'이 뭔지 궁금하시지 않나요?
-            </p>
-            <p className="font-body-lg text-on-surface-variant break-keep">
-              그냥 그렇고 그런 방법 말고, 판을 뒤집는 진짜 비기. 이름하여 <strong className="text-primary text-2xl">👉 "공유 프로젝트" 👈</strong>
-            </p>
-            <p className="font-body-lg text-on-surface-variant break-keep">
-              뭔지 알고 싶으면, 계속 따라오세요.
-            </p>
+            <div className="flex flex-col lg:flex-row gap-8 items-center">
+              <div className="flex-1 space-y-6">
+                <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
+                  여기서 잠깐, 손 좀 들어볼게요🙋
+                </p>
+                <p className="font-body-lg text-on-surface-variant break-keep">
+                  혹시 지금 팀에서 AI 쓰는 방식, 이거랑 똑같지 않나요?<br/>
+                  근데 여기서 ‘이것’ 하나만 더하면?
+                </p>
+              </div>
+              <div className="flex-1 max-w-sm">
+                <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full object-cover shadow-sm border border-border-subtle rotate-2" alt="Before 짤방"/>
+              </div>
+            </div>
+            
+            <div className="border-t border-border-subtle pt-8 mt-4 flex flex-col lg:flex-row-reverse gap-8 items-center">
+              <div className="flex-1 space-y-6">
+                <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
+                  그래서 '이것'이 뭔지 궁금하시지 않나요?
+                </p>
+                <p className="font-body-lg text-on-surface-variant break-keep">
+                  그냥 그렇고 그런 방법 말고, 판을 뒤집는 진짜 비기. 이름하여 <strong className="text-primary text-2xl">👉 "공유 프로젝트" 👈</strong>
+                </p>
+                <p className="font-body-lg text-on-surface-variant break-keep">
+                  뭔지 알고 싶으면, 계속 따라오세요.
+                </p>
+              </div>
+              <div className="flex-1 max-w-sm">
+                <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full object-cover shadow-sm border border-border-subtle -rotate-2" alt="After 짤방"/>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -149,15 +158,20 @@ export default function Page() {
             <p className="font-body-md mt-6 text-on-surface-variant">한 번 묻고 끝나는 질문은 일반 채팅이 편해요. 하지만 계속 이어지는 업무라면 프로젝트를 만들어두는 편이 훨씬 효율적이에요.</p>
             <ZoomableImage src="/images/ai-magazine/notion/image 2.png" className="rounded-lg shadow-sm border border-border-subtle w-full object-contain mt-4" alt="프로젝트 언제 쓸까"/>
           </div>
-          <div className="flex-1 bg-primary-container text-on-primary p-8 rounded-xl flex flex-col justify-center">
-            <h2 className="font-headline-lg text-headline-lg mb-4">03. 공유 프로젝트 🧑‍🤝‍🧑</h2>
-            <p className="font-body-lg font-bold mb-4">공유 프로젝트는 말 그대로 프로젝트를 팀원들과 함께 쓰는 거예요.</p>
-            <p className="font-body-md opacity-90 mb-4">
-              한 명이 세팅해두면, 팀원 모두가 같은 파일·같은 지침·같은 맥락 위에서 바로 작업 시작.
-            </p>
-            <p className="font-body-md opacity-90">
-              "나 이 자료 AI에 넣어뒀는데, 너도 다시 넣어야 해"는 이제 없어요.
-            </p>
+          <div className="flex-1 bg-primary-container text-on-primary p-8 rounded-xl flex flex-col justify-between">
+            <div>
+              <h2 className="font-headline-lg text-headline-lg mb-4">03. 공유 프로젝트 🧑‍🤝‍🧑</h2>
+              <p className="font-body-lg font-bold mb-4">공유 프로젝트는 말 그대로 프로젝트를 팀원들과 함께 쓰는 거예요.</p>
+              <p className="font-body-md opacity-90 mb-4">
+                한 명이 세팅해두면, 팀원 모두가 같은 파일·같은 지침·같은 맥락 위에서 바로 작업 시작.
+              </p>
+              <p className="font-body-md opacity-90">
+                "나 이 자료 AI에 넣어뒀는데, 너도 다시 넣어야 해"는 이제 없어요.
+              </p>
+            </div>
+            <div className="mt-8 flex justify-center opacity-80 pb-4">
+              <span className="material-symbols-outlined text-[100px]">groups</span>
+            </div>
           </div>
         </section>
 
@@ -233,8 +247,37 @@ export default function Page() {
           <p className="font-body-lg mb-6">지침은 짧은 것보다 <strong>명확한 것</strong>이 중요해요. 아래 템플릿을 그대로 복사해서 대괄호 안만 바꿔도 좋아요. 😎</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 p-6 rounded-xl">
-              <h3 className="font-headline-md mb-4 text-primary-fixed">지침 템플릿</h3>
+            <div className="bg-white/10 p-6 rounded-xl flex flex-col">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="font-headline-md text-primary-fixed">지침 템플릿</h3>
+                <button
+                  onClick={(e) => {
+                    const text = `너는 내 [업무명] 담당자야.
+
+이 프로젝트의 목적은 [목적]이야.
+
+내가 업로드한 자료를 최우선 기준으로 답변해줘.
+자료에 없는 내용은 추측하지 말고, 필요한 경우 먼저 확인 질문을 해줘.
+
+답변은 실무자가 바로 사용할 수 있을 정도로 구체적으로 작성해줘.
+
+말투는 [친근하지만 전문적인 톤 / 짧고 명확한 톤 / 보고서용 비즈니스 톤]으로 해줘.
+
+금지할 표현은 [과장된 표현 / 확인되지 않은 수치 / 애매한 말 / 뻔한 조언]이야.`;
+                    navigator.clipboard.writeText(text);
+                    const el = e.currentTarget.querySelector('.btn-text');
+                    if (el) {
+                      const old = el.textContent;
+                      el.textContent = '복사 완료!';
+                      setTimeout(() => el.textContent = old, 2000);
+                    }
+                  }}
+                  className="flex items-center gap-1 bg-primary/20 hover:bg-primary/30 text-primary-fixed px-3 py-1 rounded text-sm transition-colors"
+                >
+                  <span className="material-symbols-outlined text-sm">content_copy</span>
+                  <span className="btn-text">복사하기</span>
+                </button>
+              </div>
               <pre className="whitespace-pre-wrap font-body-sm text-sm text-white/90">
                 {`너는 내 [업무명] 담당자야.
 

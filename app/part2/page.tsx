@@ -31,12 +31,19 @@ export default function Page() {
 
         {/* Intro Section */}
         <section className="mt-stack-xl mb-stack-lg max-w-3xl">
-          <p className="font-body-lg text-on-surface-variant break-keep mb-4 font-bold text-xl">
-            잠깐, 1편 보고 오셨나요?
-          </p>
-          <p className="font-body-lg text-on-surface-variant break-keep">
-            1편에서 공유 프로젝트로 자료랑 맥락은 이미 한곳에 모았죠. 근데 이런 문제, 아직 남아있지 않나요?
-          </p>
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="flex-1 space-y-4">
+              <p className="font-body-lg text-on-surface-variant break-keep mb-4 font-bold text-xl">
+                잠깐, 1편 보고 오셨나요?
+              </p>
+              <p className="font-body-lg text-on-surface-variant break-keep">
+                1편에서 공유 프로젝트로 자료랑 맥락은 이미 한곳에 모았죠. 근데 이런 문제, 아직 남아있지 않나요?
+              </p>
+            </div>
+            <div className="flex-1 max-w-sm">
+              <ZoomableImage src="/images/ai-magazine/notion/image 13.png" className="rounded-lg w-full object-cover shadow-sm border border-border-subtle rotate-2" alt="팀 각자 쓰는 모습 짤"/>
+            </div>
+          </div>
         </section>
 
         {/* Before / After */}
@@ -50,10 +57,6 @@ export default function Page() {
                 Before - 팀이 각자 AI를 따로 쓸 때 😮‍💨
               </h2>
               <div className="font-body-lg text-on-surface-variant space-y-4 break-keep flex-1 flex flex-col">
-                <div className="flex-1 flex flex-col justify-center mb-6">
-                  <ZoomableImage src="/images/ai-magazine/notion/image 13.png" className="rounded-lg shadow-sm border border-border-subtle w-full max-w-full mx-auto object-contain" alt="팀 각자 쓰는 모습"/>
-                </div>
-                
                 <p>마케팅팀에서 일하는 장원영 씨는 오늘도 새 채팅창을 열었어요.</p>
                 <p>회의가 끝났고, 팀원들은 각자 회의록을 AI로 정리하기 시작해요.</p>
                 <p>장원영 씨는 본인 ChatGPT에 회의 내용을 붙여넣고 정리를 요청하고, 김재원 씨도 같은 내용을 본인 AI에 넣고 정리해요.</p>
@@ -215,9 +218,13 @@ export default function Page() {
           
           <div className="space-y-16">
             <div className="flex gap-4 items-start">
-              <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</div>
+              <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">만들고 싶은 GPT의 목적을 정한다.</h4>
+                <div className="bg-surface-variant/50 border border-border-subtle rounded-lg p-6 flex flex-col items-center justify-center max-w-md text-on-surface-variant text-center gap-3">
+                  <span className="material-symbols-outlined text-4xl text-primary">lightbulb</span>
+                  <p className="font-body-md">어떤 문제를 해결하고 싶은지, 누구를 위한 비서인지 분명히 하는 것이 첫걸음이에요!</p>
+                </div>
               </div>
             </div>
 
@@ -398,9 +405,27 @@ export default function Page() {
                 <h3 className="font-headline-md font-bold mb-4">팁 3. 파일을 넣을 때는 역할까지 함께 정해주세요 🧑‍💼</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">Knowledge에 파일만 올려두고 끝내면 GPT가 그 자료를 어떻게 활용해야 할지 애매할 수 있어요. 그래서 Instructions에 파일의 역할을 함께 적어주는 것이 좋아요.</p>
                 <p className="font-body-md text-on-surface-variant mb-4">예를 들어 이렇게 지시할 수 있어요. 👇</p>
-                <div className="bg-surface-variant p-6 rounded-lg font-body-md mb-6 space-y-2">
-                  <p>업로드한 FAQ 문서는 사실관계를 확인하는 기준으로 사용해줘.</p>
-                  <p>업로드한 정책 문서는 답변의 최우선 기준으로 사용해줘.</p>
+                <div className="bg-surface-variant p-6 rounded-lg font-body-md mb-6 flex flex-col relative group">
+                  <button
+                    onClick={(e) => {
+                      const text = `업로드한 FAQ 문서는 사실관계를 확인하는 기준으로 사용해줘.\n업로드한 정책 문서는 답변의 최우선 기준으로 사용해줘.`;
+                      navigator.clipboard.writeText(text);
+                      const el = e.currentTarget.querySelector('.btn-text');
+                      if (el) {
+                        const old = el.textContent;
+                        el.textContent = '복사 완료!';
+                        setTimeout(() => el.textContent = old, 2000);
+                      }
+                    }}
+                    className="absolute top-4 right-4 flex items-center gap-1 bg-white/50 hover:bg-white/80 text-on-surface-variant px-3 py-1 rounded text-sm transition-colors opacity-0 group-hover:opacity-100"
+                  >
+                    <span className="material-symbols-outlined text-sm">content_copy</span>
+                    <span className="btn-text">복사하기</span>
+                  </button>
+                  <div className="space-y-2">
+                    <p>업로드한 FAQ 문서는 사실관계를 확인하는 기준으로 사용해줘.</p>
+                    <p>업로드한 정책 문서는 답변의 최우선 기준으로 사용해줘.</p>
+                  </div>
                 </div>
               </div>
               <ZoomableImage src="/images/ai-magazine/notion/image 29.png" className="rounded-lg border border-border-subtle w-full max-w-md object-contain" alt="파일 역할"/>
@@ -412,10 +437,28 @@ export default function Page() {
                 <h3 className="font-headline-md font-bold mb-4">팁 4. 지식 기반 답변을 원한다면 Instructions에 꼭 적어주세요 💁</h3>
                 <p className="font-body-md text-on-surface-variant mb-4">GPT가 Knowledge 파일을 잘 활용하게 하려면 Instructions에 "업로드한 자료를 우선적으로 참고해달라"고 명확히 적어야 해요.</p>
                 <p className="font-body-md text-on-surface-variant mb-4">아래 문장을 그대로 활용해도 좋아요. 👇</p>
-                <div className="bg-surface-variant p-6 rounded-lg font-body-md mb-6 space-y-2">
-                  <p>답변할 때는 업로드된 Knowledge 파일을 우선적으로 참고해줘.</p>
-                  <p>자료에 있는 내용은 자료 기준으로 답변하고, 자료에 없는 내용은 임의로 단정하지 마.</p>
-                  <p>필요한 경우 어떤 자료를 참고했는지도 함께 알려줘.</p>
+                <div className="bg-surface-variant p-6 rounded-lg font-body-md mb-6 flex flex-col relative group">
+                  <button
+                    onClick={(e) => {
+                      const text = `답변할 때는 업로드된 Knowledge 파일을 우선적으로 참고해줘.\n자료에 있는 내용은 자료 기준으로 답변하고, 자료에 없는 내용은 임의로 단정하지 마.\n필요한 경우 어떤 자료를 참고했는지도 함께 알려줘.`;
+                      navigator.clipboard.writeText(text);
+                      const el = e.currentTarget.querySelector('.btn-text');
+                      if (el) {
+                        const old = el.textContent;
+                        el.textContent = '복사 완료!';
+                        setTimeout(() => el.textContent = old, 2000);
+                      }
+                    }}
+                    className="absolute top-4 right-4 flex items-center gap-1 bg-white/50 hover:bg-white/80 text-on-surface-variant px-3 py-1 rounded text-sm transition-colors opacity-0 group-hover:opacity-100"
+                  >
+                    <span className="material-symbols-outlined text-sm">content_copy</span>
+                    <span className="btn-text">복사하기</span>
+                  </button>
+                  <div className="space-y-2">
+                    <p>답변할 때는 업로드된 Knowledge 파일을 우선적으로 참고해줘.</p>
+                    <p>자료에 있는 내용은 자료 기준으로 답변하고, 자료에 없는 내용은 임의로 단정하지 마.</p>
+                    <p>필요한 경우 어떤 자료를 참고했는지도 함께 알려줘.</p>
+                  </div>
                 </div>
               </div>
               <ZoomableImage src="/images/ai-magazine/notion/image 30.png" className="rounded-lg border border-border-subtle w-full max-w-md object-contain mb-6" alt="지식 우선"/>
