@@ -23,15 +23,14 @@ export default function Page() {
             <span className="block">매번 똑같은 지시 내릴 건가요?</span>
             <span className="block">저도 지겨워서요🥱</span>
           </h1>
-          <div className="relative rounded-xl bg-secondary-container flex items-center justify-center overflow-hidden h-[400px] lg:h-[600px]">
-            <img alt="Hero Visual" className="w-full h-full object-cover" src="/images/ai-magazine/notion/image 12.png" />
-            <div className="absolute inset-0 hero-gradient"></div>
+          <div className="relative rounded-xl bg-secondary-container flex items-center justify-center overflow-hidden">
+            <img alt="Hero Visual" className="w-full h-auto object-contain" src="/images/ai-magazine/notion/image 12.png" />
           </div>
         </section>
 
         {/* Intro Section */}
         <section className="mt-stack-xl mb-stack-lg">
-          <div className="bg-surface-variant p-10 rounded-xl border border-border-subtle flex flex-col lg:flex-row gap-12 items-center justify-between w-full">
+          <div className="flex flex-col lg:flex-row gap-12 items-center justify-between w-full">
             <div className="flex-1 space-y-4">
               <p className="font-body-lg text-on-surface-variant break-keep font-bold text-2xl">
                 잠깐, 1편 보고 오셨나요?
@@ -41,7 +40,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex-1 w-full max-w-lg flex justify-center lg:justify-end">
-              <ZoomableImage src="/images/ai-magazine/notion/image 13.png" className="rounded-lg w-full object-cover shadow-sm border border-border-subtle rotate-2" alt="팀 각자 쓰는 모습 짤"/>
+              <ZoomableImage src="/images/ai-magazine/notion/image 13.png" className="rounded-lg w-full object-contain shadow-sm border border-border-subtle rotate-2" alt="팀 각자 쓰는 모습 짤"/>
             </div>
           </div>
         </section>
@@ -242,7 +241,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</div>
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">GPT 만들기 화면을 연다.</h4>
-                <ZoomableImage src="/images/ai-magazine/notion/image 18.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="만들기 창"/>
+                <ZoomableImage src="/images/ai-magazine/notion/image 18.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="만들기 창"/>
               </div>
             </div>
 
@@ -250,7 +249,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</div>
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">이름과 설명을 입력한다.</h4>
-                <ZoomableImage src="/images/ai-magazine/notion/image 19.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="이름 입력"/>
+                <ZoomableImage src="/images/ai-magazine/notion/image 19.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="이름 입력"/>
               </div>
             </div>
 
@@ -259,8 +258,8 @@ export default function Page() {
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">Instructions에 역할과 규칙을 적는다.</h4>
                 <div className="flex flex-col gap-6 w-full">
-                  <ZoomableImage src="/images/ai-magazine/notion/image 20.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="지침 입력 1"/>
-                  <ZoomableImage src="/images/ai-magazine/notion/image 21.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="지침 입력 2"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/image 20.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="지침 입력 1"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/image 21.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="지침 입력 2"/>
                 </div>
               </div>
             </div>
@@ -269,7 +268,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">5</div>
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">필요한 경우 Knowledge에 참고 자료를 업로드한다.</h4>
-                <ZoomableImage src="/images/ai-magazine/notion/image 22.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="지식 업로드"/>
+                <ZoomableImage src="/images/ai-magazine/notion/image 22.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="지식 업로드"/>
               </div>
             </div>
             
@@ -277,7 +276,7 @@ export default function Page() {
               <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">6</div>
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">웹 검색, 이미지 생성, 데이터 분석 등 필요한 기능을 켠다.</h4>
-                <ZoomableImage src="/images/ai-magazine/notion/image 23.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="기능 설정"/>
+                <ZoomableImage src="/images/ai-magazine/notion/image 23.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="기능 설정"/>
               </div>
             </div>
 
@@ -286,8 +285,8 @@ export default function Page() {
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">실제 업무 질문으로 테스트한다.</h4>
                 <div className="flex flex-col gap-6 w-full">
-                  <ZoomableImage src="/images/ai-magazine/notion/image 24.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="테스트 1"/>
-                  <ZoomableImage src="/images/ai-magazine/notion/image 25.png" className="rounded-lg border border-border-subtle w-full max-w-4xl" alt="테스트 2"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/image 24.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="테스트 1"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/image 25.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="테스트 2"/>
                 </div>
               </div>
             </div>
@@ -317,7 +316,7 @@ export default function Page() {
               <div className="w-full">
                 <h4 className="font-headline-md mb-4">공유 범위는 목적에 맞게 설정한다.</h4>
                 <p className="font-body-md text-on-surface-variant mb-4">GPTs를 만든 뒤에는 공개 범위를 설정할 수 있어요. 혼자 쓰는 GPT라면 나만 보기로 설정하면 되고, 팀원들과 함께 쓰고 싶다면 링크 공유나 워크스페이스 공유를 활용할 수 있어요.</p>
-                <ZoomableImage src="/images/ai-magazine/notion/image 26.png" className="rounded-lg border border-border-subtle w-full max-w-4xl mb-6" alt="공유 범위"/>
+                <ZoomableImage src="/images/ai-magazine/notion/image 26.png" className="rounded-lg border border-border-subtle w-full object-contain mb-6" alt="공유 범위"/>
                 <p className="font-body-md text-on-surface-variant mb-4">외부 사용자도 검색해서 사용할 수 있게 하려면 GPT Store 공개를 선택할 수 있어요.</p>
                 <p className="font-body-md text-error font-bold mb-4">🚨 다만 공개하기 전에는 이름, 설명, 지침, Knowledge 파일, 답변 품질이 의도대로 작동하는지 마지막으로 확인하는 것이 좋아요!</p>
                 <p className="font-body-md text-on-surface-variant mb-4">특히 회사 자료나 내부 문서가 들어갔다면 공개 범위를 신중하게 설정해야 하니, 내부용 GPT는 외부에 공개하지 않고, 필요한 사람에게만 공유하는 것이 안전해요.</p>
