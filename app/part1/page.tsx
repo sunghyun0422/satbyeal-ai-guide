@@ -29,60 +29,33 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Before / After */}
-        <section className="mt-stack-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-            
-            {/* Before */}
-            <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle flex flex-col h-full hover:shadow-md transition-shadow">
-              <h3 className="font-headline-md text-error flex items-center gap-2 mb-6">
-                <span className="material-symbols-outlined text-4xl">cancel</span>
-                Before — 지금 우리 팀이 AI를 쓰는 방식
-              </h3>
-              <div className="font-body-lg text-on-surface-variant space-y-4 break-keep flex-1 flex flex-col">
-                <p>장원영 씨, 오늘도 새 채팅창을 열었어요.<br/>김재원 씨가 만든 가이드라인을 ChatGPT에 붙여 넣고 또 처음부터 설명 시작.</p>
-                <div className="bg-white p-4 rounded-lg shadow-sm text-body-md text-on-surface space-y-2 italic">
-                  <p>"이 가이드라인 참고해서 초안 써줘. 우리 팀 톤은 이렇고, 목적은…"</p>
-                </div>
-                <p>
-                  <span className="block mb-2">초안이 나오면 이번엔 김재원 씨 차례. 본인 ChatGPT에 또 넣어요. 배경 설명 또 처음부터. 😵‍💫</span>
-                  <span className="block">새 팀원 오면요? "그 자료 어디 있어요?" 다시 처음부터. 🤦</span>
-                </p>
-                
-                <div className="flex-1 flex flex-col justify-center my-6">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full object-contain border border-border-subtle max-h-[400px]" alt="Before"/>
-                </div>
+        {/* Before / After Flow */}
+        <section className="mt-stack-xl space-y-8 mb-stack-lg">
+          
+          {/* Before */}
+          <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle flex flex-col hover:shadow-md transition-shadow w-full">
+            <h3 className="font-headline-md text-error flex items-center gap-2 mb-6">
+              <span className="material-symbols-outlined text-4xl">cancel</span>
+              Before — 지금 우리 팀이 AI를 쓰는 방식
+            </h3>
+            <div className="font-body-lg text-on-surface-variant space-y-4 break-keep flex-1 flex flex-col">
+              <p>장원영 씨, 오늘도 새 채팅창을 열었어요.<br/>김재원 씨가 만든 가이드라인을 ChatGPT에 붙여 넣고 또 처음부터 설명 시작.</p>
+              <div className="bg-white p-4 rounded-lg shadow-sm text-body-md text-on-surface space-y-2 italic">
+                <p>"이 가이드라인 참고해서 초안 써줘. 우리 팀 톤은 이렇고, 목적은…"</p>
+              </div>
+              <p>
+                <span className="block mb-2">초안이 나오면 이번엔 김재원 씨 차례. 본인 ChatGPT에 또 넣어요. 배경 설명 또 처음부터. 😵‍💫</span>
+                <span className="block">새 팀원 오면요? "그 자료 어디 있어요?" 다시 처음부터. 🤦</span>
+              </p>
+              
+              <div className="flex-1 flex flex-col justify-center my-8">
+                <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full max-w-3xl mx-auto object-contain border border-border-subtle max-h-[700px]" alt="Before"/>
               </div>
             </div>
-            
-            {/* After */}
-            <div className="bg-primary-container text-on-primary p-8 rounded-xl flex flex-col h-full hover:shadow-md transition-shadow">
-              <h3 className="font-headline-md flex items-center gap-2 mb-6 text-on-primary">
-                <span className="material-symbols-outlined text-4xl">check_circle</span>
-                After — '이것'을 더하고 나서 🙊
-              </h3>
-              <div className="font-body-lg text-white/90 space-y-4 break-keep flex-1 flex flex-col">
-                <p>김재원 씨가 "팀 공유 프로젝트"를 하나 만들었어요.</p>
-                <p>가이드라인, 조사 자료, 기존 결과물을 넣고 팀원들에게 링크 공유. 끝.</p>
-                <p>이제 장원영 씨는 이렇게만 말해요.</p>
-                <blockquote className="border-l-4 border-white/50 pl-4 italic text-white my-4 bg-white/10 py-3 rounded-r-lg">
-                  "이 방향으로 초안 잡아줘."
-                </blockquote>
-                
-                <div className="flex-1 flex flex-col justify-center my-6">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full object-contain border border-white/20 max-h-[400px]" alt="After"/>
-                </div>
-                
-                <p>AI는 이미 다 알고 있어요. 김재원 씨도 배경 설명 없이 바로 검토 시작. 새 팀원이 와도 링크 하나면 끝. 💁</p>
-              </div>
-            </div>
-
           </div>
-        </section>
 
-        {/* 연결 텍스트 */}
-        <section className="mt-stack-xl mb-stack-lg">
-          <div className="bg-surface-variant p-10 rounded-xl border border-border-subtle space-y-6 text-center w-full">
+          {/* 연결 텍스트 1 */}
+          <div className="bg-surface-variant p-10 rounded-xl border border-border-subtle space-y-4 text-center w-full">
             <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
               여기서 잠깐, 손 좀 들어볼게요🙋
             </p>
@@ -90,17 +63,46 @@ export default function Page() {
               혹시 지금 팀에서 AI 쓰는 방식, 이거랑 똑같지 않나요?<br/>
               근데 여기서 '이것' 하나만 더하면?
             </p>
-            <div className="py-2"></div>
+          </div>
+          
+          {/* After */}
+          <div className="bg-primary-container text-on-primary p-8 rounded-xl flex flex-col hover:shadow-md transition-shadow w-full">
+            <h3 className="font-headline-md flex items-center gap-2 mb-6 text-on-primary">
+              <span className="material-symbols-outlined text-4xl">check_circle</span>
+              After — '이것'을 더하고 나서 🙊
+            </h3>
+            <div className="font-body-lg text-white/90 space-y-4 break-keep flex-1 flex flex-col">
+              <p>김재원 씨가 "팀 공유 프로젝트"를 하나 만들었어요.</p>
+              <p>가이드라인, 조사 자료, 기존 결과물을 넣고 팀원들에게 링크 공유. 끝.</p>
+              <p>이제 장원영 씨는 이렇게만 말해요.</p>
+              <blockquote className="border-l-4 border-white/50 pl-4 italic text-white my-4 bg-white/10 py-3 rounded-r-lg">
+                "이 방향으로 초안 잡아줘."
+              </blockquote>
+              
+              <div className="flex-1 flex flex-col justify-center my-8">
+                <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full max-w-3xl mx-auto object-contain border border-white/20 max-h-[700px]" alt="After"/>
+              </div>
+              
+              <p>AI는 이미 다 알고 있어요. 김재원 씨도 배경 설명 없이 바로 검토 시작. 새 팀원이 와도 링크 하나면 끝. 💁</p>
+            </div>
+          </div>
+
+          {/* 연결 텍스트 2 */}
+          <div className="bg-surface-variant p-10 rounded-xl border border-border-subtle space-y-6 text-center w-full">
             <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
               그래서 '이것'이 뭔지 궁금하시지 않나요?
             </p>
             <p className="font-body-lg text-on-surface-variant break-keep">
-              그냥 그렇고 그런 방법 말고, 판을 뒤집는 진짜 비기. 이름하여 <strong className="text-primary text-2xl">👉 "공유 프로젝트" 👈</strong>
+              그냥 그렇고 그런 방법 말고, 판을 뒤집는 진짜 비기. 이름하여
             </p>
+            <div className="py-2">
+              <strong className="text-primary text-3xl">👉 "공유 프로젝트" 👈</strong>
+            </div>
             <p className="font-body-lg text-on-surface-variant break-keep">
               뭔지 알고 싶으면, 계속 따라오세요.
             </p>
           </div>
+
         </section>
 
 
@@ -326,7 +328,7 @@ export default function Page() {
         <section className="mt-stack-xl mb-20 bg-surface-container-low p-stack-lg rounded-xl border border-border-subtle">
           <h2 className="font-headline-lg text-headline-lg mb-4 border-l-4 border-primary pl-4">07. ChatGPT가 아니어도 활용할 수 있어요</h2>
           <p className="font-body-md text-on-surface-variant mb-8">이 방식은 ChatGPT에만 한정되지 않아요. Claude의 Projects나 Gemini의 Notebook에서도 비슷하게 활용할 수 있어요. 🏘️</p>
-          <div className="flex flex-col gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
             <ZoomableImage src="/images/ai-magazine/notion/image 9.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="클로드 Project"/>
             <ZoomableImage src="/images/ai-magazine/notion/image 10.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="제미나이 Notebook"/>
           </div>
