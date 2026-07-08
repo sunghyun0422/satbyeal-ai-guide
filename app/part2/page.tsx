@@ -111,17 +111,6 @@ export default function Page() {
             </p>
             <p className="font-headline-md font-bold text-on-surface">Let's dig in! 🏃</p>
           </div>
-                <div className="mt-8 pt-8 border-t border-white/20">
-                  <p className="font-bold text-xl">자, 이 ‘팀 회의록 정리 GPT’ — 어떻게 만드는 건지 궁금하시죠? 🕴️</p>
-                  <p className="mt-4">공유 프로젝트는 자료를 모으는 작업방, 이건 반복 업무 방식 자체를 저장해두는 팀 전용 AI 비서,</p>
-                  <p className="text-3xl font-bold text-white text-center my-8">👉 "GPTs" 👈</p>
-                  <p>매번 설명하던 업무 루틴, 이제 비서한테 맡길 차례예요.</p>
-                  <p className="font-bold text-xl mt-4">Let's dig in! 🏃</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </section>
 
         {/* 01 GPTs란? */}
