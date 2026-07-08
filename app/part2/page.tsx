@@ -202,11 +202,10 @@ export default function Page() {
           <div className="flex flex-col gap-8">
             <div className="w-full space-y-6">
               <p className="font-body-md">예를 들어 회의록을 작성할 때마다 일반 ChatGPT에게 이렇게 설명해야 한다고 해볼게요.</p>
-              <ZoomableImage src="/images/ai-magazine/notion/image 14.png" className="rounded-lg shadow-sm border border-border-subtle w-full max-w-2xl object-contain" alt="일반 프롬프트 복잡함"/>
+              <ZoomableImage src="/images/ai-magazine/notion/image 14.png" className="rounded-lg shadow-sm border border-border-subtle w-full object-contain" alt="일반 프롬프트 복잡함"/>
               
               <p className="font-body-md mt-8">하지만 GPTs를 만들어두면 다음부터는 회의록만 첨부하면 돼요.</p>
-              <ZoomableImage src="/images/ai-magazine/notion/image 15.png" className="rounded-lg shadow-sm border border-border-subtle w-full max-w-2xl object-contain" alt="GPTs 깔끔함"/>
-              <ZoomableImage src="/images/ai-magazine/notion/image 15.png" className="rounded-lg shadow-sm border border-border-subtle w-full max-w-4xl object-contain" alt="GPTs 깔끔함"/>
+              <ZoomableImage src="/images/ai-magazine/notion/image 15.png" className="rounded-lg shadow-sm border border-border-subtle w-full object-contain" alt="GPTs 깔끔함"/>
               <p className="font-body-md mt-4">이미 역할, 말투, 형식, 금지 표현이 저장되어 있기 때문에 설명을 반복하지 않아도 돼요🙅.</p>
             </div>
           </div>
@@ -219,8 +218,8 @@ export default function Page() {
           <p className="font-body-lg text-on-surface-variant mb-8 break-keep">GPT는 우리 팀의 업무 방식이나 기준까지 정확히 알지는 못해요. 그래서 직접 만들어 팀의 업무 방식과 내부 기준을 담은 우리 팀에 딱 맞게 작동하는 GPTs를 만들 수 있어요👐.</p>
           
           <div className="flex flex-col gap-6 mb-12">
-            <ZoomableImage src="/images/ai-magazine/notion/image 16.png" className="rounded-lg border border-border-subtle max-w-4xl w-full object-contain" alt="GPTs 화면1"/>
-            <ZoomableImage src="/images/ai-magazine/notion/image 17.png" className="rounded-lg border border-border-subtle max-w-4xl w-full object-contain" alt="GPTs 화면2"/>
+            <ZoomableImage src="/images/ai-magazine/notion/image 16.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="GPTs 화면1"/>
+            <ZoomableImage src="/images/ai-magazine/notion/image 17.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="GPTs 화면2"/>
           </div>
 
           <h3 className="font-headline-lg text-on-surface mb-8 border-b border-border-subtle pb-4">만드는 순서</h3>
@@ -332,7 +331,23 @@ export default function Page() {
           <p className="font-body-lg mb-6">Instructions는 GPTs의 핵심이에요.</p>
           <p className="font-body-lg mb-8">아래 템플릿을 <strong>그대로</strong> 복사해서 대괄호 안만 바꿔도 좋아요. 👇</p>
           
-          <div className="bg-white/10 p-8 rounded-xl border border-white/20 shadow-sm overflow-x-auto">
+          <div className="bg-white/10 p-8 rounded-xl border border-white/20 shadow-sm overflow-x-auto relative group">
+            <button
+              onClick={(e) => {
+                const text = `너는 [역할]이야.\n\n이 GPT의 목적은 [목적]이야.\n\n사용자가 [입력할 내용]을 주면, 너는 [해야 할 작업]을 수행해줘.\n\n답변은 항상 [출력 형식]으로 정리해줘.\n\n말투는 [원하는 톤]으로 작성해줘.\n\n반드시 지켜야 할 기준은 다음과 같아.\n\n1. [기준 1]\n2. [기준 2]\n3. [기준 3]\n\n피해야 할 것은 다음과 같아.\n\n1. [금지 사항 1]\n2. [금지 사항 2]\n3. [금지 사항 3]\n\n자료에 없는 내용은 단정하지 말고, 필요한 경우 사용자에게 확인 질문을 해줘.\n결과물은 실무자가 바로 복사해 사용할 수 있을 정도로 구체적으로 작성해줘.`;
+                navigator.clipboard.writeText(text);
+                const el = e.currentTarget.querySelector('.btn-text') as HTMLElement;
+                if (el) {
+                  const old = el.textContent;
+                  el.textContent = '복사 완료!';
+                  setTimeout(() => el.textContent = old, 2000);
+                }
+              }}
+              className="absolute top-4 right-4 flex items-center gap-1 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition-colors opacity-0 group-hover:opacity-100"
+            >
+              <span className="material-symbols-outlined text-sm">content_copy</span>
+              <span className="btn-text">복사하기</span>
+            </button>
             <pre className="whitespace-pre-wrap font-body-md text-white/95 leading-relaxed">
 {`너는 [역할]이야.
 
@@ -362,9 +377,9 @@ export default function Page() {
           </div>
         </section>
 
-        {/* 07 GPTs 효율적 사용 팁 */}
+        {/* 06 GPTs 효율적 사용 팁 */}
         <section className="mt-stack-xl bg-surface-container p-stack-lg rounded-xl">
-          <h2 className="font-headline-lg text-headline-lg mb-10 text-primary border-b border-border-subtle pb-4">07. GPTs를 효율적으로 사용하는 팁 😽</h2>
+          <h2 className="font-headline-lg text-headline-lg mb-10 text-primary border-b border-border-subtle pb-4">06. GPTs를 효율적으로 사용하는 팁 😽</h2>
           
           <div className="space-y-12">
             {/* 팁 1 */}
@@ -379,7 +394,7 @@ export default function Page() {
                   <li><strong>코드 인터프리터 (Code Interpreter)</strong> : 엑셀 파일 분석, 설문 결과 도출, 복잡한 수치 계산</li>
                 </ul>
               </div>
-              <ZoomableImage src="/images/ai-magazine/notion/image 27.png" className="rounded-lg border border-border-subtle w-full max-w-md object-contain mb-4" alt="기능 켜기"/>
+              <ZoomableImage src="/images/ai-magazine/notion/image 27.png" className="rounded-lg border border-border-subtle w-full object-contain mb-4" alt="기능 켜기"/>
               <div className="bg-white p-5 rounded-lg shadow-sm border border-border-subtle w-full text-body-md text-on-surface">
                 <strong>Tip.</strong> 목적 없는 '기능 다 켜기'는 응답 속도만 늦춥니다. <strong>정말 필요한 기능만 딱 켜두는 게 '고수'의 세팅법입니다. 🙋</strong>
               </div>
@@ -400,7 +415,7 @@ export default function Page() {
                   <p>연구 보고서</p>
                 </div>
               </div>
-              <ZoomableImage src="/images/ai-magazine/notion/image 28.png" className="rounded-lg border border-border-subtle w-full max-w-md object-contain mb-4" alt="지식 자료"/>
+              <ZoomableImage src="/images/ai-magazine/notion/image 28.png" className="rounded-lg border border-border-subtle w-full object-contain mb-4" alt="지식 자료"/>
               <div className="w-full">
                 <p className="font-body-md text-on-surface-variant mb-4">파일을 많이 넣는다고 무조건 좋은 것은 아니에요.</p>
                 <p className="font-body-md font-bold text-on-surface mb-4">중요한 것은 "이 GPT가 어떤 기준을 보고 답해야 하는가"예요. 👈</p>
@@ -437,7 +452,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <ZoomableImage src="/images/ai-magazine/notion/image 29.png" className="rounded-lg border border-border-subtle w-full max-w-md object-contain" alt="파일 역할"/>
+              <ZoomableImage src="/images/ai-magazine/notion/image 29.png" className="rounded-lg border border-border-subtle w-full object-contain" alt="파일 역할"/>
             </div>
 
             {/* 팁 4 */}
