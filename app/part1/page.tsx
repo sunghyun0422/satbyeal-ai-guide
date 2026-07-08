@@ -50,7 +50,7 @@ export default function Page() {
                 </p>
                 
                 <div className="flex-1 flex flex-col justify-center my-6">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full object-cover border border-border-subtle max-h-[300px]" alt="Before"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1344.jpeg" className="rounded-lg w-full object-contain border border-border-subtle max-h-[400px]" alt="Before"/>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function Page() {
                 </blockquote>
                 
                 <div className="flex-1 flex flex-col justify-center my-6">
-                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full object-cover border border-white/20 max-h-[300px]" alt="After"/>
+                  <ZoomableImage src="/images/ai-magazine/notion/IMG_1341.jpeg" className="rounded-lg w-full object-contain border border-white/20 max-h-[400px]" alt="After"/>
                 </div>
                 
                 <p>AI는 이미 다 알고 있어요. 김재원 씨도 배경 설명 없이 바로 검토 시작. 새 팀원이 와도 링크 하나면 끝. 💁</p>
@@ -81,9 +81,8 @@ export default function Page() {
         </section>
 
         {/* 연결 텍스트 */}
-        <section className="mt-stack-xl mb-stack-lg space-y-8">
-          {/* 연결 텍스트 박스 */}
-          <div className="bg-surface-variant p-8 rounded-xl border border-border-subtle space-y-4 text-center max-w-2xl mx-auto">
+        <section className="mt-stack-xl mb-stack-lg">
+          <div className="bg-surface-variant p-10 rounded-xl border border-border-subtle space-y-6 text-center w-full">
             <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
               여기서 잠깐, 손 좀 들어볼게요🙋
             </p>
@@ -91,25 +90,20 @@ export default function Page() {
               혹시 지금 팀에서 AI 쓰는 방식, 이거랑 똑같지 않나요?<br/>
               근데 여기서 '이것' 하나만 더하면?
             </p>
-          </div>
-
-          {/* 마무리 텍스트 박스 */}
-          <div className="bg-primary-container text-on-primary p-8 rounded-xl space-y-4 text-center max-w-2xl mx-auto">
-            <p className="font-body-lg text-white/90 break-keep font-bold text-xl">
+            <div className="py-2"></div>
+            <p className="font-body-lg text-on-surface-variant break-keep font-bold text-xl">
               그래서 '이것'이 뭔지 궁금하시지 않나요?
             </p>
-            <p className="font-body-lg text-white/90 break-keep">
-              그냥 그렇고 그런 방법 말고, 판을 뒤집는 진짜 비기. 이름하여 <strong className="text-white text-2xl">👉 "공유 프로젝트" 👈</strong>
+            <p className="font-body-lg text-on-surface-variant break-keep">
+              그냥 그렇고 그런 방법 말고, 판을 뒤집는 진짜 비기. 이름하여 <strong className="text-primary text-2xl">👉 "공유 프로젝트" 👈</strong>
             </p>
-            <p className="font-body-lg text-white/90 break-keep">
+            <p className="font-body-lg text-on-surface-variant break-keep">
               뭔지 알고 싶으면, 계속 따라오세요.
             </p>
           </div>
         </section>
 
-        <section className="mt-stack-xl flex justify-center">
-            <ZoomableImage src="/images/ai-magazine/notion/image 1.png" className="rounded-lg shadow-sm border border-border-subtle max-w-2xl w-full object-contain" alt="Let's dig in!"/>
-        </section>
+
 
         {/* 01 프로젝트란? */}
         <section className="mt-stack-xl">
