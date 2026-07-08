@@ -14,11 +14,11 @@ export default function Page() {
 {/*  Hero Section  */}
 <section className="relative w-full h-[80vh] overflow-hidden flex items-center bg-[#f0f2f5]">
 <div className="absolute inset-0">
-<img alt="Premium AI Background" className="w-full h-full object-cover" src="/images/premium_ai_bg_right_logo.png" />
+<img alt="Premium AI Background" className="w-full h-full object-cover" src="/images/premium_ai_bg.png" />
 </div>
-<div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent"></div>
-<div className="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full text-on-surface">
-<div className="max-w-2xl">
+<div className="absolute inset-0 bg-gradient-to-l from-white/90 via-white/40 to-transparent"></div>
+<div className="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full text-on-surface flex justify-end">
+<div className="max-w-2xl flex flex-col items-end text-right">
 <span className="inline-block bg-primary text-white font-label-lg px-4 py-1 rounded-sm mb-stack-md uppercase tracking-widest">Premium Advisory Group</span>
 <h1 className="font-display-lg text-display-lg mb-stack-md leading-tight text-on-surface">샛별자문단<div className="">AI 가이드 매거진</div></h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-lg">
