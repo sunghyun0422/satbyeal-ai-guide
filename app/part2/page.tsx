@@ -29,8 +29,18 @@ export default function Page() {
           </div>
         </section>
 
+        {/* Intro Section */}
+        <section className="mt-stack-xl mb-stack-lg max-w-3xl">
+          <p className="font-body-lg text-on-surface-variant break-keep mb-4 font-bold text-xl">
+            잠깐, 1편 보고 오셨나요?
+          </p>
+          <p className="font-body-lg text-on-surface-variant break-keep">
+            1편에서 공유 프로젝트로 자료랑 맥락은 이미 한곳에 모았죠. 근데 이런 문제, 아직 남아있지 않나요?
+          </p>
+        </section>
+
         {/* Before / After */}
-        <section className="mt-stack-xl">
+        <section className="mt-stack-lg">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
             {/* Before */}
@@ -40,10 +50,7 @@ export default function Page() {
                 Before - 팀이 각자 AI를 따로 쓸 때 😮‍💨
               </h2>
               <div className="font-body-lg text-on-surface-variant space-y-4 break-keep flex-1 flex flex-col">
-                <p>잠깐, 1편 보고 오셨나요?</p>
-                <p>1편에서 공유 프로젝트로 자료랑 맥락은 이미 한곳에 모았죠. 근데 이런 문제, 아직 남아있지 않나요?</p>
-                
-                <div className="flex-1 flex flex-col justify-center my-6">
+                <div className="flex-1 flex flex-col justify-center mb-6">
                   <ZoomableImage src="/images/ai-magazine/notion/image 13.png" className="rounded-lg shadow-sm border border-border-subtle w-full max-w-full mx-auto object-contain" alt="팀 각자 쓰는 모습"/>
                 </div>
                 
