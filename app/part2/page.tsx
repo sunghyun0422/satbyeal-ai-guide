@@ -343,7 +343,7 @@ export default function Page() {
                   setTimeout(() => el.textContent = old, 2000);
                 }
               }}
-              className="absolute top-4 right-4 flex items-center gap-1 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition-colors opacity-0 group-hover:opacity-100"
+              className="absolute top-4 right-4 flex items-center gap-1 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition-colors"
             >
               <span className="material-symbols-outlined text-sm">content_copy</span>
               <span className="btn-text">복사하기</span>
@@ -441,7 +441,7 @@ export default function Page() {
                         setTimeout(() => el.textContent = old, 2000);
                       }
                     }}
-                    className="absolute top-4 right-4 flex items-center gap-1 bg-white/50 hover:bg-white/80 text-on-surface-variant px-3 py-1 rounded text-sm transition-colors opacity-0 group-hover:opacity-100"
+                    className="absolute top-4 right-4 flex items-center gap-1 bg-white/50 hover:bg-white/80 text-on-surface-variant px-3 py-1 rounded text-sm transition-colors"
                   >
                     <span className="material-symbols-outlined text-sm">content_copy</span>
                     <span className="btn-text">복사하기</span>
@@ -473,7 +473,7 @@ export default function Page() {
                         setTimeout(() => el.textContent = old, 2000);
                       }
                     }}
-                    className="absolute top-4 right-4 flex items-center gap-1 bg-white/50 hover:bg-white/80 text-on-surface-variant px-3 py-1 rounded text-sm transition-colors opacity-0 group-hover:opacity-100"
+                    className="absolute top-4 right-4 flex items-center gap-1 bg-white/50 hover:bg-white/80 text-on-surface-variant px-3 py-1 rounded text-sm transition-colors"
                   >
                     <span className="material-symbols-outlined text-sm">content_copy</span>
                     <span className="btn-text">복사하기</span>
@@ -485,7 +485,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <ZoomableImage src="/images/ai-magazine/notion/image 30.png" className="rounded-lg border border-border-subtle w-full max-w-md object-contain mb-6" alt="지식 우선"/>
+              <ZoomableImage src="/images/ai-magazine/notion/image 30.png" className="rounded-lg border border-border-subtle w-full object-contain mb-6" alt="지식 우선"/>
               <p className="font-body-md text-on-surface-variant">특히 답변의 신뢰도를 높이기 위해 사내 정책, 제품 정보와 같은 정확성이 중요한 내용은 출처 표시를 요청하는 것도 좋아요.</p>
             </div>
 
